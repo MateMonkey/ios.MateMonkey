@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */; };
-		D0B6D8E41E3E3181007A59CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E31E3E3181007A59CA /* ViewController.swift */; };
+		D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */; };
 		D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E51E3E3181007A59CA /* Main.storyboard */; };
 		D0B6D8E91E3E3181007A59CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E81E3E3181007A59CA /* Assets.xcassets */; };
 		D0B6D8EC1E3E3181007A59CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */; };
+		D0B6D8F71E3E800B007A59CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B6D8F61E3E800B007A59CA /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0B6D8DE1E3E3181007A59CA /* MateMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MateMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0B6D8E31E3E3181007A59CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateMapViewController.swift; sourceTree = "<group>"; };
 		D0B6D8E61E3E3181007A59CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0B6D8E81E3E3181007A59CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B6D8EB1E3E3181007A59CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0B6D8ED1E3E3181007A59CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B6D8F31E3E343B007A59CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0B6D8F41E3E3487007A59CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D0B6D8F61E3E800B007A59CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B6D8F71E3E800B007A59CA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 				D0B6D8F31E3E343B007A59CA /* README.md */,
 				D0B6D8E01E3E3181007A59CA /* MateMonkey */,
 				D0B6D8DF1E3E3181007A59CA /* Products */,
+				D0B6D8F51E3E800B007A59CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,13 +63,21 @@
 			isa = PBXGroup;
 			children = (
 				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
-				D0B6D8E31E3E3181007A59CA /* ViewController.swift */,
+				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
 				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
 				D0B6D8E81E3E3181007A59CA /* Assets.xcassets */,
 				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
 				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
 			);
 			path = MateMonkey;
+			sourceTree = "<group>";
+		};
+		D0B6D8F51E3E800B007A59CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8F61E3E800B007A59CA /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +114,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3AX7ZS95SE;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,7 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B6D8E41E3E3181007A59CA /* ViewController.swift in Sources */,
+				D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +282,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
 				INFOPLIST_FILE = MateMonkey/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
 				INFOPLIST_FILE = MateMonkey/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
