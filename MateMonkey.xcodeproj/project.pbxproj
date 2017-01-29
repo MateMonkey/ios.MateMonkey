@@ -262,7 +262,7 @@
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
 				INFOPLIST_FILE = MateMonkey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.MateMonkey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -275,7 +275,7 @@
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
 				INFOPLIST_FILE = MateMonkey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.MateMonkey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
