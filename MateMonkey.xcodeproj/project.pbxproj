@@ -13,6 +13,8 @@
 		D0B6D8E91E3E3181007A59CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E81E3E3181007A59CA /* Assets.xcassets */; };
 		D0B6D8EC1E3E3181007A59CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */; };
 		D0B6D8F71E3E800B007A59CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B6D8F61E3E800B007A59CA /* MapKit.framework */; };
+		D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */; };
+		D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D0B6D8F31E3E343B007A59CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0B6D8F41E3E3487007A59CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D0B6D8F61E3E800B007A59CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFetcher.swift; sourceTree = "<group>"; };
+		D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 				D0B6D8F41E3E3487007A59CA /* .gitignore */,
 				D0B6D8F31E3E343B007A59CA /* README.md */,
 				D0B6D8E01E3E3181007A59CA /* MateMonkey */,
+				D0B6D8F91E3FD8DE007A59CA /* Additional Files */,
 				D0B6D8DF1E3E3181007A59CA /* Products */,
 				D0B6D8F51E3E800B007A59CA /* Frameworks */,
 			);
@@ -62,12 +67,8 @@
 		D0B6D8E01E3E3181007A59CA /* MateMonkey */ = {
 			isa = PBXGroup;
 			children = (
-				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
-				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
-				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
-				D0B6D8E81E3E3181007A59CA /* Assets.xcassets */,
-				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
-				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
+				D0B6D8FA1E3FD8EE007A59CA /* Controllers */,
+				D0B6D8F81E3FD8C0007A59CA /* Storyboards/Views */,
 			);
 			path = MateMonkey;
 			sourceTree = "<group>";
@@ -78,6 +79,36 @@
 				D0B6D8F61E3E800B007A59CA /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0B6D8F81E3FD8C0007A59CA /* Storyboards/Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
+				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards/Views;
+			sourceTree = "<group>";
+		};
+		D0B6D8F91E3FD8DE007A59CA /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */,
+				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
+				D0B6D8E81E3E3181007A59CA /* Assets.xcassets */,
+				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
+			);
+			name = "Additional Files";
+			path = MateMonkey;
+			sourceTree = "<group>";
+		};
+		D0B6D8FA1E3FD8EE007A59CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
+				D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */,
 				D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
+				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

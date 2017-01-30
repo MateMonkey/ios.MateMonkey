@@ -17,13 +17,17 @@ class MateMapViewController: UIViewController {
     var initialLocationSet = false {
         didSet {
             // if it is now true, lets request surrounding dealers!
-            print("initial Location has been set. Search for dealers now!")
+            fetcher.queryForMapRect(self.mapView.visibleMapRect)
         }
     }
+    
+    let fetcher = MMDealerFetcher()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fetcher.delegate = self
         
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager = CLLocationManager()
@@ -32,6 +36,7 @@ class MateMapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +44,14 @@ class MateMapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func centerUserLocation(_ sender: Any) {
+    @IBAction func centerUserLocation(_ sender: UIButton) {
         if let currentLocation = locationManager.location {
             centerMapOnLocation(currentLocation)
         }
+    }
+    
+    @IBAction func searchCurrentMapArea(_ sender: UIButton) {
+        fetcher.queryForMapRect(self.mapView.visibleMapRect)
     }
     
     func centerMapOnLocation(_ location: CLLocation) {
@@ -51,6 +60,7 @@ class MateMapViewController: UIViewController {
         
         self.mapView.setRegion(region, animated: true)
     }
+    
 }
 
 extension MateMapViewController: CLLocationManagerDelegate {
@@ -61,5 +71,12 @@ extension MateMapViewController: CLLocationManagerDelegate {
                 initialLocationSet = true
             }
         }
+    }
+}
+
+extension MateMapViewController: MMDealerFetcherDelegate {
+    func queryCompleted() {
+        // call a method to populate the map with the fetcher's results
+        print("We got a call from the MMDealerFetcher. We are the delegate!")
     }
 }
