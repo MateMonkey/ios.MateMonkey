@@ -1,5 +1,5 @@
 //
-//  MMDealer.swift
+//  DealerType.swift
 //  MateMonkey
 //
 //  Created by Peter on 31.01.17.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+enum MMDealerType {
+    case bar, club, retail, restaurant, other, hackerspace, community
+}

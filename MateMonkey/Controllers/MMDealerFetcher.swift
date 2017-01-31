@@ -17,6 +17,8 @@ class MMDealerFetcher {
     
     var delegate: MMDealerFetcherDelegate?
     
+    var queryData: Data?
+    
     var result = [String]()
     
     func queryForMapRect(_ mapRect: MKMapRect) {
@@ -35,6 +37,25 @@ class MMDealerFetcher {
         print(completeRequestURLString)
         
         // query the API server
+        let requestURL: URL = URL(string: completeRequestURLString)!
+        let urlRequest: URLRequest = URLRequest(url: requestURL)
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) {data, response , error in
+            
+            let httpResponse = response as! HTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            
+            if (statusCode == 200) {
+                print("Status Code 200!")
+                if data != nil {
+                    self.queryData = data!
+                    print(self.queryData)
+                }
+            } else {
+                print(error.debugDescription)
+            }
+        }
+        task.resume()
         
         // load the results into the result array variable
         
@@ -56,4 +77,7 @@ class MMDealerFetcher {
         let swMapPoint = MKMapPointMake(x, y)
         return MKCoordinateForMapPoint(swMapPoint)
     }
+    
+    // MARK: - JSON methods
+    
 }
