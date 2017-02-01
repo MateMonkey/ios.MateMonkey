@@ -75,8 +75,9 @@ extension MateMapViewController: CLLocationManagerDelegate {
 }
 
 extension MateMapViewController: MMDealerFetcherDelegate {
-    func queryCompleted() {
+    func queryCompleted(sender: MMDealerFetcher) {
         // call a method to populate the map with the fetcher's results
-        print("We got a call from the MMDealerFetcher. We are the delegate!")
+        print("There are \(sender.results.count) dealers on the map.")
+        // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
     }
 }

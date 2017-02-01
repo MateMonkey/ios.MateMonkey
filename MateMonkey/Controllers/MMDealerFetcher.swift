@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 
 protocol MMDealerFetcherDelegate {
-    func queryCompleted()
+    func queryCompleted(sender: MMDealerFetcher)
 }
 
 class MMDealerFetcher {
@@ -19,7 +19,7 @@ class MMDealerFetcher {
     
     var queryData: Data?
     
-    var result = [String]()
+    var results = [MMDealer]()
     
     func queryForMapRect(_ mapRect: MKMapRect) {
         
@@ -47,26 +47,19 @@ class MMDealerFetcher {
             
             if (statusCode == 200) {
                 print(data!)
-                do {
-                    let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-                    if let dictionary = json as? [String: Any] {
-                        for (key, value) in dictionary {
-                            print(key)
-                            print(value)
-                        }
-                    }
+                let dealers = MMJSONParser(data: data!).parse()
+                if dealers.count > 0 {
+                    // We have one or more dealers in the map area
+                    self.results = dealers
                 }
             } else {
                 print(error.debugDescription)
             }
+            
+            // call the delegate method
+            self.delegate?.queryCompleted(sender: self)
         }
         task.resume()
-        
-        // load the results into the result array variable
-        
-        // call the delegate method
-        delegate?.queryCompleted()
-        
     }
     
     // MARK: - Map methods
@@ -82,7 +75,5 @@ class MMDealerFetcher {
         let swMapPoint = MKMapPointMake(x, y)
         return MKCoordinateForMapPoint(swMapPoint)
     }
-    
-    // MARK: - JSON methods
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A98A01E4284DF0071C58B /* MMJSONParser.swift */; };
 		D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */; };
 		D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */; };
 		D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E51E3E3181007A59CA /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D09A98A01E4284DF0071C58B /* MMJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONParser.swift; sourceTree = "<group>"; };
 		D0B6D8DE1E3E3181007A59CA /* MateMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MateMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateMapViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
 				D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */,
+				D09A98A01E4284DF0071C58B /* MMJSONParser.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */,
 				D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
+				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
