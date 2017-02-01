@@ -46,10 +46,15 @@ class MMDealerFetcher {
             let statusCode = httpResponse.statusCode
             
             if (statusCode == 200) {
-                print("Status Code 200!")
-                if data != nil {
-                    self.queryData = data!
-                    print(self.queryData)
+                print(data!)
+                do {
+                    let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+                    if let dictionary = json as? [String: Any] {
+                        for (key, value) in dictionary {
+                            print(key)
+                            print(value)
+                        }
+                    }
                 }
             } else {
                 print(error.debugDescription)

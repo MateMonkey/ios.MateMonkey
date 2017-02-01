@@ -46,7 +46,7 @@ class MateMapViewController: UIViewController {
     
     @IBAction func centerUserLocation(_ sender: UIButton) {
         if let currentLocation = locationManager.location {
-            centerMapOnLocation(currentLocation)
+            centerMapOnLocation(currentLocation, animated: true)
         }
     }
     
@@ -54,11 +54,11 @@ class MateMapViewController: UIViewController {
         fetcher.queryForMapRect(self.mapView.visibleMapRect)
     }
     
-    func centerMapOnLocation(_ location: CLLocation) {
+    func centerMapOnLocation(_ location: CLLocation, animated: Bool) {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
-        self.mapView.setRegion(region, animated: true)
+        self.mapView.setRegion(region, animated: animated)
     }
     
 }
@@ -67,7 +67,7 @@ extension MateMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if initialLocationSet == false {
             if let lastLocation = locations.last {
-                centerMapOnLocation(lastLocation)
+                centerMapOnLocation(lastLocation, animated: false)
                 initialLocationSet = true
             }
         }
