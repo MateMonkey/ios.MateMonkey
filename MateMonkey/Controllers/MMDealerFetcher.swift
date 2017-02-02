@@ -51,6 +51,8 @@ class MMDealerFetcher {
                 if dealers.count > 0 {
                     // We have one or more dealers in the map area
                     self.results = dealers
+                } else {
+                    self.results = []
                 }
             } else {
                 print(error.debugDescription)
