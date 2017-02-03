@@ -19,6 +19,9 @@ class MMDealer: NSObject, MKAnnotation {
     let address: MMAddress
     var coordinate: CLLocationCoordinate2D
     
+    var title: String?
+    var subtitle: String?
+    
     init(name: String, id: Int, type: String, note: String, currency: String, address: MMAddress) {
         self.name = name
         self.id = id
@@ -48,6 +51,8 @@ class MMDealer: NSObject, MKAnnotation {
         let coord = CLLocationCoordinate2D(latitude: address.lat, longitude: address.lon)
         self.coordinate = coord
         
+        self.title = self.name
+        self.subtitle = self.type.rawValue
         
         super.init()
     }

@@ -24,6 +24,7 @@ class MateMapViewController: UIViewController {
             fetcher.queryForMapRect(self.mapView.visibleMapRect)
         }
     }
+    var currentDealers = [MMDealer]()
     
     // MARK: - Constants
     let fetcher = MMDealerFetcher()
@@ -69,6 +70,10 @@ class MateMapViewController: UIViewController {
         self.mapView.setRegion(region, animated: animated)
     }
     
+    func displayNewDealerLocations(_ locations: [MMDealer]) {
+        // TODO: Check to see if the dealer is already on the map. If not, don't display them again.
+    }
+    
 }
 
 // MARK: - Extensions
@@ -94,7 +99,17 @@ extension MateMapViewController: MMDealerFetcherDelegate {
     func queryCompleted(sender: MMDealerFetcher) {
         // call a method to populate the map with the fetcher's results
         print("There are \(sender.results.count) dealers on the map.")
-        // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
+        
+        if sender.results.isEmpty {
+            // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
+        // } else if sender.results.count >= 15 {
+            // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
+        } else {
+            // FIXME: The annotations are added multiple times onto the map. This should not happen and we need a fix for that.
+            for dealer in sender.results {
+                mapView.addAnnotation(dealer)
+            }
+        }
         
         // finish up by stopping the spinner
         DispatchQueue.main.async {
