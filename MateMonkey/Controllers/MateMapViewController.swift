@@ -93,7 +93,23 @@ extension MateMapViewController: MKMapViewDelegate {
         fetcherQueue.async {
             self.fetcher.queryForMapRect(mapView.visibleMapRect)
         }
-        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let identifier = annotation.subtitle! {
+            var view: MKAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                let imageName = "MapPin_" + identifier
+                view.image = UIImage(named: imageName)
+                view.canShowCallout = false
+            }
+            return view
+        }
+        return nil
     }
 }
 
@@ -109,7 +125,6 @@ extension MateMapViewController: MMDealerFetcherDelegate {
                 // } else if sender.results.count >= 15 {
                 // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
             } else {
-                // FIXME: The annotations are added multiple times onto the map. This should not happen and we need a fix for that.
                 let currentDealers = self.mapView.annotations
                 for dealer in sender.results {
                     if currentDealers.contains(where: { $0.title! == String(dealer.id) }) {
