@@ -111,6 +111,23 @@ extension MateMapViewController: MKMapViewDelegate {
         }
         return nil
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let dealerId = view.annotation?.title {
+            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let detailVC: DealerDetailViewController = mainStoryboard.instantiateViewController(withIdentifier: "DealerDetailView") as! DealerDetailViewController
+            if let dealer = fetcher.results.filter({ $0.title == dealerId }).first {
+                detailVC.dealerToDisplay = dealer
+                let navController = UINavigationController(rootViewController: detailVC)
+                present(navController, animated: true, completion: nil)
+            } else {
+                print("The dealer was not found in the fetcher's result.")
+            }
+        } else {
+            print("The dealer seems to not have an ID as the title?!?")
+        }
+    }
 }
 
 extension MateMapViewController: MMDealerFetcherDelegate {

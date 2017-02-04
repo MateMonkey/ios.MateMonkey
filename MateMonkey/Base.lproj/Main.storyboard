@@ -56,8 +56,194 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
+        <!--Details-->
+        <scene sceneID="0qo-qS-YFL">
+            <objects>
+                <viewController storyboardIdentifier="DealerDetailView" id="EII-sb-Ixr" customClass="DealerDetailViewController" customModule="MateMonkey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lhg-tJ-CpN"/>
+                        <viewControllerLayoutGuide type="bottom" id="rx9-qg-KpR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zcA-a6-Xkf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DealerName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-e3-tNY">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="Icon_Location" translatesAutoresizingMaskIntoConstraints="NO" id="U4y-zE-53M">
+                                <rect key="frame" x="10" y="101" width="24" height="24"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="Icon_Phone" translatesAutoresizingMaskIntoConstraints="NO" id="HgU-oo-f9e">
+                                <rect key="frame" x="10" y="142" width="24" height="24"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="Icon_Mail" translatesAutoresizingMaskIntoConstraints="NO" id="yKg-bF-xd7">
+                                <rect key="frame" x="10" y="174" width="24" height="24"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="Icon_Website" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-eZ-njs">
+                                <rect key="frame" x="10" y="206" width="24" height="24"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="Icon_Note" translatesAutoresizingMaskIntoConstraints="NO" id="qUV-2n-IGC">
+                                <rect key="frame" x="10" y="238" width="24" height="24"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreetName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-QH-HDZ">
+                                <rect key="frame" x="42" y="101" width="73" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StreetNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-iv-zxW">
+                                <rect key="frame" x="117" y="101" width="86" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PostalCode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC9-t3-MbL">
+                                <rect key="frame" x="42" y="118" width="70" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xd-lT-hVg">
+                                <rect key="frame" x="114" y="118" width="24" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiw-72-dQ7">
+                                <rect key="frame" x="42" y="238" width="317" height="70"/>
+                                <string key="text">Notes
+With
+Four
+Lines</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="Icon_Stock" translatesAutoresizingMaskIntoConstraints="NO" id="X3y-1C-RQK">
+                                <rect key="frame" x="10" y="312" width="24" height="24"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-QM-iEB">
+                                <rect key="frame" x="42" y="140" width="87" height="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <state key="normal" title="PhoneNumber"/>
+                                <connections>
+                                    <action selector="phoneNumberPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="ZX8-Ga-gWM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvB-v3-eWu">
+                                <rect key="frame" x="42" y="172" width="82" height="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <state key="normal" title="EmailAddress"/>
+                                <connections>
+                                    <action selector="emailAddressPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="PXX-3q-Ejn"/>
+                                    <action selector="phoneNumberPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="4Dt-Sj-Bqz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRH-Xa-nmN">
+                                <rect key="frame" x="42" y="204" width="99" height="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <state key="normal" title="WebsiteAddress"/>
+                                <connections>
+                                    <action selector="websiteAddressPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="Blu-NI-Fiv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.26666666666666666" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qUV-2n-IGC" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="1U3-Z1-0iT"/>
+                            <constraint firstItem="5Xd-lT-hVg" firstAttribute="leading" secondItem="MC9-t3-MbL" secondAttribute="trailing" constant="2" id="1XO-lD-sVy"/>
+                            <constraint firstItem="UJm-QM-iEB" firstAttribute="centerY" secondItem="HgU-oo-f9e" secondAttribute="centerY" id="1Z1-1J-Fpu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Xd-lT-hVg" secondAttribute="trailing" priority="250" constant="8" id="2AS-AN-KmW"/>
+                            <constraint firstItem="MC9-t3-MbL" firstAttribute="leading" secondItem="U4y-zE-53M" secondAttribute="trailing" constant="8" symbolic="YES" id="3u0-pe-skG"/>
+                            <constraint firstItem="MC9-t3-MbL" firstAttribute="top" secondItem="Tvw-QH-HDZ" secondAttribute="bottom" constant="1" id="4b0-4D-EQE"/>
+                            <constraint firstItem="HgU-oo-f9e" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="5cO-I3-QJj"/>
+                            <constraint firstItem="hiw-72-dQ7" firstAttribute="top" secondItem="qUV-2n-IGC" secondAttribute="top" id="8dL-ku-SOt"/>
+                            <constraint firstItem="qUV-2n-IGC" firstAttribute="top" secondItem="rtk-eZ-njs" secondAttribute="bottom" constant="8" symbolic="YES" id="8vs-g6-ajn"/>
+                            <constraint firstItem="X3y-1C-RQK" firstAttribute="top" secondItem="qUV-2n-IGC" secondAttribute="bottom" constant="50" id="D6x-TR-ja3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KRH-Xa-nmN" secondAttribute="trailing" priority="250" id="DGK-zQ-Ls0"/>
+                            <constraint firstItem="Yqf-iv-zxW" firstAttribute="leading" secondItem="Tvw-QH-HDZ" secondAttribute="trailing" constant="2" id="DUy-pQ-aKR"/>
+                            <constraint firstItem="UJm-QM-iEB" firstAttribute="leading" secondItem="HgU-oo-f9e" secondAttribute="trailing" constant="8" symbolic="YES" id="E4h-qj-nup"/>
+                            <constraint firstItem="FvB-v3-eWu" firstAttribute="leading" secondItem="yKg-bF-xd7" secondAttribute="trailing" constant="8" symbolic="YES" id="ELd-UK-gDE"/>
+                            <constraint firstItem="FvB-v3-eWu" firstAttribute="centerY" secondItem="yKg-bF-xd7" secondAttribute="centerY" id="Gjt-ek-EK6"/>
+                            <constraint firstItem="KRH-Xa-nmN" firstAttribute="centerY" secondItem="rtk-eZ-njs" secondAttribute="centerY" id="H76-Fy-9HY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FvB-v3-eWu" secondAttribute="trailing" priority="250" id="Ipw-F2-hMI"/>
+                            <constraint firstItem="Yqf-iv-zxW" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="KYq-Sj-TJy"/>
+                            <constraint firstItem="rtk-eZ-njs" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="Ko2-4x-yvM"/>
+                            <constraint firstItem="U4y-zE-53M" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="MB4-U6-Cvx"/>
+                            <constraint firstItem="HgU-oo-f9e" firstAttribute="top" secondItem="MC9-t3-MbL" secondAttribute="bottom" constant="8" symbolic="YES" id="Nlp-Nw-OXY"/>
+                            <constraint firstItem="Tvw-QH-HDZ" firstAttribute="leading" secondItem="U4y-zE-53M" secondAttribute="trailing" constant="8" symbolic="YES" id="O3O-b5-zNf"/>
+                            <constraint firstItem="X3y-1C-RQK" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="OYw-XC-JIp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jdL-e3-tNY" secondAttribute="leading" id="VsL-ux-9zj"/>
+                            <constraint firstItem="yKg-bF-xd7" firstAttribute="top" secondItem="HgU-oo-f9e" secondAttribute="bottom" constant="8" symbolic="YES" id="Vxa-iv-OM7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yqf-iv-zxW" secondAttribute="trailing" priority="250" constant="8" id="WRs-AY-lPB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hiw-72-dQ7" secondAttribute="trailing" id="We1-P1-5AU"/>
+                            <constraint firstItem="U4y-zE-53M" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="ZRk-Ke-yGi"/>
+                            <constraint firstItem="yKg-bF-xd7" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="cGv-A4-pu3"/>
+                            <constraint firstItem="hiw-72-dQ7" firstAttribute="leading" secondItem="qUV-2n-IGC" secondAttribute="trailing" constant="8" id="dgj-ja-Nne"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jdL-e3-tNY" secondAttribute="trailing" id="eRV-hx-rsd"/>
+                            <constraint firstItem="jdL-e3-tNY" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" id="fdO-J2-72l"/>
+                            <constraint firstItem="5Xd-lT-hVg" firstAttribute="top" secondItem="Yqf-iv-zxW" secondAttribute="bottom" constant="1" id="os5-Jd-W6l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UJm-QM-iEB" secondAttribute="trailing" priority="250" id="sGy-O7-yqp"/>
+                            <constraint firstItem="rtk-eZ-njs" firstAttribute="top" secondItem="yKg-bF-xd7" secondAttribute="bottom" constant="8" symbolic="YES" id="sTs-V8-3HG"/>
+                            <constraint firstItem="Tvw-QH-HDZ" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="tgM-Dl-JXZ"/>
+                            <constraint firstItem="KRH-Xa-nmN" firstAttribute="leading" secondItem="rtk-eZ-njs" secondAttribute="trailing" constant="8" symbolic="YES" id="ut6-cK-pSf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="lmK-l0-9Kw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="FeD-m6-pYP"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TVW-gQ-iFs">
+                            <connections>
+                                <action selector="closeBarButtonPressed:" destination="EII-sb-Ixr" id="JQh-Om-ElF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityLabel" destination="5Xd-lT-hVg" id="31Y-7t-M3p"/>
+                        <outlet property="dealerNameLabel" destination="jdL-e3-tNY" id="osd-Ix-dKE"/>
+                        <outlet property="emailAddressButton" destination="FvB-v3-eWu" id="ih7-JV-ORx"/>
+                        <outlet property="notesLabel" destination="hiw-72-dQ7" id="NvH-N5-ypm"/>
+                        <outlet property="phoneNumberButton" destination="UJm-QM-iEB" id="dM9-9y-iw7"/>
+                        <outlet property="postalCodeLabel" destination="MC9-t3-MbL" id="MhL-1J-jlX"/>
+                        <outlet property="streetNameLabel" destination="Tvw-QH-HDZ" id="aWH-2x-k1G"/>
+                        <outlet property="streetNumberLabel" destination="Yqf-iv-zxW" id="kvu-fi-JBC"/>
+                        <outlet property="websiteAddressButton" destination="KRH-Xa-nmN" id="I5g-gU-hTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsP-H1-ZKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861.5999999999999" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bzc-je-cRK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ka9-pd-RyB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztO-6H-Vxi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EII-sb-Ixr" kind="relationship" relationship="rootViewController" id="niL-YO-BdL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mve-sO-TYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="38"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Icon_Location" width="24" height="24"/>
+        <image name="Icon_Mail" width="24" height="24"/>
+        <image name="Icon_Note" width="24" height="24"/>
+        <image name="Icon_Phone" width="24" height="24"/>
+        <image name="Icon_Stock" width="24" height="24"/>
         <image name="Icon_UserLocation" width="45" height="45"/>
+        <image name="Icon_Website" width="24" height="24"/>
     </resources>
 </document>
