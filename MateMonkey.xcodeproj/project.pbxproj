@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A98A01E4284DF0071C58B /* MMJSONParser.swift */; };
 		D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */; };
 		D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */; };
 		D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E51E3E3181007A59CA /* Main.storyboard */; };
 		D0B6D8E91E3E3181007A59CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E81E3E3181007A59CA /* Assets.xcassets */; };
 		D0B6D8EC1E3E3181007A59CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */; };
 		D0B6D8F71E3E800B007A59CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B6D8F61E3E800B007A59CA /* MapKit.framework */; };
+		D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */; };
+		D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */; };
+		D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */; };
+		D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2A20B1E413018000DA93C /* MMDealerType.swift */; };
+		D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2A20D1E41317D000DA93C /* MMAddress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D09A98A01E4284DF0071C58B /* MMJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONParser.swift; sourceTree = "<group>"; };
 		D0B6D8DE1E3E3181007A59CA /* MateMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MateMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateMapViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +33,11 @@
 		D0B6D8F31E3E343B007A59CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0B6D8F41E3E3487007A59CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D0B6D8F61E3E800B007A59CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFetcher.swift; sourceTree = "<group>"; };
+		D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
+		D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealer.swift; sourceTree = "<group>"; };
+		D0F2A20B1E413018000DA93C /* MMDealerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerType.swift; sourceTree = "<group>"; };
+		D0F2A20D1E41317D000DA93C /* MMAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAddress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +74,11 @@
 		D0B6D8E01E3E3181007A59CA /* MateMonkey */ = {
 			isa = PBXGroup;
 			children = (
-				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
-				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
-				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
 				D0B6D8E81E3E3181007A59CA /* Assets.xcassets */,
-				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
-				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
+				D0B6D9021E412A16007A59CA /* Models */,
+				D0B6D8F81E3FD8C0007A59CA /* Storyboards/Views */,
+				D0B6D8FA1E3FD8EE007A59CA /* Controllers */,
+				D0B6D8F91E3FD8DE007A59CA /* Additional Files */,
 			);
 			path = MateMonkey;
 			sourceTree = "<group>";
@@ -80,6 +91,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D0B6D8F81E3FD8C0007A59CA /* Storyboards/Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
+				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards/Views;
+			sourceTree = "<group>";
+		};
+		D0B6D8F91E3FD8DE007A59CA /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */,
+				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
+				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
+			);
+			path = "Additional Files";
+			sourceTree = "<group>";
+		};
+		D0B6D8FA1E3FD8EE007A59CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
+				D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */,
+				D09A98A01E4284DF0071C58B /* MMJSONParser.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D0B6D9021E412A16007A59CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */,
+				D0F2A20D1E41317D000DA93C /* MMAddress.swift */,
+				D0F2A20B1E413018000DA93C /* MMDealerType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,6 +140,7 @@
 				D0B6D8DA1E3E3181007A59CA /* Sources */,
 				D0B6D8DB1E3E3181007A59CA /* Frameworks */,
 				D0B6D8DC1E3E3181007A59CA /* Resources */,
+				D08FABAF1E46116700B0F443 /* Mark TODO: and FIXME: as warning */,
 			);
 			buildRules = (
 			);
@@ -153,13 +204,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D08FABAF1E46116700B0F443 /* Mark TODO: and FIXME: as warning */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Mark TODO: and FIXME: as warning";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0B6D8DA1E3E3181007A59CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */,
+				D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */,
+				D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */,
+				D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */,
 				D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
+				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
+				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
-				INFOPLIST_FILE = MateMonkey/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MateMonkey/Additional Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
@@ -295,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
-				INFOPLIST_FILE = MateMonkey/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MateMonkey/Additional Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
@@ -323,6 +397,7 @@
 				D0B6D8F21E3E3181007A59CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
