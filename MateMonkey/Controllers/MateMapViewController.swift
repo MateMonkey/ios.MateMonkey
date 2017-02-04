@@ -21,13 +21,16 @@ class MateMapViewController: UIViewController {
         didSet {
             // if it is now true, lets request surrounding dealers!
             loadingSpinner.startAnimating()
-            fetcher.queryForMapRect(self.mapView.visibleMapRect)
+            fetcherQueue.async {
+                self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
+            }
         }
     }
     var currentDealers = [MMDealer]()
     
     // MARK: - Constants
     let fetcher = MMDealerFetcher()
+    let fetcherQueue = DispatchQueue(label: "bg_fetcher_queue", qos: .userInitiated)
     
     // MARK: - View controller lifecycle methods
     override func viewDidLoad() {
@@ -70,10 +73,6 @@ class MateMapViewController: UIViewController {
         self.mapView.setRegion(region, animated: animated)
     }
     
-    func displayNewDealerLocations(_ locations: [MMDealer]) {
-        // TODO: Check to see if the dealer is already on the map. If not, don't display them again.
-    }
-    
 }
 
 // MARK: - Extensions
@@ -91,28 +90,37 @@ extension MateMapViewController: CLLocationManagerDelegate {
 extension MateMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         loadingSpinner.startAnimating()
-        fetcher.queryForMapRect(mapView.visibleMapRect)
+        fetcherQueue.async {
+            self.fetcher.queryForMapRect(mapView.visibleMapRect)
+        }
+        
     }
 }
 
 extension MateMapViewController: MMDealerFetcherDelegate {
     func queryCompleted(sender: MMDealerFetcher) {
-        // call a method to populate the map with the fetcher's results
-        print("There are \(sender.results.count) dealers on the map.")
         
-        if sender.results.isEmpty {
-            // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
-        // } else if sender.results.count >= 15 {
-            // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
-        } else {
-            // FIXME: The annotations are added multiple times onto the map. This should not happen and we need a fix for that.
-            for dealer in sender.results {
-                mapView.addAnnotation(dealer)
-            }
-        }
-        
-        // finish up by stopping the spinner
         DispatchQueue.main.async {
+            // call a method to populate the map with the fetcher's results
+            print("There are \(sender.results.count) dealers on the map.")
+            
+            if sender.results.isEmpty {
+                // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
+                // } else if sender.results.count >= 15 {
+                // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
+            } else {
+                // FIXME: The annotations are added multiple times onto the map. This should not happen and we need a fix for that.
+                let currentDealers = self.mapView.annotations
+                for dealer in sender.results {
+                    if currentDealers.contains(where: { $0.title! == String(dealer.id) }) {
+                        // should be on the map already
+                        print("The dealer \(dealer.id) already exists and will not be added again.")
+                    } else {
+                        self.mapView.addAnnotation(dealer)
+                    }
+                }
+            }
+            // finish up by stopping the spinner
             self.loadingSpinner.stopAnimating()
         }
     }

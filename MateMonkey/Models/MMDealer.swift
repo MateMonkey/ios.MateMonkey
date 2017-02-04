@@ -51,7 +51,7 @@ class MMDealer: NSObject, MKAnnotation {
         let coord = CLLocationCoordinate2D(latitude: address.lat, longitude: address.lon)
         self.coordinate = coord
         
-        self.title = self.name
+        self.title = String(self.id)
         self.subtitle = self.type.rawValue
         
         super.init()
