@@ -52,7 +52,7 @@ class MMDealer: NSObject, MKAnnotation {
         self.coordinate = coord
         
         self.title = String(self.id)
-        self.subtitle = self.type.rawValue
+        self.subtitle = String(describing: self.type)
         
         super.init()
     }

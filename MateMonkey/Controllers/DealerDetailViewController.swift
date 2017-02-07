@@ -36,6 +36,12 @@ class DealerDetailViewController: UIViewController {
         if let dealer = dealerToDisplay {
             populateLabelsForDealer(dealer)
         }
+        
+        /* Experimental navBar colors
+        self.navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.02, green: 0.33, blue: 0.03, alpha: 1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,15 +105,15 @@ class DealerDetailViewController: UIViewController {
         notesLabel.text = dealer.note
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let editVC = segue.destination as? EditDealerViewController {
+            editVC.dealerToEdit = self.dealerToDisplay
+        }
     }
-    */
 
 }
 
