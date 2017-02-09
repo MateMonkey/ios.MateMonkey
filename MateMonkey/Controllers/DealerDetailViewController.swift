@@ -112,6 +112,7 @@ class DealerDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let editVC = segue.destination as? EditDealerViewController {
             editVC.dealerToEdit = self.dealerToDisplay
+            editVC.JSONsender.delegate = self
         }
     }
 
@@ -121,5 +122,17 @@ extension DealerDetailViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         // Not much to do here except dismiss the VC (we don't care whatever the user did)
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension DealerDetailViewController: JSONSenderDelegate {
+    func requestCompleted(success: Bool) {
+        // TODO: implement a non-interruppting message about the success or failure to update
+        if success {
+            // TODO: Update the information of the current dealer to reflect the changes.
+            print("Successfully updated")
+        } else {
+            print("Dealer update failed")
+        }
     }
 }
