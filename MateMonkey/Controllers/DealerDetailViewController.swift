@@ -126,11 +126,17 @@ extension DealerDetailViewController: MFMailComposeViewControllerDelegate {
 }
 
 extension DealerDetailViewController: JSONSenderDelegate {
-    func requestCompleted(success: Bool) {
+    func requestCompleted(success: Bool, updatedDealer: MMDealer?) {
         // TODO: implement a non-interruppting message about the success or failure to update
         if success {
-            // TODO: Update the information of the current dealer to reflect the changes.
-            print("Successfully updated")
+            // Update the information of the current dealer to reflect the changes.
+            DispatchQueue.main.async {
+                print("Successfully updated")
+                self.dealerToDisplay = updatedDealer
+                if let dealer = self.dealerToDisplay {
+                    self.populateLabelsForDealer(dealer)
+                }
+            }
         } else {
             print("Dealer update failed")
         }

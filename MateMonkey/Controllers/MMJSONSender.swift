@@ -9,7 +9,7 @@
 import Foundation
 
 protocol JSONSenderDelegate {
-    func requestCompleted(success: Bool)
+    func requestCompleted(success: Bool, updatedDealer: MMDealer?)
 }
 
 class MMJSONSender {
@@ -17,7 +17,7 @@ class MMJSONSender {
     var delegate: JSONSenderDelegate?
     
     func updateDealer(_ dealer: MMDealer, updatedData data: [String: Any]) {
-        // TODO: compare both dealers and create a JSON of the changes
+        // compare both dealers and create a JSON of the changes
         
         var json = [String: Any]()
         
@@ -37,13 +37,17 @@ class MMJSONSender {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data returned")
-                self.delegate?.requestCompleted(success: false)
+                self.delegate?.requestCompleted(success: false, updatedDealer: nil)
                 return
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let returnedJSON = responseJSON as? [String: Any] {
                 print(returnedJSON)
-                self.delegate?.requestCompleted(success: true)
+                if let dealer = try? MMDealer(json: returnedJSON) {
+                    self.delegate?.requestCompleted(success: true, updatedDealer: dealer)
+                } else {
+                    self.delegate?.requestCompleted(success: true, updatedDealer: nil)
+                }
             }
         }
         task.resume()
@@ -54,7 +58,7 @@ class MMJSONSender {
         let jsonAddress = getJsonDictionary(forAddress: address)
         
         guard name != "" else {
-            delegate?.requestCompleted(success: false)
+            delegate?.requestCompleted(success: false, updatedDealer: nil)
             return
         }
         
@@ -77,13 +81,16 @@ class MMJSONSender {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
-                self.delegate?.requestCompleted(success: false)
+                self.delegate?.requestCompleted(success: false, updatedDealer: nil)
                 return
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let returnedJSON = responseJSON as? [String: Any] {
-                print(returnedJSON)
-                self.delegate?.requestCompleted(success: true)
+                if let dealer = try? MMDealer(json: returnedJSON) {
+                    self.delegate?.requestCompleted(success: true, updatedDealer: dealer)
+                } else {
+                    self.delegate?.requestCompleted(success: true, updatedDealer: nil)
+                }
             }
         }
         task.resume()

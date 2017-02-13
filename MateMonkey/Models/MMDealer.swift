@@ -119,6 +119,8 @@ class MMDealer: NSObject, MKAnnotation {
             self.note = ""
         }
         
+        self.title = String(self.id)
+        self.subtitle = String(describing: self.type)
         
     }
     

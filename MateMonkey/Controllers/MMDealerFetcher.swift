@@ -47,12 +47,16 @@ class MMDealerFetcher {
             
             if (statusCode == 200) {
                 print(data!)
-                let dealers = MMJSONParser(data: data!).parse()
-                if dealers.count > 0 {
-                    // We have one or more dealers in the map area
-                    self.results = dealers
+                if let dealers = try? MMJSONParser(data: data!).parse() {
+                    if dealers.count > 0 {
+                        // We have one or more dealers in the map area
+                        self.results = dealers
+                    } else {
+                        self.results = []
+                    }
                 } else {
-                    self.results = []
+                    // TODO: The parser neatly throws an error, we should be able to look into it more precisely
+                    print("ParserError")
                 }
             } else {
                 print(error.debugDescription)

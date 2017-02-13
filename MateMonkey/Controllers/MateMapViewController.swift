@@ -50,7 +50,14 @@ class MateMapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        fetcherQueue.async {
+            self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,6 +134,7 @@ extension MateMapViewController: MKMapViewDelegate {
         } else {
             print("The dealer seems to not have an ID as the title?!?")
         }
+        mapView.deselectAnnotation(view.annotation, animated: false)
     }
 }
 
