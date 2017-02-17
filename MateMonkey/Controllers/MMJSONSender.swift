@@ -24,7 +24,7 @@ class MMJSONSender {
         for item in data {
             json[item.key] = item.value
         }
-        
+        print(json)
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         let targetURLString = GlobalValues.testAPI + "dealers/" + String(dealer.id)
