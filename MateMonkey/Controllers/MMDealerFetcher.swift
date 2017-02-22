@@ -32,7 +32,7 @@ class MMDealerFetcher {
         
         let dealerParameter = "dealers?bbox=" + bottomLeftLatitude + "," + bottomLeftLongitude + "," + topRightLatitude + "," + topRightLongitude
         
-        let completeRequestURLString = GlobalValues.testAPI + dealerParameter
+        let completeRequestURLString = GlobalValues.baseURL + dealerParameter
         
         print(completeRequestURLString)
         

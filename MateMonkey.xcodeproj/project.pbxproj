@@ -21,6 +21,8 @@
 		D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */; };
 		D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */; };
 		D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */; };
+		D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D51E57ACF300B7F82B /* MMFilterView.swift */; };
+		D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D71E5E1F0A00B7F82B /* Extensions.swift */; };
 		D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2A20B1E413018000DA93C /* MMDealerType.swift */; };
 		D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2A20D1E41317D000DA93C /* MMAddress.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
 		D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealer.swift; sourceTree = "<group>"; };
 		D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONSender.swift; sourceTree = "<group>"; };
+		D0E603D51E57ACF300B7F82B /* MMFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFilterView.swift; sourceTree = "<group>"; };
+		D0E603D71E5E1F0A00B7F82B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0F2A20B1E413018000DA93C /* MMDealerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerType.swift; sourceTree = "<group>"; };
 		D0F2A20D1E41317D000DA93C /* MMAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAddress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
+				D0E603D51E57ACF300B7F82B /* MMFilterView.swift */,
 				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards/Views;
@@ -115,6 +120,7 @@
 				D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */,
 				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
 				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
+				D0E603D71E5E1F0A00B7F82B /* Extensions.swift */,
 			);
 			path = "Additional Files";
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */,
 				D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */,
+				D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */,
 				D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */,
 				D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */,
 				D08FABB31E468BD700B0F443 /* VisibleStrings.swift in Sources */,
@@ -250,6 +257,7 @@
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
 				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
+				D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

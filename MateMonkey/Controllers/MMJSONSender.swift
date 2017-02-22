@@ -27,7 +27,7 @@ class MMJSONSender {
         print(json)
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
-        let targetURLString = GlobalValues.testAPI + "dealers/" + String(dealer.id)
+        let targetURLString = GlobalValues.baseURL + "dealers/" + String(dealer.id)
         let url = URL(string: targetURLString)!
         var request = URLRequest(url: url)
         request.httpMethod = "PUT"
@@ -71,7 +71,7 @@ class MMJSONSender {
         
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
-        let targetURLString = GlobalValues.testAPI + "dealers"
+        let targetURLString = GlobalValues.baseURL + "dealers"
         let url = URL(string: targetURLString)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

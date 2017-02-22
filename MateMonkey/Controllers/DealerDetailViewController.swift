@@ -37,8 +37,9 @@ class DealerDetailViewController: UIViewController {
             populateLabelsForDealer(dealer)
         }
         
+
         /* Experimental navBar colors
-        self.navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.02, green: 0.33, blue: 0.03, alpha: 1.0)
+         self.navigationController?.navigationBar.barTintColor = UIColor.monkeyGreenDark()
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.white
         */

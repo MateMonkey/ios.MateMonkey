@@ -17,22 +17,18 @@ class MateMapViewController: UIViewController {
     
     // MARK: - Variables
     var locationManager: CLLocationManager!
-    var initialLocationSet = false {
-        didSet {
-            // if it is now true, lets request surrounding dealers!
-            loadingSpinner.startAnimating()
-            fetcherQueue.async {
-                self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
-            }
-        }
-    }
+    var initialLocationSet = false
     var currentDealers = [MMDealer]()
+    
+    var filterView = MMFilterView(frame: CGRect(x: 0.0, y: UIScreen.main.bounds.height - 40, width: UIScreen.main.bounds.width, height: 244))
+    var filterExpanded = false
     
     // MARK: - Constants
     let fetcher = MMDealerFetcher()
     let fetcherQueue = DispatchQueue(label: "bg_fetcher_queue", qos: .userInitiated)
     
     // MARK: - View controller lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,14 +46,14 @@ class MateMapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
+        
+        filterView.delegate = self
+        self.view.addSubview(filterView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        fetcherQueue.async {
-            self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,6 +96,7 @@ extension MateMapViewController: MKMapViewDelegate {
         fetcherQueue.async {
             self.fetcher.queryForMapRect(mapView.visibleMapRect)
         }
+        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -162,6 +159,22 @@ extension MateMapViewController: MMDealerFetcherDelegate {
             }
             // finish up by stopping the spinner
             self.loadingSpinner.stopAnimating()
+        }
+    }
+}
+
+extension MateMapViewController: MMFilterViewDelegate {
+    func expandFilter(sender: MMFilterView) {
+        print("FilterView tapped or dragged.")
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            if self.filterExpanded == false {
+                self.filterView.frame = CGRect(x: 0.0, y: UIScreen.main.bounds.height - 229, width: UIScreen.main.bounds.width, height: 244)
+            } else {
+                self.filterView.frame = CGRect(x: 0.0, y: UIScreen.main.bounds.height - 40, width: UIScreen.main.bounds.width, height: 244)
+            }
+        }) { (completed) in
+            self.filterExpanded = !self.filterExpanded
         }
     }
 }

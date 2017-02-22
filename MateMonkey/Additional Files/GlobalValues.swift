@@ -10,6 +10,9 @@ import Foundation
 
 struct GlobalValues {
     
-    static let baseURL: String = "https://matemonkey.com/api/v1/"
-    static let testAPI: String = "https://playground.matemonkey.com/api/v1/"
+    #if DEBUG
+        static let baseURL: String = "https://playground.matemonkey.com/api/v1/"
+    #else
+        static let baseURL: String = "https://matemonkey.com/api/v1/"
+    #endif
 }
