@@ -25,5 +25,7 @@ struct VisibleStrings {
     static let missingCountry = NSLocalizedString("Country", comment: "Reason for an alert when the user does not provide a required field: country")
     static let missingCity = NSLocalizedString("City", comment: "Reason for an alert when the user does not provide a required field: city")
     static let missingPostal = NSLocalizedString("ZIP Code", comment: "Reason for an alert when the user does not provide a required field: postal")
-
+    
+    static let filterDealers = NSLocalizedString("Filter Dealers", comment: "Title text for the button leading to filtering options for the dealers.")
+    static let filterProducts = NSLocalizedString("Filter Products", comment: "Title text for the button leading to filtering options for the products.")
 }

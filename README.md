@@ -19,4 +19,7 @@ Current version: 0.1 alpha
 Tracked via github's bugtracker
 
 ## Why is this Open Source? ##
-Because [MateMonkey](https://github.com/MateMonkey) partly is open source, too! Also, I want to improve my coding skills by coding "out in the open". Anyone can participate and help make the code and the app better by contributing. 
+Because [MateMonkey](https://github.com/MateMonkey) is open source, too (at least in parts)! Also, I want to improve my coding skills by coding "out in the open". Anyone can participate and help make the code and the app better by contributing. 
+
+## Before you contribute ##
+Please check out what I am working on in the development branch. If you want to make significant changes to the app, please contact me first or open an issue. Improvements to my code will be happily merged!
