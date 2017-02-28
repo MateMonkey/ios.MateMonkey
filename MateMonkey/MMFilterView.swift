@@ -10,6 +10,7 @@ import UIKit
 
 protocol MMFilterViewDelegate {
     func expandFilter(sender: MMFilterView)
+    func presentFromFilterView(viewController: UIViewController)
 }
 
 enum FilterButtonType {
@@ -116,7 +117,11 @@ class MMFilterView: UIView {
     }
     
     func openInfoScreen() {
-        // TODO: segue to the app info screen
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        let appInfoVC: AppInfoViewController = mainStoryboard.instantiateViewController(withIdentifier: "AppInfoView") as! AppInfoViewController
+        
+        delegate?.presentFromFilterView(viewController: appInfoVC)
     }
     
     func addDealer() {

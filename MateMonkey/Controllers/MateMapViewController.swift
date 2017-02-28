@@ -165,7 +165,6 @@ extension MateMapViewController: MMDealerFetcherDelegate {
 
 extension MateMapViewController: MMFilterViewDelegate {
     func expandFilter(sender: MMFilterView) {
-        print("FilterView tapped or dragged.")
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
             
             if self.filterExpanded == false {
@@ -176,5 +175,10 @@ extension MateMapViewController: MMFilterViewDelegate {
         }) { (completed) in
             self.filterExpanded = !self.filterExpanded
         }
+    }
+    
+    func presentFromFilterView(viewController: UIViewController) {
+        let navController = UINavigationController(rootViewController: viewController)
+        self.present(navController, animated: true, completion: nil)
     }
 }
