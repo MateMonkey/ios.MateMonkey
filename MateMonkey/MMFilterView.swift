@@ -14,7 +14,7 @@ protocol MMFilterViewDelegate {
 }
 
 enum FilterButtonType {
-    case expander, dealer, products, info, add
+    case dealer, products, info, add
 }
 
 class MMFilterView: UIView {
@@ -29,7 +29,7 @@ class MMFilterView: UIView {
     public var delegate: MMFilterViewDelegate?
     
     // MARK: Buttons
-    let expanderButton: UIButton
+    let expanderImageView: UIImageView
     let filterDealersButton: UIButton
     let filterProductsButton: UIButton
     let infoButton: UIButton
@@ -41,7 +41,7 @@ class MMFilterView: UIView {
         self.width = frame.width
         self.height = frame.height
         
-        expanderButton = UIButton(type: .custom)
+        expanderImageView = UIImageView(image: UIImage(named: "Expander")!)
         filterDealersButton = UIButton(type: .custom)
         filterProductsButton = UIButton(type: .custom)
         
@@ -52,10 +52,12 @@ class MMFilterView: UIView {
         
         self.backgroundColor = UIColor.monkeyGreenDark()
         self.layer.cornerRadius = 14
-        let tap = UITapGestureRecognizer(target: self, action: #selector(expandFilterView))
-        self.addGestureRecognizer(tap)
 
-        setUpButton(button: expanderButton, type: .expander)
+        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(detectPan))
+        
+        expanderImageView.frame = CGRect(x: 0, y: 0, width: width, height: 40)
+        self.addSubview(expanderImageView)
+        
         setUpButton(button: filterDealersButton, type: .dealer)
         setUpButton(button: filterProductsButton, type: .products)
         setUpButton(button: infoButton, type: .info)
@@ -68,13 +70,9 @@ class MMFilterView: UIView {
     }
     
     // MARK: - Functions
-    
+        
     func setUpButton(button: UIButton, type: FilterButtonType) {
         switch type {
-        case .expander:
-            button.frame = CGRect(x: 0, y: 0, width: width, height: 40)
-            button.setImage(UIImage(named: "Expander"), for: .normal)
-            button.addTarget(self, action: #selector(expandFilterView), for: [.touchUpInside, .touchDragExit])
         case .dealer:
             button.setTitle(VisibleStrings.filterDealers, for: .normal)
             button.frame = CGRect(x: width * 0.09, y: 40, width: width * 0.82, height: 50.0)
@@ -104,8 +102,8 @@ class MMFilterView: UIView {
         self.addSubview(button)
     }
     
-    func expandFilterView() {
-        delegate?.expandFilter(sender: self)
+    func detectPan(recognizer: UIPanGestureRecognizer) {
+        
     }
     
     func openDealersFilter() {
