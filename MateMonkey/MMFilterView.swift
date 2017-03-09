@@ -28,6 +28,8 @@ class MMFilterView: UIView {
     
     public var delegate: MMFilterViewDelegate?
     
+    var lastLocation = CGPoint(x: 0, y: 0)
+    
     // MARK: Buttons
     let expanderImageView: UIImageView
     let filterDealersButton: UIButton
@@ -54,8 +56,9 @@ class MMFilterView: UIView {
         self.layer.cornerRadius = 14
 
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(detectPan))
+        self.gestureRecognizers = [panRecognizer]
         
-        expanderImageView.frame = CGRect(x: 0, y: 0, width: width, height: 40)
+        expanderImageView.frame = CGRect(x: 0, y: 0, width: width, height: 50)
         self.addSubview(expanderImageView)
         
         setUpButton(button: filterDealersButton, type: .dealer)
@@ -75,7 +78,7 @@ class MMFilterView: UIView {
         switch type {
         case .dealer:
             button.setTitle(VisibleStrings.filterDealers, for: .normal)
-            button.frame = CGRect(x: width * 0.09, y: 40, width: width * 0.82, height: 50.0)
+            button.frame = CGRect(x: width * 0.09, y: 50, width: width * 0.82, height: 50.0)
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.white.cgColor
             button.layer.cornerRadius = 14
@@ -103,7 +106,36 @@ class MMFilterView: UIView {
     }
     
     func detectPan(recognizer: UIPanGestureRecognizer) {
+        var translation: CGPoint = recognizer.translation(in: self.superview)
         
+        switch recognizer.state {
+        case .began:
+            // Set and remember the view's last location in the variable
+            lastLocation = self.center
+        case .changed:
+            // lets move the view
+            print("Panned view changed")
+            var newCenter = CGPoint(x: lastLocation.x, y: lastLocation.y + translation.y)
+            
+            // TODO: Add a nice "rubber band" effect here, so the user can't pull up indefinitely.
+            
+            self.center = newCenter
+        case .ended:
+            // check the location and snap to a state
+            print("Pan ended.")
+            var newCenter = CGPoint(x: lastLocation.x, y: lastLocation.y + translation.y)
+            if newCenter.y > UIScreen.main.bounds.height {
+                newCenter.y = UIScreen.main.bounds.height + 93
+            } else {
+                newCenter.y = UIScreen.main.bounds.height - 93
+            }
+            UIView.animate(withDuration: 0.1, animations: { 
+                self.center = newCenter
+            })
+        default:
+            // think about the other possible cases and if we really dont need them.
+            print("default")
+        }
     }
     
     func openDealersFilter() {
@@ -125,7 +157,7 @@ class MMFilterView: UIView {
     func addDealer() {
         // TODO: segue to an empty editDealerViewController to add another dealer
     }
-
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
