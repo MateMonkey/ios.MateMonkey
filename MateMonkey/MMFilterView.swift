@@ -106,7 +106,7 @@ class MMFilterView: UIView {
     }
     
     func detectPan(recognizer: UIPanGestureRecognizer) {
-        var translation: CGPoint = recognizer.translation(in: self.superview)
+        let translation: CGPoint = recognizer.translation(in: self.superview)
         
         switch recognizer.state {
         case .began:
@@ -114,10 +114,12 @@ class MMFilterView: UIView {
             lastLocation = self.center
         case .changed:
             // lets move the view
-            print("Panned view changed")
             var newCenter = CGPoint(x: lastLocation.x, y: lastLocation.y + translation.y)
             
-            // TODO: Add a nice "rubber band" effect here, so the user can't pull up indefinitely.
+            // Add a "rubber band" effect here, so the user can't pull up indefinitely.
+            // It's ok for now, but some minor tweaking wouldn't hurt either.
+            let myLogForY = translation.y / log10(abs(translation.y))
+            newCenter.y = lastLocation.y + myLogForY
             
             self.center = newCenter
         case .ended:
