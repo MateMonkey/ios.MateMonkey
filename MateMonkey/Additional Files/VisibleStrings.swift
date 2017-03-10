@@ -28,4 +28,6 @@ struct VisibleStrings {
     
     static let filterDealers = NSLocalizedString("Filter Dealers", comment: "Title text for the button leading to filtering options for the dealers.")
     static let filterProducts = NSLocalizedString("Filter Products", comment: "Title text for the button leading to filtering options for the products.")
+    
+    static let version = NSLocalizedString("version", comment: "Used to display the app's current version in the AppInfoViewController")
 }
