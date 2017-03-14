@@ -53,12 +53,12 @@ class MMFilterView: UIView {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.monkeyGreenDark()
-        self.layer.cornerRadius = 14
+        self.layer.cornerRadius = GlobalValues.FVCornerRadius
 
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(detectPan))
         self.gestureRecognizers = [panRecognizer]
         
-        expanderImageView.frame = CGRect(x: 0, y: 0, width: width, height: 50)
+        expanderImageView.frame = CGRect(x: 0, y: 0, width: width, height: GlobalValues.FVExpanderHeight)
         self.addSubview(expanderImageView)
         
         setUpButton(button: filterDealersButton, type: .dealer)
@@ -78,26 +78,26 @@ class MMFilterView: UIView {
         switch type {
         case .dealer:
             button.setTitle(VisibleStrings.filterDealers, for: .normal)
-            button.frame = CGRect(x: width * 0.09, y: 50, width: width * 0.82, height: 50.0)
-            button.layer.borderWidth = 1
+            button.frame = CGRect(x: width * GlobalValues.FVButtonInsetFactor, y: GlobalValues.FVDealerButtonY, width: width * GlobalValues.FVButtonWidthFactor, height: GlobalValues.FVFilterButtonHeight)
+            button.layer.borderWidth = GlobalValues.FVButtonBorderWidth
             button.layer.borderColor = UIColor.white.cgColor
-            button.layer.cornerRadius = 14
+            button.layer.cornerRadius = GlobalValues.FVCornerRadius
             button.addTarget(self, action: #selector(openDealersFilter), for: .touchUpInside)
             button.setTitleColor(UIColor.monkeyGreenLight(), for: .highlighted)
         case .products:
             button.setTitle(VisibleStrings.filterProducts, for: .normal)
-            button.frame = CGRect(x: width * 0.09, y: 105, width: width * 0.82, height: 50.0)
-            button.layer.borderWidth = 1
+            button.frame = CGRect(x: width * GlobalValues.FVButtonInsetFactor, y: GlobalValues.FVProductButtonY, width: width * GlobalValues.FVButtonWidthFactor, height: GlobalValues.FVFilterButtonHeight)
+            button.layer.borderWidth = GlobalValues.FVButtonBorderWidth
             button.layer.borderColor = UIColor.white.cgColor
-            button.layer.cornerRadius = 14
+            button.layer.cornerRadius = GlobalValues.FVCornerRadius
             button.addTarget(self, action: #selector(openProductsFilter), for: .touchUpInside)
             button.setTitleColor(UIColor.monkeyGreenLight(), for: .highlighted)
         case .info:
-            button.frame = CGRect(x: width * 0.09, y: 175, width: 40.0, height: 40.0)
+            button.frame = CGRect(x: width * GlobalValues.FVButtonInsetFactor, y: GlobalValues.FVDoubleButtonsY, width: GlobalValues.FVDoubleButtonsWidth, height: GlobalValues.FVDoubleButtonsHeight)
             button.setImage(detailImage, for: .normal)
             button.addTarget(self, action: #selector(openInfoScreen), for: .touchUpInside)
         case .add:
-            button.frame = CGRect(x: (width * 0.91) - 40, y: 175, width: 40.0, height: 40.0)
+            button.frame = CGRect(x: (width * GlobalValues.FVButtonRightInsetFactor) - GlobalValues.FVDoubleButtonsWidth, y: GlobalValues.FVDoubleButtonsY, width: GlobalValues.FVDoubleButtonsWidth, height: GlobalValues.FVDoubleButtonsHeight)
             button.setImage(addImage, for: .normal)
             button.addTarget(self, action: #selector(addDealer), for: .touchUpInside)
         }
@@ -124,14 +124,13 @@ class MMFilterView: UIView {
             self.center = newCenter
         case .ended:
             // check the location and snap to a state
-            print("Pan ended.")
             var newCenter = CGPoint(x: lastLocation.x, y: lastLocation.y + translation.y)
-            if newCenter.y > UIScreen.main.bounds.height {
-                newCenter.y = UIScreen.main.bounds.height + 93
+            if newCenter.y >= UIScreen.main.bounds.height {
+                newCenter.y = UIScreen.main.bounds.height + GlobalValues.FVContentCenterOffset
             } else {
-                newCenter.y = UIScreen.main.bounds.height - 93
+                newCenter.y = UIScreen.main.bounds.height - GlobalValues.FVContentCenterOffset - GlobalValues.FVBottomButtonPadding
             }
-            UIView.animate(withDuration: 0.1, animations: { 
+            UIView.animate(withDuration: GlobalValues.FVSnapBackAnimationDuration, animations: {
                 self.center = newCenter
             })
         default:

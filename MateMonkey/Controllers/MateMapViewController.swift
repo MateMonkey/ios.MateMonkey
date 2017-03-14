@@ -20,7 +20,7 @@ class MateMapViewController: UIViewController {
     var initialLocationSet = false
     var currentDealers = [MMDealer]()
     
-    var filterView = MMFilterView(frame: CGRect(x: 0.0, y: UIScreen.main.bounds.height - 50, width: UIScreen.main.bounds.width, height: 286))
+    var filterView = MMFilterView(frame: CGRect(x: 0.0, y: UIScreen.main.bounds.height - GlobalValues.FVExpanderHeight, width: UIScreen.main.bounds.width, height: GlobalValues.FilterViewHeight))
     var filterExpanded = false
     
     // MARK: - Constants

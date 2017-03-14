@@ -659,7 +659,7 @@ Lines</string>
         <!--Navigation Controller-->
         <scene sceneID="br3-Yj-wqN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UT3-Xy-0ji" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="appInfoNav" automaticallyAdjustsScrollViewInsets="NO" id="UT3-Xy-0ji" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k72-5N-e9J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
