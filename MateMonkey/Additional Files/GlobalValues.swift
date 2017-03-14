@@ -21,25 +21,27 @@ struct GlobalValues {
     
     // MARK: - Filter View size constants
     
-    static let FilterViewHeight: CGFloat = 280
+    static let FilterViewHeight: CGFloat = GlobalValues.FVExpanderHeight + (GlobalValues.FVFilterButtonHeight * 2) + (GlobalValues.FVSpaceBetweenButtons * 2) + GlobalValues.FVDoubleButtonsHeight + GlobalValues.FVBottomViewPadding
     
     static let FVCornerRadius: CGFloat = 14
     static let FVButtonBorderWidth: CGFloat = 1
     
     static let FVExpanderHeight: CGFloat = 50 // big target for touch
     
-    static let FVButtonInsetFactor: CGFloat = 0.09 // The button inset times 2 plus
-    static let FVButtonWidthFactor: CGFloat = 0.82 // the button width needs to equal 1.0
-    static let FVButtonRightInsetFactor: CGFloat = 1.00 - GlobalValues.FVButtonInsetFactor // The button inset factor for the right side
+    static let FVButtonInsetFactor: CGFloat = 0.09
+    static let FVButtonWidthFactor: CGFloat = 1.0 - (GlobalValues.FVButtonInsetFactor * 2) // What's left of the button after subtracting the inset from both sides
+    static let FVButtonRightInsetFactor: CGFloat = 1.0 - GlobalValues.FVButtonInsetFactor // The button inset factor for the right side
     
     static let FVFilterButtonHeight: CGFloat = 50.0 // big target for touch
     static let FVDoubleButtonsHeight: CGFloat = 40.0 // just a tad smaller to make hierarchy clear
     static let FVDoubleButtonsWidth: CGFloat = GlobalValues.FVDoubleButtonsHeight // we want them square
     
-    static let FVDealerButtonY: CGFloat = 50
-    static let FVProductButtonY: CGFloat = 120
-    static let FVDoubleButtonsY: CGFloat = 190
+    static let FVDealerButtonY: CGFloat = 0 + GlobalValues.FVExpanderHeight
+    static let FVProductButtonY: CGFloat = GlobalValues.FVDealerButtonY + GlobalValues.FVFilterButtonHeight + GlobalValues.FVSpaceBetweenButtons
+    static let FVDoubleButtonsY: CGFloat = GlobalValues.FVProductButtonY + GlobalValues.FVFilterButtonHeight + GlobalValues.FVSpaceBetweenButtons
     
+    static let FVSpaceBetweenButtons: CGFloat = 15
+    static let FVBottomViewPadding: CGFloat = 50
     static let FVBottomButtonPadding: CGFloat = 15
     
     static let FVContentCenterOffset = (GlobalValues.FilterViewHeight - (GlobalValues.FVExpanderHeight * 2)) / 2
