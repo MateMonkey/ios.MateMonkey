@@ -31,18 +31,23 @@ class AppInfoViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func homepageButtonTapped(_ sender: UIButton) {
+        openURLFromString(GlobalValues.homepageURL)
     }
     
     @IBAction func twitterButtonTapped(_ sender: UIButton) {
+        openURLFromString(GlobalValues.twitterURL)
     }
     
     @IBAction func githubButtonTapped(_ sender: UIButton) {
+        openURLFromString(GlobalValues.githubURL)
     }
     
     @IBAction func guentnerHomepageTapped(_ sender: UIButton) {
+        openURLFromString(GlobalValues.guentnerURL)
     }
     
     @IBAction func hossHomepageTapped(_ sender: UIButton) {
+        openURLFromString(GlobalValues.hossURL)
     }
     
     @IBAction func licenseButtonTapped(_ sender: UIButton) {
@@ -50,6 +55,9 @@ class AppInfoViewController: UIViewController {
     }
     
     @IBAction func rateButtonTapped(_ sender: UIButton) {
+        // TODO: revisit once iOS 10.3 is released to implement the new rating feature.
+        openURLFromString(GlobalValues.appStoreURL)
+        
     }
     
     @IBAction func closeBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -62,6 +70,22 @@ class AppInfoViewController: UIViewController {
         if let versionString = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             let labelString = VisibleStrings.version + " " + versionString
             versionLabel.text = labelString
+        }
+    }
+    
+    func openURLFromString(_ string: String) {
+        if let url = URL(string: string) {
+            if UIApplication.shared.canOpenURL(url) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
+                        success ? print("Opened \(string).") : print("Failed to open \(string).")
+                    })
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+        } else {
+            print("Invalid URL: \(string)")
         }
     }
     

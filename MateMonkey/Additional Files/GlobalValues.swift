@@ -11,12 +11,19 @@ import UIKit
 
 struct GlobalValues {
     
-    // MARK: API URL
+    // MARK: URLs
     #if DEBUG
         static let baseURL: String = "https://playground.matemonkey.com/api/v1/"
     #else
         static let baseURL: String = "https://matemonkey.com/api/v1/"
     #endif
+    
+    static let homepageURL: String = "https://matemonkey.com"
+    static let twitterURL: String = "https://twitter.com/matemonkeycom"
+    static let githubURL: String = "https://github.com/MateMonkey"
+    static let guentnerURL: String = "https://sourcediver.org" // TODO: ask if this is wanted/the right one.
+    static let hossURL: String = "http://www.jurassicturtle.com"
+    static let appStoreURL: String = "itms-apps://itunes.apple.com/app/id1202602103"
     
     
     // MARK: - Filter View size constants
