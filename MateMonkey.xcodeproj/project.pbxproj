@@ -21,6 +21,8 @@
 		D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */; };
 		D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */; };
 		D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */; };
+		D0E2B2361E7B25A100F1BD2F /* FilterDealersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */; };
+		D0E2B2381E7B325900F1BD2F /* BubbleBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2B2371E7B325900F1BD2F /* BubbleBehavior.swift */; };
 		D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */; };
 		D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D51E57ACF300B7F82B /* MMFilterView.swift */; };
 		D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D71E5E1F0A00B7F82B /* Extensions.swift */; };
@@ -47,6 +49,8 @@
 		D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFetcher.swift; sourceTree = "<group>"; };
 		D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
 		D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealer.swift; sourceTree = "<group>"; };
+		D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDealersViewController.swift; sourceTree = "<group>"; };
+		D0E2B2371E7B325900F1BD2F /* BubbleBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleBehavior.swift; sourceTree = "<group>"; };
 		D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONSender.swift; sourceTree = "<group>"; };
 		D0E603D51E57ACF300B7F82B /* MMFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFilterView.swift; sourceTree = "<group>"; };
 		D0E603D71E5E1F0A00B7F82B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		D0B6D8F91E3FD8DE007A59CA /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0E2B2371E7B325900F1BD2F /* BubbleBehavior.swift */,
 				D08FABB21E468BD700B0F443 /* VisibleStrings.swift */,
 				D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */,
 				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */,
+				D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */,
 				D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */,
 				D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */,
 				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
@@ -250,6 +256,7 @@
 				D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */,
 				D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */,
 				D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */,
+				D0E2B2361E7B25A100F1BD2F /* FilterDealersViewController.swift in Sources */,
 				D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */,
 				D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */,
 				D08FABB31E468BD700B0F443 /* VisibleStrings.swift in Sources */,
@@ -260,6 +267,7 @@
 				D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
 				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
+				D0E2B2381E7B325900F1BD2F /* BubbleBehavior.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
 				D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */,
 			);

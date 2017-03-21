@@ -197,11 +197,13 @@ Lines</string>
                     <navigationItem key="navigationItem" title="Details" id="lmK-l0-9Kw">
                         <barButtonItem key="backBarButtonItem" title="Back" id="FeD-m6-pYP"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TVW-gQ-iFs">
+                            <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="closeBarButtonPressed:" destination="EII-sb-Ixr" id="JQh-Om-ElF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="E7E-XL-6R0">
+                            <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="N8c-pC-LLG" kind="show" id="9Qh-gK-kzc"/>
                             </connections>
@@ -419,6 +421,7 @@ Lines</string>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Details" id="MLL-ah-n8H">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ctS-yx-840">
+                            <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="N8c-pC-LLG" id="har-CE-sGW"/>
                             </connections>
@@ -625,6 +628,7 @@ Lines</string>
                     </view>
                     <navigationItem key="navigationItem" title="App Info" id="Bel-fS-hdd">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ymT-zD-Lp9">
+                            <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="closeBarButtonPressed:" destination="qNM-0I-plG" id="kt3-Ia-jZe"/>
                             </connections>
@@ -637,6 +641,32 @@ Lines</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-ba-yqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="831.63418290854577"/>
+        </scene>
+        <!--Filter Dealers View Controller-->
+        <scene sceneID="5AL-tb-PEu">
+            <objects>
+                <viewController storyboardIdentifier="FilterDealersView" id="FS0-Ii-QNj" customClass="FilterDealersViewController" customModule="MateMonkey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cwg-0H-SfO"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fw-2J-18r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ozQ-Df-kua">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zU7-Kx-vld">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="sJu-Tp-qdU">
+                            <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="FS0-Ii-QNj" id="rUZ-hU-3Th"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckg-Qb-cm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="1585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bzc-je-cRK">
@@ -673,6 +703,24 @@ Lines</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2K-VN-dTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966" y="832"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zpW-Rh-8mU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Nd-0H-hkj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdw-2K-wM9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FS0-Ii-QNj" kind="relationship" relationship="rootViewController" id="w2t-L4-Hqw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEO-8v-Esy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="1585.4572713643179"/>
         </scene>
     </scenes>
     <resources>

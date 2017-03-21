@@ -17,6 +17,10 @@ enum FilterButtonType {
     case dealer, products, info, add
 }
 
+enum ViewControllerSegueType {
+    case filterDealers, filterProducts, appInfo, addDealer
+}
+
 class MMFilterView: UIView {
     
     // MARK: Variables
@@ -140,23 +144,39 @@ class MMFilterView: UIView {
     }
     
     func openDealersFilter() {
-        // TODO: segue to the filter dealers view
+        segueToViewControllerType(.filterDealers)
     }
     
     func openProductsFilter() {
-        // TODO: segue to the filter products view
+        segueToViewControllerType(.filterProducts)
     }
     
     func openInfoScreen() {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        let appInfoVC: AppInfoViewController = mainStoryboard.instantiateViewController(withIdentifier: "AppInfoView") as! AppInfoViewController
-        
-        delegate?.presentFromFilterView(viewController: appInfoVC)
+        segueToViewControllerType(.appInfo)
     }
     
     func addDealer() {
-        // TODO: segue to an empty editDealerViewController to add another dealer
+        segueToViewControllerType(.addDealer)
+    }
+    
+    func segueToViewControllerType(_ type: ViewControllerSegueType) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        switch type {
+        case .filterDealers:
+            let filterDealersVC: FilterDealersViewController = mainStoryboard.instantiateViewController(withIdentifier: "FilterDealersView") as! FilterDealersViewController
+            delegate?.presentFromFilterView(viewController: filterDealersVC)
+        case .filterProducts:
+            // TODO: implement this.
+            print("Not yet implemented.")
+        case .appInfo:
+            let appInfoVC: AppInfoViewController = mainStoryboard.instantiateViewController(withIdentifier: "AppInfoView") as! AppInfoViewController
+            delegate?.presentFromFilterView(viewController: appInfoVC)
+        case .addDealer:
+            // TODO: implement this.
+            print("Not yet implemented.")
+        }
+        
     }
     
     /*
