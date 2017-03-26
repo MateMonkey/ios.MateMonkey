@@ -9,27 +9,32 @@
 import UIKit
 
 class FilterDealersViewController: UIViewController {
-
-    // MARK: Constants
     
-    let bouncer = BubbleBehavior()
-    lazy var animator: UIDynamicAnimator = { UIDynamicAnimator(referenceView: self.view) } ()
+    // MARK: Outlets
+    
+    @IBOutlet weak var retailButton: MMFilterDealerButton!
+    @IBOutlet weak var restaurantsButton: MMFilterDealerButton!
+    @IBOutlet weak var barsCafesButton: MMFilterDealerButton!
+    @IBOutlet weak var clubsButton: MMFilterDealerButton!
+    @IBOutlet weak var communityButton: MMFilterDealerButton!
+    @IBOutlet weak var hackerspacesButton: MMFilterDealerButton!
+    @IBOutlet weak var otherButton: MMFilterDealerButton!
+
+    // MARK: - Constants
     
     
     // MARK: - View controller lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animator.addBehavior(bouncer)
 
         // Do any additional setup after loading the view.
+        setUpButtons()
+        setSelectionStatusForButtons()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let redBubble = addBubbleWithText("Test")
-        redBubble.backgroundColor = UIColor.red
-        bouncer.addBubble(redBubble)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,23 +48,40 @@ class FilterDealersViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Actions
+    
+    @IBAction func filterButtonTapped(_ sender: MMFilterDealerButton) {
+        sender.filterSelected = !sender.filterSelected
+    }
+    
+    
     // MARK: - Functions
     
-    func addBubbleWithText(_ text: String) -> UIView {
-        let bubbleX = CGFloat(arc4random()).truncatingRemainder(dividingBy: view.bounds.width)
-        let bubbleY = CGFloat(arc4random()).truncatingRemainder(dividingBy: view.bounds.height)
-        let bubble = UIView(frame: CGRect(x: bubbleX, y: bubbleY, width: 50, height: 50))
-        bubble.layer.cornerRadius = bubble.frame.size.width / 2
+    func setUpButtons() {
+        retailButton.color = UIColor.dealerTypeRetail()
+        retailButton.typeTag = .retail
         
+        restaurantsButton.color = UIColor.dealerTypeRestaurants()
+        restaurantsButton.typeTag = .restaurant
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: bubble.frame.size.width, height: bubble.bounds.height))
-        label.text = text
-        label.textAlignment = .center
-        label.textColor = UIColor.black
-        bubble.addSubview(label)
+        barsCafesButton.color = UIColor.dealerTypeBars()
+        barsCafesButton.typeTag = .bar
         
-        view.addSubview(bubble)
-        return bubble
+        clubsButton.color = UIColor.dealerTypeClubs()
+        clubsButton.typeTag = .club
+        
+        communityButton.color = UIColor.dealerTypeCommunity()
+        communityButton.typeTag = .community
+        
+        hackerspacesButton.color = UIColor.dealerTypeHackerspaces()
+        hackerspacesButton.typeTag = .hackerspace
+        
+        otherButton.color = UIColor.dealerTypeOther()
+        otherButton.typeTag = .other
+    }
+    
+    func setSelectionStatusForButtons() {
+        
     }
 
 }

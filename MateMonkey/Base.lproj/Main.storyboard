@@ -653,7 +653,109 @@ Lines</string>
                     <view key="view" contentMode="scaleToFill" id="ozQ-Df-kua">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-g3-Tmu" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="86"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Retail">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="s27-W8-9A6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuV-fR-sLd" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="150" width="375" height="86.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Restaurants">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="tbQ-HG-dr8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwE-we-sAg" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="236.5" width="375" height="86"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Bars/Cafés">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="SIr-Vt-uVM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-5Y-hNY" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="322.5" width="375" height="86"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Clubs">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="PPF-bt-gKs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6N-Cz-L8W" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="408.5" width="375" height="86"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Community">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="GlA-GU-hho"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-7k-TnE" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="494.5" width="375" height="86.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Hackerspaces">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="d0c-cX-tAD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1D-Ip-HSh" customClass="MMFilterDealerButton" customModule="MateMonkey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="581" width="375" height="86"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Other">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="FS0-Ii-QNj" eventType="touchUpInside" id="bvF-eg-i8w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Ig-5Y-hNY" firstAttribute="height" secondItem="Imf-g3-Tmu" secondAttribute="height" id="2ff-pc-MBo"/>
+                            <constraint firstItem="D1D-Ip-HSh" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="4CP-lf-Jl5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6N-Cz-L8W" secondAttribute="trailing" constant="-16" id="6ON-AA-VMs"/>
+                            <constraint firstItem="2Ig-5Y-hNY" firstAttribute="top" secondItem="gwE-we-sAg" secondAttribute="bottom" id="6r6-8S-00g"/>
+                            <constraint firstItem="D1D-Ip-HSh" firstAttribute="height" secondItem="Imf-g3-Tmu" secondAttribute="height" id="76x-jz-8WT"/>
+                            <constraint firstItem="gwE-we-sAg" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="NvM-gP-ppe"/>
+                            <constraint firstItem="D1D-Ip-HSh" firstAttribute="top" secondItem="xUg-7k-TnE" secondAttribute="bottom" id="OTu-21-k3C"/>
+                            <constraint firstItem="xUg-7k-TnE" firstAttribute="height" secondItem="Imf-g3-Tmu" secondAttribute="height" id="SyO-aU-QSM"/>
+                            <constraint firstItem="xUg-7k-TnE" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="Td5-AO-fnK"/>
+                            <constraint firstItem="O6N-Cz-L8W" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="Unn-dD-uMo"/>
+                            <constraint firstItem="O6N-Cz-L8W" firstAttribute="height" secondItem="Imf-g3-Tmu" secondAttribute="height" id="VbP-mm-JCc"/>
+                            <constraint firstItem="gwE-we-sAg" firstAttribute="top" secondItem="EuV-fR-sLd" secondAttribute="bottom" id="Y0C-5x-mnY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gwE-we-sAg" secondAttribute="trailing" constant="-16" id="Ywv-Lu-GkG"/>
+                            <constraint firstItem="2Ig-5Y-hNY" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="ZYY-Bg-SQr"/>
+                            <constraint firstItem="O6N-Cz-L8W" firstAttribute="top" secondItem="2Ig-5Y-hNY" secondAttribute="bottom" id="bq8-S3-o0b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ig-5Y-hNY" secondAttribute="trailing" constant="-16" id="dqJ-du-gmI"/>
+                            <constraint firstItem="0fw-2J-18r" firstAttribute="top" secondItem="D1D-Ip-HSh" secondAttribute="bottom" id="exv-WG-Taj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xUg-7k-TnE" secondAttribute="trailing" constant="-16" id="iG9-yl-ccN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EuV-fR-sLd" secondAttribute="trailing" constant="-16" id="kf7-Lt-Nzk"/>
+                            <constraint firstItem="EuV-fR-sLd" firstAttribute="height" secondItem="Imf-g3-Tmu" secondAttribute="height" id="mbA-D2-zPa"/>
+                            <constraint firstItem="EuV-fR-sLd" firstAttribute="top" secondItem="Imf-g3-Tmu" secondAttribute="bottom" id="mne-Ox-KSi"/>
+                            <constraint firstItem="EuV-fR-sLd" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="p7E-7A-DZg"/>
+                            <constraint firstItem="gwE-we-sAg" firstAttribute="height" secondItem="Imf-g3-Tmu" secondAttribute="height" id="q1T-Oa-nC3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D1D-Ip-HSh" secondAttribute="trailing" constant="-16" id="ugL-Au-IIN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Imf-g3-Tmu" secondAttribute="trailing" constant="-16" id="xZ6-9t-Ouu"/>
+                            <constraint firstItem="Imf-g3-Tmu" firstAttribute="leading" secondItem="ozQ-Df-kua" secondAttribute="leadingMargin" constant="-16" id="xaJ-Fk-nUS"/>
+                            <constraint firstItem="xUg-7k-TnE" firstAttribute="top" secondItem="O6N-Cz-L8W" secondAttribute="bottom" id="yRF-Ea-Sfu"/>
+                            <constraint firstItem="Imf-g3-Tmu" firstAttribute="top" secondItem="Cwg-0H-SfO" secondAttribute="bottom" id="zVc-8l-Vqz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zU7-Kx-vld">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="sJu-Tp-qdU">
@@ -663,10 +765,19 @@ Lines</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barsCafesButton" destination="gwE-we-sAg" id="sfi-Ki-Qu7"/>
+                        <outlet property="clubsButton" destination="2Ig-5Y-hNY" id="hMX-VU-jxZ"/>
+                        <outlet property="communityButton" destination="O6N-Cz-L8W" id="txc-co-RZT"/>
+                        <outlet property="hackerspacesButton" destination="xUg-7k-TnE" id="wEl-ID-M2R"/>
+                        <outlet property="otherButton" destination="D1D-Ip-HSh" id="5az-wn-LW6"/>
+                        <outlet property="restaurantsButton" destination="EuV-fR-sLd" id="k6Z-Cb-Wb9"/>
+                        <outlet property="retailButton" destination="Imf-g3-Tmu" id="m0s-tu-B5T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckg-Qb-cm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="1585"/>
+            <point key="canvasLocation" x="1861.5999999999999" y="1584.5577211394304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bzc-je-cRK">

@@ -16,4 +16,27 @@ extension UIColor {
     class func monkeyGreenLight() -> UIColor {
         return UIColor(colorLiteralRed: 0.36, green: 0.72, blue: 0.36, alpha: 1.0)
     }
+    
+    class func dealerTypeRetail() -> UIColor {
+        return UIColor(colorLiteralRed: 114 / 255, green: 176 / 255, blue: 39 / 255, alpha: 1)
+    }
+    class func dealerTypeBars() -> UIColor {
+        return UIColor(colorLiteralRed: 255 / 255, green: 59 / 255, blue: 48 / 255, alpha: 1)
+    }
+    class func dealerTypeRestaurants() -> UIColor {
+        return UIColor(colorLiteralRed: 246 / 255, green: 151 / 255, blue: 47 / 255, alpha: 1)
+    }
+    class func dealerTypeCommunity() -> UIColor {
+        return UIColor(colorLiteralRed: 67 / 255, green: 105 / 255, blue: 120 / 255, alpha: 1)
+    }
+    class func dealerTypeClubs() -> UIColor {
+        return UIColor(colorLiteralRed: 210 / 255, green: 82 / 255, blue: 185 / 255, alpha: 1)
+    }
+    class func dealerTypeHackerspaces() -> UIColor {
+        return UIColor(colorLiteralRed: 56 / 255, green: 170 / 255, blue: 221 / 255, alpha: 1)
+    }
+    class func dealerTypeOther() -> UIColor {
+        return UIColor(colorLiteralRed: 114 / 255, green: 130 / 255, blue: 36 / 255, alpha: 1)
+    }
+
 }
