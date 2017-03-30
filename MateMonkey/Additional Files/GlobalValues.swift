@@ -27,8 +27,10 @@ struct GlobalValues {
     
     
     // MARK: - Filter View size constants
-    
+    /* Height for the view with filter products button enabled
     static let FilterViewHeight: CGFloat = GlobalValues.FVExpanderHeight + (GlobalValues.FVFilterButtonHeight * 2) + (GlobalValues.FVSpaceBetweenButtons * 2) + GlobalValues.FVDoubleButtonsHeight + GlobalValues.FVBottomViewPadding
+    */
+    static let FilterViewHeight: CGFloat = GlobalValues.FVExpanderHeight + GlobalValues.FVFilterButtonHeight + GlobalValues.FVSpaceBetweenButtons + GlobalValues.FVDoubleButtonsHeight + GlobalValues.FVBottomViewPadding
     
     static let FVCornerRadius: CGFloat = 14
     static let FVButtonBorderWidth: CGFloat = 1
@@ -44,8 +46,12 @@ struct GlobalValues {
     static let FVDoubleButtonsWidth: CGFloat = GlobalValues.FVDoubleButtonsHeight // we want them square
     
     static let FVDealerButtonY: CGFloat = 0 + GlobalValues.FVExpanderHeight
+    
+    /*
     static let FVProductButtonY: CGFloat = GlobalValues.FVDealerButtonY + GlobalValues.FVFilterButtonHeight + GlobalValues.FVSpaceBetweenButtons
     static let FVDoubleButtonsY: CGFloat = GlobalValues.FVProductButtonY + GlobalValues.FVFilterButtonHeight + GlobalValues.FVSpaceBetweenButtons
+    */
+    static let FVDoubleButtonsY: CGFloat = GlobalValues.FVDealerButtonY + GlobalValues.FVFilterButtonHeight + GlobalValues.FVSpaceBetweenButtons
     
     static let FVSpaceBetweenButtons: CGFloat = 15
     static let FVBottomViewPadding: CGFloat = 50

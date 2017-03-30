@@ -5,6 +5,7 @@
 //  Created by Peter on 17.02.17.
 //  Copyright © 2017 Jurassic Turtle. All rights reserved.
 //
+//  Filtering by products is disabled for the current version and will be added at a later date. Disable by removing "//ProductFilter".
 
 import UIKit
 
@@ -37,7 +38,7 @@ class MMFilterView: UIView {
     // MARK: Buttons
     let expanderImageView: UIImageView
     let filterDealersButton: UIButton
-    let filterProductsButton: UIButton
+    //ProductFilter: let filterProductsButton: UIButton
     let infoButton: UIButton
     let addDealerButton: UIButton
     
@@ -49,7 +50,7 @@ class MMFilterView: UIView {
         
         expanderImageView = UIImageView(image: UIImage(named: "Expander")!)
         filterDealersButton = UIButton(type: .custom)
-        filterProductsButton = UIButton(type: .custom)
+        // filterProductsButton = UIButton(type: .custom)
         
         infoButton = UIButton(type: .custom)
         addDealerButton = UIButton(type: .custom)
@@ -66,7 +67,7 @@ class MMFilterView: UIView {
         self.addSubview(expanderImageView)
         
         setUpButton(button: filterDealersButton, type: .dealer)
-        setUpButton(button: filterProductsButton, type: .products)
+        //ProductFilter: setUpButton(button: filterProductsButton, type: .products)
         setUpButton(button: infoButton, type: .info)
         setUpButton(button: addDealerButton, type: .add)
         
@@ -90,7 +91,7 @@ class MMFilterView: UIView {
             button.setTitleColor(UIColor.monkeyGreenLight(), for: .highlighted)
         case .products:
             button.setTitle(VisibleStrings.filterProducts, for: .normal)
-            button.frame = CGRect(x: width * GlobalValues.FVButtonInsetFactor, y: GlobalValues.FVProductButtonY, width: width * GlobalValues.FVButtonWidthFactor, height: GlobalValues.FVFilterButtonHeight)
+            //ProductFilter: button.frame = CGRect(x: width * GlobalValues.FVButtonInsetFactor, y: GlobalValues.FVProductButtonY, width: width * GlobalValues.FVButtonWidthFactor, height: GlobalValues.FVFilterButtonHeight)
             button.layer.borderWidth = GlobalValues.FVButtonBorderWidth
             button.layer.borderColor = UIColor.white.cgColor
             button.layer.cornerRadius = GlobalValues.FVCornerRadius
@@ -167,7 +168,7 @@ class MMFilterView: UIView {
             let filterDealersVC: FilterDealersViewController = mainStoryboard.instantiateViewController(withIdentifier: "FilterDealersView") as! FilterDealersViewController
             delegate?.presentFromFilterView(viewController: filterDealersVC)
         case .filterProducts:
-            // TODO: implement this.
+            //ProductFilter: This will be implemented at a later time (version 1.2?)
             print("Not yet implemented.")
         case .appInfo:
             let appInfoVC: AppInfoViewController = mainStoryboard.instantiateViewController(withIdentifier: "AppInfoView") as! AppInfoViewController
