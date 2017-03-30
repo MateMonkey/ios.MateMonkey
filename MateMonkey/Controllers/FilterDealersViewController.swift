@@ -22,6 +22,7 @@ class FilterDealersViewController: UIViewController {
 
     // MARK: - Constants
     
+    let filter = MMDealerFilter()
     
     // MARK: - View controller lifecycle
     
@@ -30,7 +31,6 @@ class FilterDealersViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setUpButtons()
-        setSelectionStatusForButtons()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +52,7 @@ class FilterDealersViewController: UIViewController {
     
     @IBAction func filterButtonTapped(_ sender: MMFilterDealerButton) {
         sender.filterSelected = !sender.filterSelected
+        filter.setStatus(sender.filterSelected, forType: sender.typeTag!)
     }
     
     
@@ -60,28 +61,30 @@ class FilterDealersViewController: UIViewController {
     func setUpButtons() {
         retailButton.color = UIColor.dealerTypeRetail()
         retailButton.typeTag = .retail
+        retailButton.filterSelected = filter.getStatusForType(.retail)
         
         restaurantsButton.color = UIColor.dealerTypeRestaurants()
         restaurantsButton.typeTag = .restaurant
+        restaurantsButton.filterSelected = filter.getStatusForType(.restaurant)
         
         barsCafesButton.color = UIColor.dealerTypeBars()
         barsCafesButton.typeTag = .bar
+        barsCafesButton.filterSelected = filter.getStatusForType(.bar)
         
         clubsButton.color = UIColor.dealerTypeClubs()
         clubsButton.typeTag = .club
+        clubsButton.filterSelected = filter.getStatusForType(.club)
         
         communityButton.color = UIColor.dealerTypeCommunity()
         communityButton.typeTag = .community
+        communityButton.filterSelected = filter.getStatusForType(.community)
         
         hackerspacesButton.color = UIColor.dealerTypeHackerspaces()
         hackerspacesButton.typeTag = .hackerspace
+        hackerspacesButton.filterSelected = filter.getStatusForType(.hackerspace)
         
         otherButton.color = UIColor.dealerTypeOther()
         otherButton.typeTag = .other
+        otherButton.filterSelected = filter.getStatusForType(.other)
     }
-    
-    func setSelectionStatusForButtons() {
-        
-    }
-
 }
