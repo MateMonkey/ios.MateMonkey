@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MMFilterChangedDelegate {
+    func filtersHaveChanged()
+}
+
 class FilterDealersViewController: UIViewController {
     
     // MARK: Outlets
@@ -20,9 +24,11 @@ class FilterDealersViewController: UIViewController {
     @IBOutlet weak var hackerspacesButton: MMFilterDealerButton!
     @IBOutlet weak var otherButton: MMFilterDealerButton!
 
-    // MARK: - Constants
+    // MARK: - Constants & variables
     
     let filter = MMDealerFilter()
+    
+    public var delegate: MMFilterChangedDelegate?
     
     // MARK: - View controller lifecycle
     
@@ -53,6 +59,7 @@ class FilterDealersViewController: UIViewController {
     @IBAction func filterButtonTapped(_ sender: MMFilterDealerButton) {
         sender.filterSelected = !sender.filterSelected
         filter.setStatus(sender.filterSelected, forType: sender.typeTag!)
+        delegate?.filtersHaveChanged()
     }
     
     

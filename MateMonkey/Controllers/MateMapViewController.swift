@@ -74,8 +74,7 @@ class MateMapViewController: UIViewController {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.mapView.setRegion(region, animated: animated)
-    }
-    
+    }    
 }
 
 // MARK: - Extensions
@@ -96,7 +95,6 @@ extension MateMapViewController: MKMapViewDelegate {
         fetcherQueue.async {
             self.fetcher.queryForMapRect(mapView.visibleMapRect)
         }
-        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -144,15 +142,16 @@ extension MateMapViewController: MMDealerFetcherDelegate {
             
             if sender.results.isEmpty {
                 // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
-                // } else if sender.results.count >= 15 {
+            } else if sender.results.count >= GlobalValues.maximumPinsVisible {
                 // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
+                print("Too many results. Zoom in!")
             } else {
-                let currentDealers = self.mapView.annotations
-                for dealer in sender.results {
-                    if currentDealers.contains(where: { $0.title! == String(dealer.id) }) {
-                        // should be on the map already
-                        print("The dealer \(dealer.id) already exists and will not be added again.")
-                    } else {
+                let filteredDealers = MMDealerFilter().filterDealers(sender.results)
+                
+                if filteredDealers.count == 0 {
+                    print("Nothing left, all filtered out.")
+                } else {
+                    for dealer in filteredDealers {
                         self.mapView.addAnnotation(dealer)
                     }
                 }
@@ -180,5 +179,14 @@ extension MateMapViewController: MMFilterViewDelegate {
     func presentFromFilterView(viewController: UIViewController) {
         let navController = UINavigationController(rootViewController: viewController)
         self.present(navController, animated: true, completion: nil)
+    }
+    
+    func filtersHaveChanged() {
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        loadingSpinner.startAnimating()
+        fetcherQueue.async {
+            self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
+        }
     }
 }

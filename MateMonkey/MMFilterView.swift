@@ -12,6 +12,7 @@ import UIKit
 protocol MMFilterViewDelegate {
     func expandFilter(sender: MMFilterView)
     func presentFromFilterView(viewController: UIViewController)
+    func filtersHaveChanged()
 }
 
 enum FilterButtonType {
@@ -166,6 +167,7 @@ class MMFilterView: UIView {
         switch type {
         case .filterDealers:
             let filterDealersVC: FilterDealersViewController = mainStoryboard.instantiateViewController(withIdentifier: "FilterDealersView") as! FilterDealersViewController
+            filterDealersVC.delegate = self
             delegate?.presentFromFilterView(viewController: filterDealersVC)
         case .filterProducts:
             //ProductFilter: This will be implemented at a later time (version 1.2?)
@@ -188,4 +190,10 @@ class MMFilterView: UIView {
     }
     */
     
+}
+
+extension MMFilterView: MMFilterChangedDelegate {
+    func filtersHaveChanged() {
+        delegate?.filtersHaveChanged()
+    }
 }

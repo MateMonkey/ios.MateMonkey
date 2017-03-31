@@ -61,4 +61,7 @@ struct GlobalValues {
     // Take the overall height (280), substract padding at the top and bottom (2x50 = 100) and divide by two: This will be the content's center.
     
     static let FVSnapBackAnimationDuration: TimeInterval = 0.1
+    
+    
+    static let maximumPinsVisible = 25
 }

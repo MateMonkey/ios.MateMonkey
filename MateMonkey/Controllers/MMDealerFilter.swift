@@ -15,7 +15,7 @@ class MMDealerFilter {
     
     private var activeTypes = [MMDealerType: Bool]()
     private var dealerTypeAsStrings = [MMDealerType.bar, MMDealerType.club, MMDealerType.retail, MMDealerType.restaurant, MMDealerType.other, MMDealerType.hackerspace, MMDealerType.community]
-    
+        
     init() {
         updateActiveTypes()
     }
@@ -51,6 +51,27 @@ class MMDealerFilter {
         let userDefaultKey = "FilterOutDealerType-" + String(describing: type)
         UserDefaults.standard.set(!status, forKey: userDefaultKey)
         updateActiveTypes()
+    }
+    
+    public func filterOutDealer(_ dealer: MMDealer) -> Bool {
+        if (activeTypes[dealer.type] == true) {
+            // if the dealer's type is active, we don't want to filter it out
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    public func filterDealers(_ dealerArray: [MMDealer]) -> [MMDealer] {
+        var filteredDealers = dealerArray
+        
+        for (index, dealer) in filteredDealers.enumerated() {
+            if filterOutDealer(dealer) == true {
+                filteredDealers.remove(at: index)
+                return filterDealers(filteredDealers)
+            }
+        }
+        return filteredDealers
     }
     
 }
