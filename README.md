@@ -6,7 +6,13 @@ This app provides a native iOS environment for the website [MateMonkey](www.mate
 
 ##Version##
 
-Current version: 0.1 alpha
+Current version: 1.0
+
+## To Do ##
+
+* implement adding dealers
+* implement notification system
+* localize and translate to German
 
 ## Development Roadmap ##
 
@@ -30,6 +36,7 @@ Stock filter
 ###Wishlist/Ideas/Misc###
 
 * small, unobtrusive notifications (like Android's toasts) for dealer updates (successful/failed), zoomed out too far
+* create new dealer just by lat/lon (without address)
 
 ## Issues ##
 Tracked via github's bugtracker

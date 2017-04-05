@@ -37,23 +37,7 @@ class AppInfoViewController: UIViewController {
     @IBAction func twitterButtonTapped(_ sender: UIButton) {
         openURLFromString(GlobalValues.twitterURL)
     }
-    
-    @IBAction func githubButtonTapped(_ sender: UIButton) {
-        openURLFromString(GlobalValues.githubURL)
-    }
-    
-    @IBAction func guentnerHomepageTapped(_ sender: UIButton) {
-        openURLFromString(GlobalValues.guentnerURL)
-    }
-    
-    @IBAction func hossHomepageTapped(_ sender: UIButton) {
-        openURLFromString(GlobalValues.hossURL)
-    }
-    
-    @IBAction func licenseButtonTapped(_ sender: UIButton) {
-        // TODO: revisit at a later time and implement necessary information
-    }
-    
+        
     @IBAction func rateButtonTapped(_ sender: UIButton) {
         // TODO: revisit once iOS 10.3 is released to implement the new rating feature.
         openURLFromString(GlobalValues.appStoreURL)
@@ -68,8 +52,10 @@ class AppInfoViewController: UIViewController {
     
     func setVersionInLabel() {
         if let versionString = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            let labelString = VisibleStrings.version + " " + versionString
-            versionLabel.text = labelString
+            if let buildString = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+                let labelString = VisibleStrings.version + " " + versionString + " (" + buildString + ")"
+                versionLabel.text = labelString
+            }
         }
     }
     
