@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */; };
 		D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */; };
+		D08C14811E96E73400ACABAD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C14801E96E73400ACABAD /* Banner.swift */; };
 		D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */; };
 		D08FABB31E468BD700B0F443 /* VisibleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB21E468BD700B0F443 /* VisibleStrings.swift */; };
 		D08FABB51E4A64A500B0F443 /* EditDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFilter.swift; sourceTree = "<group>"; };
+		D08C14801E96E73400ACABAD /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDetailViewController.swift; sourceTree = "<group>"; };
 		D08FABB21E468BD700B0F443 /* VisibleStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleStrings.swift; sourceTree = "<group>"; };
 		D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDealerViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
 				D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */,
 				D0E603D51E57ACF300B7F82B /* MMFilterView.swift */,
+				D08C14801E96E73400ACABAD /* Banner.swift */,
 				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards/Views;
@@ -281,6 +284,7 @@
 				D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
 				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
+				D08C14811E96E73400ACABAD /* Banner.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
 				D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */,
 			);

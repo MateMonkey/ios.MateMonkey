@@ -74,7 +74,13 @@ class MateMapViewController: UIViewController {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.mapView.setRegion(region, animated: animated)
-    }    
+    }
+    
+    func showBanner(withMessage message: String) {
+        let banner = Banner(title: message, subtitle: "Tap to dismiss.", backgroundColor: UIColor.monkeyGreenDark())
+        banner.dismissesOnTap = true
+        banner.show(duration: 5.0)
+    }
 }
 
 // MARK: - Extensions
@@ -141,14 +147,17 @@ extension MateMapViewController: MMDealerFetcherDelegate {
             print("There are \(sender.results.count) dealers on the map.")
             
             if sender.results.isEmpty {
-                // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
+                // if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
+                self.showBanner(withMessage: VisibleStrings.bannerMessageNoDealers)
             } else if sender.results.count >= GlobalValues.maximumPinsVisible {
-                // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
+                // if there are too many results, the user might not be able to select a single dealer and it might become very messy
+                self.showBanner(withMessage: VisibleStrings.bannerMessageTooManyDealers)
                 print("Too many results. Zoom in!")
             } else {
                 let filteredDealers = MMDealerFilter().filterDealers(sender.results)
                 
                 if filteredDealers.count == 0 {
+                    self.showBanner(withMessage: VisibleStrings.bannerMessageAllFiltered)
                     print("Nothing left, all filtered out.")
                 } else {
                     for dealer in filteredDealers {

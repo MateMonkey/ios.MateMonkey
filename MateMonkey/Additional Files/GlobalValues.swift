@@ -20,9 +20,6 @@ struct GlobalValues {
     
     static let homepageURL: String = "https://matemonkey.com"
     static let twitterURL: String = "https://twitter.com/matemonkeycom"
-    static let githubURL: String = "https://github.com/MateMonkey"
-    static let guentnerURL: String = "https://sourcediver.org" // TODO: ask if this is wanted/the right one.
-    static let hossURL: String = "http://www.jurassicturtle.com"
     static let appStoreURL: String = "itms-apps://itunes.apple.com/app/id1202602103"
     
     

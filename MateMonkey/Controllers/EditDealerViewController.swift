@@ -211,7 +211,7 @@ class EditDealerViewController: UIViewController {
     func getTypeUpdateIfDifferent() -> String? {
         let typeInt = typePicker.selectedRow(inComponent: 0)
         
-        let type = MMDealerType(rawValue: typeInt)
+        let type = MMDealerType(rawValue: typeInt)!
         if dealerToEdit?.type != type {
             return String(describing: type)
         } else {

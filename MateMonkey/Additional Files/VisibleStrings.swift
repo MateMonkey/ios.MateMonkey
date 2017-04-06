@@ -30,4 +30,11 @@ struct VisibleStrings {
     static let filterProducts = NSLocalizedString("Filter Products", comment: "Title text for the button leading to filtering options for the products.")
     
     static let version = NSLocalizedString("Version", comment: "Used to display the app's current version in the AppInfoViewController")
+    
+    static let bannerMessageNoDealers = NSLocalizedString("There are no dealers in this area.", comment: "Message displayed in a banner at the top of the screen when the current map area has no dealers.")
+    static let bannerMessageTooManyDealers = NSLocalizedString("Too many dealers, please zoom in.", comment: "Message displayed in a banner at the top of the screen when there are too many dealers on the map.")
+    static let bannerMessageAllFiltered = NSLocalizedString("There are no dealers matching your filters.", comment: "Message displayed in a banner at the top of the screen when there are dealers, but they get sorted out by the user's filters.")
+    
+    static let bannerMessageDealerUpdated = NSLocalizedString("Dealer successfully updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information has been updated.")
+    static let bannerMessageDealerUpdateFailed = NSLocalizedString("", comment: "Message displayed in a banner at the top of the screen when a dealer's information failed to update.")
 }
