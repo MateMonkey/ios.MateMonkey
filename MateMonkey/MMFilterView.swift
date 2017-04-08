@@ -176,8 +176,8 @@ class MMFilterView: UIView {
             let appInfoVC: AppInfoViewController = mainStoryboard.instantiateViewController(withIdentifier: "AppInfoView") as! AppInfoViewController
             delegate?.presentFromFilterView(viewController: appInfoVC)
         case .addDealer:
-            // TODO: implement this.
-            print("Not yet implemented.")
+            let addDealerVC: EditDealerViewController = mainStoryboard.instantiateViewController(withIdentifier: "AddEditDealerView") as! EditDealerViewController
+            delegate?.presentFromFilterView(viewController: addDealerVC)
         }
         
     }

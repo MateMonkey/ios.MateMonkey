@@ -248,14 +248,14 @@ Lines</string>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmw-qp-oN9">
                                 <rect key="frame" x="16" y="130" width="265" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgw-nh-P1A">
                                 <rect key="frame" x="289" y="130" width="70" height="30"/>
@@ -321,14 +321,14 @@ Lines</string>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDB-9R-hoD">
                                 <rect key="frame" x="16" y="206" width="343" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-30-rM1">
                                 <rect key="frame" x="144" y="253" width="215" height="30"/>
@@ -356,7 +356,7 @@ Lines</string>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6q-Zv-hPd">
                                 <rect key="frame" x="27.5" y="421" width="320" height="216"/>
@@ -489,14 +489,8 @@ Lines</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geR-EF-yPS">
-                                <rect key="frame" x="155" y="643" width="66" height="16"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEV-MS-AkF">
-                                <rect key="frame" x="84.5" y="605" width="206" height="38"/>
+                                <rect key="frame" x="84.5" y="276" width="206" height="38"/>
                                 <string key="text">MateMonkey
 iOS App created by Peter Hoß</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -513,25 +507,43 @@ iOS App created by Peter Hoß</string>
                                     <action selector="rateButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="9sK-ua-nIA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymj-bR-2xp">
+                                <rect key="frame" x="16" y="346" width="343" height="52"/>
+                                <string key="text">MateMonkey uses the following libraries:
+∙BRYXBanner
+	(https://github.com/bryx-inc/BRYXBanner)</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geR-EF-yPS">
+                                <rect key="frame" x="154.5" y="322" width="66" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="top" secondItem="40B-nb-mla" secondAttribute="bottom" constant="8" symbolic="YES" id="4x8-2K-EAB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="40B-nb-mla" secondAttribute="trailing" id="5RC-Ro-aBH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ymj-bR-2xp" secondAttribute="leading" id="8N6-Cu-KCp"/>
                             <constraint firstItem="40B-nb-mla" firstAttribute="top" secondItem="ucd-Nb-KwY" secondAttribute="bottom" constant="8" symbolic="YES" id="Gn8-gc-e7k"/>
-                            <constraint firstItem="geR-EF-yPS" firstAttribute="top" secondItem="MEV-MS-AkF" secondAttribute="bottom" id="IYI-V8-5dh"/>
+                            <constraint firstItem="geR-EF-yPS" firstAttribute="top" secondItem="MEV-MS-AkF" secondAttribute="bottom" constant="8" symbolic="YES" id="JlG-eX-fqs"/>
                             <constraint firstItem="VVY-Qj-wns" firstAttribute="top" secondItem="aN1-uZ-9g4" secondAttribute="bottom" constant="15" id="L6W-42-Hpd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VVY-Qj-wns" secondAttribute="trailing" id="LjW-9R-9TP"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="leading" secondItem="40B-nb-mla" secondAttribute="leading" constant="10" id="Nbh-tb-q1c"/>
+                            <constraint firstItem="ymj-bR-2xp" firstAttribute="top" secondItem="geR-EF-yPS" secondAttribute="bottom" constant="8" id="RFl-5B-u5g"/>
                             <constraint firstItem="aN1-uZ-9g4" firstAttribute="leading" secondItem="BHe-Y9-vsg" secondAttribute="leading" id="W45-kO-cic"/>
                             <constraint firstItem="qru-ZP-Jpb" firstAttribute="leading" secondItem="VVY-Qj-wns" secondAttribute="leading" constant="10" id="WUH-yY-mkc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VVY-Qj-wns" secondAttribute="leading" id="awq-y0-M52"/>
                             <constraint firstAttribute="leadingMargin" secondItem="40B-nb-mla" secondAttribute="leading" id="f5w-2j-rev"/>
+                            <constraint firstItem="MEV-MS-AkF" firstAttribute="top" secondItem="qru-ZP-Jpb" secondAttribute="bottom" constant="50" id="nNC-eB-2dJ"/>
                             <constraint firstItem="MEV-MS-AkF" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="nVy-wS-S4Z"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="njg-UN-w8i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BHe-Y9-vsg" secondAttribute="trailing" id="pHx-Zv-Ir9"/>
-                            <constraint firstItem="do9-Ob-hmV" firstAttribute="top" secondItem="geR-EF-yPS" secondAttribute="bottom" constant="8" symbolic="YES" id="tau-kd-0sD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ymj-bR-2xp" secondAttribute="trailing" id="pSj-qS-9tn"/>
                             <constraint firstItem="qru-ZP-Jpb" firstAttribute="top" secondItem="VVY-Qj-wns" secondAttribute="bottom" constant="-5" id="tzR-Qe-Xi2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qru-ZP-Jpb" secondAttribute="trailing" id="uxE-0I-UaC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aN1-uZ-9g4" secondAttribute="trailing" id="wf1-7n-iD4"/>

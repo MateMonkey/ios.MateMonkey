@@ -46,6 +46,7 @@ class EditDealerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.view.tintColor = UIColor.monkeyGreenDark()
         
         // Set up data source and delegate for the picker view
         typePicker.dataSource = self
@@ -76,7 +77,26 @@ class EditDealerViewController: UIViewController {
         // check the required entries if they exist if they are required and if they are valid
         guard !emptyRequiredField() else { return }
         guard let dealer = dealerToEdit else {
-            _ = self.navigationController?.popViewController(animated: true)
+            let name = dealerNameField.text!
+            let notes = notesField.text!
+            let type = MMDealerType(rawValue: typePicker.selectedRow(inComponent: 0))!
+            
+            let street = streetField.text!
+            let number = streetNumberField.text!
+            let postal = zipField.text!
+            let city = cityField.text!
+            let country = countryField.text!
+            
+            let phone = phoneNumberField.text!
+            let email = emailAddressField.text!
+            let web = websiteField.text!
+            
+            let address = MMAddress(street: street, country: country, city: city, postal: postal, lat: 0, lon: 0, number: number, web: web, email: email, phone: phone)
+            
+            MMJSONSender().addDealer(name: name, type: type, address: address, optionalNote: notes)
+            
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
             return
         }
         
@@ -126,6 +146,10 @@ class EditDealerViewController: UIViewController {
             let typeInt = dealer.type.rawValue
             
             typePicker.selectRow(typeInt, inComponent: 0, animated: false)
+        } else {
+            self.title = "Add Dealer"
+            let cancelButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonPressed))
+            self.navigationItem.leftBarButtonItem = cancelButton
         }
     }
     
@@ -228,6 +252,10 @@ class EditDealerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func cancelButtonPressed() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
 
 }
 

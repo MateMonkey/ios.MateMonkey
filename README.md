@@ -10,8 +10,8 @@ Current version: 1.0
 
 ## To Do ##
 
-* implement adding dealers
-* implement notification system
+* cleanup and small refactors
+* design launch screen
 * localize and translate to German
 
 ## Development Roadmap ##

@@ -182,6 +182,7 @@
 				D0B6D8DA1E3E3181007A59CA /* Sources */,
 				D0B6D8DB1E3E3181007A59CA /* Frameworks */,
 				D0B6D8DC1E3E3181007A59CA /* Resources */,
+				D0BBD0B91E99814200FF95D1 /* Auto-Increment Build Number */,
 				D08FABAF1E46116700B0F443 /* Mark TODO: and FIXME: as warning */,
 			);
 			buildRules = (
@@ -206,6 +207,7 @@
 					D0B6D8DD1E3E3181007A59CA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3AX7ZS95SE;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -260,6 +262,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+		D0BBD0B91E99814200FF95D1 /* Auto-Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Auto-Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
