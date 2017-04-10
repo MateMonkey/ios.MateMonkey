@@ -77,7 +77,7 @@ class MateMapViewController: UIViewController {
     }
     
     func showBanner(withMessage message: String) {
-        let banner = Banner(title: message, subtitle: "Tap to dismiss.", backgroundColor: UIColor.monkeyGreenDark())
+        let banner = Banner(title: message, subtitle: VisibleStrings.bannerTapToDismiss, backgroundColor: UIColor.monkeyGreenDark())
         banner.dismissesOnTap = true
         banner.show(duration: 5.0)
     }
@@ -144,7 +144,9 @@ extension MateMapViewController: MMDealerFetcherDelegate {
         
         DispatchQueue.main.async {
             // call a method to populate the map with the fetcher's results
+            #if DEBUG
             print("There are \(sender.results.count) dealers on the map.")
+            #endif
             
             if sender.results.isEmpty {
                 // if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
@@ -152,13 +154,12 @@ extension MateMapViewController: MMDealerFetcherDelegate {
             } else if sender.results.count >= GlobalValues.maximumPinsVisible {
                 // if there are too many results, the user might not be able to select a single dealer and it might become very messy
                 self.showBanner(withMessage: VisibleStrings.bannerMessageTooManyDealers)
-                print("Too many results. Zoom in!")
             } else {
                 let filteredDealers = MMDealerFilter().filterDealers(sender.results)
                 
                 if filteredDealers.count == 0 {
+                    // There are no dealers left after filters, let's inform the user.
                     self.showBanner(withMessage: VisibleStrings.bannerMessageAllFiltered)
-                    print("Nothing left, all filtered out.")
                 } else {
                     for dealer in filteredDealers {
                         self.mapView.addAnnotation(dealer)

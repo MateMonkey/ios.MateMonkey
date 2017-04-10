@@ -147,7 +147,7 @@ class EditDealerViewController: UIViewController {
             
             typePicker.selectRow(typeInt, inComponent: 0, animated: false)
         } else {
-            self.title = "Add Dealer"
+            self.title = VisibleStrings.addDealerTitle
             let cancelButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonPressed))
             self.navigationItem.leftBarButtonItem = cancelButton
         }

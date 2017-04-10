@@ -131,7 +131,6 @@ extension DealerDetailViewController: JSONSenderDelegate {
         if success {
             // Update the information of the current dealer to reflect the changes.
             DispatchQueue.main.async {
-                print("Successfully updated")
                 self.dealerToDisplay = updatedDealer
                 if let dealer = self.dealerToDisplay {
                     self.populateLabelsForDealer(dealer)
@@ -141,7 +140,6 @@ extension DealerDetailViewController: JSONSenderDelegate {
                 }
             }
         } else {
-            print("Dealer update failed")
             if let presenter = self.presentingViewController as? MateMapViewController {
                 presenter.showBanner(withMessage: VisibleStrings.bannerMessageDealerUpdateFailed)
             }
