@@ -1,0 +1,8 @@
+/* (No Commment) */
+"CFBundleName" = "MateMonkey";
+
+/* (No Commment) */
+"CFBundleShortVersionString" = "1.0";
+
+/* (No Comment) */
+"NSLocationWhenInUseUsageDescription" = "Dies wird benötigt, um dir Matehändler in deiner Nähe anzuzeigen.";

@@ -1,0 +1,66 @@
+/* Banner subtitle to let the user know how to get rid of the banner quickly. */
+"(Tap to dismiss)" = "(Tippe, um diese Benachrichtigung zu entfernen.)";
+
+/* Title for the app's screen that lets users add a new dealer. */
+"Add Dealer" = "Händler hinzufügen";
+
+/* Call confirmation action for an alert when the user is about to make a phone call. */
+"Call" = "Anrufen";
+
+/* Generic cancel for use in an alert. */
+"Cancel" = "Abbrechen";
+
+/* Reason for an alert when the user does not provide a required field: city */
+"City" = "Stadt";
+
+/* Reason for an alert when the user does not provide a required field: country */
+"Country" = "Land";
+
+/* Message displayed in a banner at the top of the screen when a dealer's information failed to update. */
+"Dealer could not be updated." = "Händler konnte nicht aktualisiert werden.";
+
+/* Message displayed in a banner at the top of the screen when a dealer's information has been updated. */
+"Dealer successfully updated." = "Händler erfolgreich aktualisiert.";
+
+/* Message for an alert when the user is about to make a phone call. */
+"Do you want to call this dealer?" = "Willst du diesen Händler anrufen?";
+
+/* Title text for the button leading to filtering options for the dealers. */
+"Filter Dealers" = "Händler filtern";
+
+/* Title text for the button leading to filtering options for the products. */
+"Filter Products" = "Produkte filtern";
+
+/* Title for an alert when the user is about to make a phone call. */
+"Make a phone call" = "Einen Anruf tätigen";
+
+/* Title for an alert when a required field for a dealer is empty. */
+"Missing Entry" = "Fehlender Eintrag";
+
+/* Reason for an alert when the user does not provide a required field: dealer name */
+"Name" = "Name";
+
+/* Generic OK for use in an alert. */
+"OK" = "OK";
+
+/* Reason for an alert when the user does not provide a required field: street name */
+"Street" = "Straße";
+
+/* Message displayed in a banner at the top of the screen when the current map area has no dealers. */
+"There are no dealers in this area." = "Es gibt in dieser Region keine Händler.";
+
+/* Message displayed in a banner at the top of the screen when there are dealers, but they get sorted out by the user's filters. */
+"There are no dealers matching your filters." = "Es gibt hier keine Händler, die deinen Filtern entsprechen.";
+
+/* Message for an alert when a required field for a dealer is empty. */
+"This field can not be empty: " = "Dieses Feld darf nicht leer sein:";
+
+/* Message displayed in a banner at the top of the screen when there are too many dealers on the map. */
+"Too many dealers, please zoom in." = "Zu viele Händler, bitte zoome näher heran.";
+
+/* Used to display the app's current version in the AppInfoViewController */
+"Version" = "Version";
+
+/* Reason for an alert when the user does not provide a required field: postal */
+"ZIP Code" = "Postleitzahl";
+
