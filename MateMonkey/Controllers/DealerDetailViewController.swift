@@ -58,12 +58,13 @@ class DealerDetailViewController: UIViewController {
     
     @IBAction func phoneNumberPressed(_ sender: UIButton) {
         if let phoneNumber = dealerToDisplay?.address.phone {
-            let phoneString = "tel://" + phoneNumber
-            if UIApplication.shared.canOpenURL(URL(string: phoneString)!) {
+            let phoneString = "tel://" + phoneNumber.replacingOccurrences(of: " ", with: "")
+            let phoneURL = URL(string: phoneString)
+            if UIApplication.shared.canOpenURL(phoneURL!) {
                 let phoneConfirmationAlert: UIAlertController = UIAlertController(title: VisibleStrings.callAlertTitle, message: VisibleStrings.callAlertMessage, preferredStyle: .alert)
                 phoneConfirmationAlert.addAction(UIAlertAction(title: VisibleStrings.cancel, style: .cancel, handler: nil))
                 phoneConfirmationAlert.addAction(UIAlertAction(title: VisibleStrings.callAlertConfirm, style: .default, handler: { (UIAlertAction) in
-                    UIApplication.shared.openURL(URL(string: phoneString)!)
+                    UIApplication.shared.openURL(phoneURL!)
                 }))
                 present(phoneConfirmationAlert, animated: true, completion: nil)
             }
