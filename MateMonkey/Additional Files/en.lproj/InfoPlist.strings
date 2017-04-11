@@ -4,3 +4,5 @@
 /* (No Commment) */
 "CFBundleShortVersionString" = "1.0";
 
+/* (No Comment) */
+"NSLocationWhenInUseUsageDescription" = "This is needed to find Mate dealers near you.";

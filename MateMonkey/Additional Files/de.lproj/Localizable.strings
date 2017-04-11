@@ -2,7 +2,7 @@
 "(Tap to dismiss)" = "(Tippe, um diese Benachrichtigung zu entfernen.)";
 
 /* Title for the app's screen that lets users add a new dealer. */
-"Add Dealer" = "Händler hinzufügen";
+"Add Dealer" = "Neuer Händler";
 
 /* Call confirmation action for an alert when the user is about to make a phone call. */
 "Call" = "Anrufen";

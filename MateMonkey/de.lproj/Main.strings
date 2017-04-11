@@ -114,13 +114,25 @@ Zeilen";
 "kmw-qp-oN9.placeholder" = "Straße";
 
 /* Class = "UINavigationItem"; title = "Details"; ObjectID = "lmK-l0-9Kw"; */
-"lmK-l0-9Kw.title" = "Händlerdaten";
+"lmK-l0-9Kw.title" = "Händlerinfo";
 
 /* Class = "UILabel"; text = "MateMonkey will never interrupt you for ratings."; ObjectID = "qru-ZP-Jpb"; */
 "qru-ZP-Jpb.text" = "MateMonkey wird dich nie für eine Bewertung unterbrechen.";
 
 /* Class = "UITextField"; placeholder = "Website"; ObjectID = "rBd-h6-Q9o"; */
 "rBd-h6-Q9o.placeholder" = "Webseite";
+
+/* Class = "UITextView"; text = "MateMonkey uses the following third party libraries.\n\n∙BRYXBanner (https://github.com/bryx-inc/BRYXBanner):\n\tCopyright (c) 2015 Harlan Haskins <harlan@harlanhaskins.com>\n\tPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\tThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\tTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."; ObjectID = "s2D-G9-jUv"; */
+"s2D-G9-jUv.text" = "MateMonkey nutzt die folgenden Programmbibliotheken von Drittanbietern.
+
+∙BRYXBanner (https://github.com/bryx-inc/BRYXBanner):
+	Copyright (c) 2015 Harlan Haskins 
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ";
+
+/* Class = "UIButton"; normalTitle = "View Licenses"; ObjectID = "vcZ-a1-wFM"; */
+"vcZ-a1-wFM.normalTitle" = "Zeige Lizenzen";
 
 /* Class = "UIButton"; normalTitle = "Hackerspaces"; ObjectID = "xUg-7k-TnE"; */
 "xUg-7k-TnE.normalTitle" = "Hackerspaces";
@@ -133,9 +145,4 @@ Zeilen";
 
 /* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "ySQ-30-rM1"; */
 "ySQ-30-rM1.placeholder" = "Telefonnummer";
-
-/* Class = "UILabel"; text = "MateMonkey uses the following libraries:\n∙BRYXBanner\n\t(https://github.com/bryx-inc/BRYXBanner)"; ObjectID = "ymj-bR-2xp"; */
-"ymj-bR-2xp.text" = "MateMonkey nutzt die folgenden Bibliotheken:
-∙BRYXBanner
-	(https://github.com/bryx-inc/BRYXBanner)";
 
