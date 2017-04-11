@@ -490,7 +490,7 @@ Lines</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEV-MS-AkF">
-                                <rect key="frame" x="84.5" y="276" width="206" height="38"/>
+                                <rect key="frame" x="84.5" y="561" width="206" height="38"/>
                                 <string key="text">MateMonkey
 iOS App created by Peter Hoß</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -507,17 +507,18 @@ iOS App created by Peter Hoß</string>
                                     <action selector="rateButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="9sK-ua-nIA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymj-bR-2xp">
-                                <rect key="frame" x="16" y="346" width="343" height="52"/>
-                                <string key="text">MateMonkey uses the following libraries:
-∙BRYXBanner
-	(https://github.com/bryx-inc/BRYXBanner)</string>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcZ-a1-wFM">
+                                <rect key="frame" x="144" y="631" width="87" height="28"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="View Licenses">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FDZ-R4-PHl" kind="show" id="jsh-k9-eVb"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geR-EF-yPS">
-                                <rect key="frame" x="154.5" y="322" width="66" height="16"/>
+                                <rect key="frame" x="154" y="607" width="66" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -526,27 +527,26 @@ iOS App created by Peter Hoß</string>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="do9-Ob-hmV" firstAttribute="top" secondItem="vcZ-a1-wFM" secondAttribute="bottom" constant="8" id="0qq-Yw-qkU"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="top" secondItem="40B-nb-mla" secondAttribute="bottom" constant="8" symbolic="YES" id="4x8-2K-EAB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="40B-nb-mla" secondAttribute="trailing" id="5RC-Ro-aBH"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="ymj-bR-2xp" secondAttribute="leading" id="8N6-Cu-KCp"/>
                             <constraint firstItem="40B-nb-mla" firstAttribute="top" secondItem="ucd-Nb-KwY" secondAttribute="bottom" constant="8" symbolic="YES" id="Gn8-gc-e7k"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="top" secondItem="MEV-MS-AkF" secondAttribute="bottom" constant="8" symbolic="YES" id="JlG-eX-fqs"/>
                             <constraint firstItem="VVY-Qj-wns" firstAttribute="top" secondItem="aN1-uZ-9g4" secondAttribute="bottom" constant="15" id="L6W-42-Hpd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VVY-Qj-wns" secondAttribute="trailing" id="LjW-9R-9TP"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="leading" secondItem="40B-nb-mla" secondAttribute="leading" constant="10" id="Nbh-tb-q1c"/>
-                            <constraint firstItem="ymj-bR-2xp" firstAttribute="top" secondItem="geR-EF-yPS" secondAttribute="bottom" constant="8" id="RFl-5B-u5g"/>
                             <constraint firstItem="aN1-uZ-9g4" firstAttribute="leading" secondItem="BHe-Y9-vsg" secondAttribute="leading" id="W45-kO-cic"/>
                             <constraint firstItem="qru-ZP-Jpb" firstAttribute="leading" secondItem="VVY-Qj-wns" secondAttribute="leading" constant="10" id="WUH-yY-mkc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VVY-Qj-wns" secondAttribute="leading" id="awq-y0-M52"/>
+                            <constraint firstItem="vcZ-a1-wFM" firstAttribute="top" secondItem="geR-EF-yPS" secondAttribute="bottom" constant="8" symbolic="YES" id="crI-d5-OgJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="40B-nb-mla" secondAttribute="leading" id="f5w-2j-rev"/>
-                            <constraint firstItem="MEV-MS-AkF" firstAttribute="top" secondItem="qru-ZP-Jpb" secondAttribute="bottom" constant="50" id="nNC-eB-2dJ"/>
                             <constraint firstItem="MEV-MS-AkF" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="nVy-wS-S4Z"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="njg-UN-w8i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BHe-Y9-vsg" secondAttribute="trailing" id="pHx-Zv-Ir9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ymj-bR-2xp" secondAttribute="trailing" id="pSj-qS-9tn"/>
                             <constraint firstItem="qru-ZP-Jpb" firstAttribute="top" secondItem="VVY-Qj-wns" secondAttribute="bottom" constant="-5" id="tzR-Qe-Xi2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qru-ZP-Jpb" secondAttribute="trailing" id="uxE-0I-UaC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aN1-uZ-9g4" secondAttribute="trailing" id="wf1-7n-iD4"/>
+                            <constraint firstItem="vcZ-a1-wFM" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="zMJ-Nn-C5K"/>
                             <constraint firstItem="aN1-uZ-9g4" firstAttribute="top" secondItem="BHe-Y9-vsg" secondAttribute="bottom" id="zVT-OS-UkJ"/>
                         </constraints>
                     </view>
@@ -565,6 +565,46 @@ iOS App created by Peter Hoß</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-ba-yqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="831.63418290854577"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Udf-6L-Rgr">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FDZ-R4-PHl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bmt-Ul-tg9"/>
+                        <viewControllerLayoutGuide type="bottom" id="a5v-yB-NfG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xrc-Ml-Emf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2D-G9-jUv">
+                                <rect key="frame" x="16" y="72" width="343" height="582"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">MateMonkey uses the following third party libraries.
+
+∙BRYXBanner (https://github.com/bryx-inc/BRYXBanner):
+	Copyright (c) 2015 Harlan Haskins &lt;harlan@harlanhaskins.com&gt;
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a5v-yB-NfG" firstAttribute="top" secondItem="s2D-G9-jUv" secondAttribute="bottom" constant="13" id="JwO-cF-0hA"/>
+                            <constraint firstItem="s2D-G9-jUv" firstAttribute="top" secondItem="bmt-Ul-tg9" secondAttribute="bottom" constant="8" id="dte-Lx-OXg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s2D-G9-jUv" secondAttribute="trailing" id="lBE-Td-x9j"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="s2D-G9-jUv" secondAttribute="leading" id="lXX-eP-fIR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvN-dq-RYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2696.8000000000002" y="831.63418290854577"/>
         </scene>
         <!--Filter Dealers View Controller-->
         <scene sceneID="5AL-tb-PEu">

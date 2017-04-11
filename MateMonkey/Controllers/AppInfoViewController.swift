@@ -43,6 +43,12 @@ class AppInfoViewController: UIViewController {
         openURLFromString(GlobalValues.appStoreURL)
         
     }
+
+    @IBAction func viewLicensesButtonTapped(_ sender: UIButton) {
+        let licenseAlert = UIAlertController(title: VisibleStrings.licenseAlertTitle, message: VisibleStrings.licenseAlertText, preferredStyle: .alert)
+        licenseAlert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
+        present(licenseAlert, animated: true, completion: nil)
+    }
     
     @IBAction func closeBarButtonPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
