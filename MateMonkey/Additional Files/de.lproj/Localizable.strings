@@ -47,10 +47,10 @@
 "Street" = "Straße";
 
 /* Message displayed in a banner at the top of the screen when the current map area has no dealers. */
-"There are no dealers in this area." = "Es gibt in dieser Region keine Händler.";
+"There are no dealers in this area." = "Es gibt in diesem Gebiet keinen Händler.";
 
 /* Message displayed in a banner at the top of the screen when there are dealers, but they get sorted out by the user's filters. */
-"There are no dealers matching your filters." = "Es gibt hier keine Händler, die deinen Filtern entsprechen.";
+"There are no dealers matching your filters." = "Es gibt in hier keinen Händler, der deinen Filtern entspricht.";
 
 /* Message for an alert when a required field for a dealer is empty. */
 "This field can not be empty: " = "Dieses Feld darf nicht leer sein:";
