@@ -4,5 +4,6 @@
 /* (No Commment) */
 "CFBundleShortVersionString" = "1.0";
 
-/* (No Comment) */
+/* (No Commment) */
 "NSLocationWhenInUseUsageDescription" = "Dies wird benötigt, um dir Matehändler in deiner Nähe anzuzeigen.";
+
