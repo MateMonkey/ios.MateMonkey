@@ -28,6 +28,11 @@ struct VisibleStrings {
     static let missingCountry = NSLocalizedString("Country", comment: "Reason for an alert when the user does not provide a required field: country")
     static let missingCity = NSLocalizedString("City", comment: "Reason for an alert when the user does not provide a required field: city")
     static let missingPostal = NSLocalizedString("ZIP Code", comment: "Reason for an alert when the user does not provide a required field: postal")
+    
+    // MARK: - Invalid contact detail alert
+    static let invalidContactTitle = NSLocalizedString("Error", comment: "Title for an alert that shows when some contact information is invalid.")
+    static let invalidPhoneMessage = NSLocalizedString("This phone number is not valid.\nYou can help fix it by editing this dealer.", comment: "Message for an alert that shows when the phone number is invalid.")
+    static let invalidURLMessage = NSLocalizedString("This URL is not valid.\nYou can help fix it by editing this dealer.", comment: "Message for an alert that shows when the URL is invalid.")
         
     // MARK: - Text for FilterView
     static let filterDealers = NSLocalizedString("Filter Dealers", comment: "Title text for the button leading to filtering options for the dealers.")

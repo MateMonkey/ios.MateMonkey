@@ -11,7 +11,13 @@ import MessageUI
 
 class DealerDetailViewController: UIViewController {
     
-    // MARK: Outlets
+    // MARK: Structs
+    
+    private enum ContactError{
+        case invalidPhone, invalidURL
+    }
+    
+    // MARK: - Outlets
     @IBOutlet weak var dealerNameLabel: UILabel!
     @IBOutlet weak var streetNameLabel: UILabel!
     @IBOutlet weak var streetNumberLabel: UILabel!
@@ -59,14 +65,17 @@ class DealerDetailViewController: UIViewController {
     @IBAction func phoneNumberPressed(_ sender: UIButton) {
         if let phoneNumber = dealerToDisplay?.address.phone {
             let phoneString = "tel://" + phoneNumber.replacingOccurrences(of: " ", with: "")
-            let phoneURL = URL(string: phoneString)
-            if UIApplication.shared.canOpenURL(phoneURL!) {
-                let phoneConfirmationAlert: UIAlertController = UIAlertController(title: VisibleStrings.callAlertTitle, message: VisibleStrings.callAlertMessage, preferredStyle: .alert)
-                phoneConfirmationAlert.addAction(UIAlertAction(title: VisibleStrings.cancel, style: .cancel, handler: nil))
-                phoneConfirmationAlert.addAction(UIAlertAction(title: VisibleStrings.callAlertConfirm, style: .default, handler: { (UIAlertAction) in
-                    UIApplication.shared.openURL(phoneURL!)
-                }))
-                present(phoneConfirmationAlert, animated: true, completion: nil)
+            if let phoneURL = URL(string: phoneString) {
+                if UIApplication.shared.canOpenURL(phoneURL) {
+                    let phoneConfirmationAlert: UIAlertController = UIAlertController(title: VisibleStrings.callAlertTitle, message: VisibleStrings.callAlertMessage, preferredStyle: .alert)
+                    phoneConfirmationAlert.addAction(UIAlertAction(title: VisibleStrings.cancel, style: .cancel, handler: nil))
+                    phoneConfirmationAlert.addAction(UIAlertAction(title: VisibleStrings.callAlertConfirm, style: .default, handler: { (UIAlertAction) in
+                        UIApplication.shared.openURL(phoneURL)
+                    }))
+                    present(phoneConfirmationAlert, animated: true, completion: nil)
+                }
+            } else {
+                showErrorAlert(forErrorType: .invalidPhone)
             }
         }
     }
@@ -84,8 +93,12 @@ class DealerDetailViewController: UIViewController {
     
     @IBAction func websiteAddressPressed(_ sender: UIButton) {
         if let webAddress = dealerToDisplay?.address.web {
-            if UIApplication.shared.canOpenURL(URL(string: webAddress)!) {
-                UIApplication.shared.openURL(URL(string: webAddress)!)
+            if let webURL = URL(string: webAddress) {
+                if UIApplication.shared.canOpenURL(webURL) {
+                    UIApplication.shared.openURL(webURL)
+                }
+            } else {
+                showErrorAlert(forErrorType: .invalidURL)
             }
         }
     }
@@ -105,6 +118,21 @@ class DealerDetailViewController: UIViewController {
         websiteAddressButton.setTitle(dealer.address.web, for: .normal)
         
         notesLabel.text = dealer.note
+    }
+    
+    private func showErrorAlert(forErrorType errorType: ContactError) {
+        var alertMessage: String
+        switch errorType {
+        case .invalidPhone:
+            alertMessage = VisibleStrings.invalidPhoneMessage
+        case . invalidURL:
+            alertMessage = VisibleStrings.invalidURLMessage
+        }
+        
+        let invalidAlert: UIAlertController = UIAlertController(title: VisibleStrings.invalidContactTitle, message: alertMessage, preferredStyle: .alert)
+        invalidAlert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
+        
+        self.present(invalidAlert, animated: true, completion: nil)
     }
 
     // MARK: - Navigation

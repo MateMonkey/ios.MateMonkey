@@ -34,6 +34,8 @@ Stock filter
 ###Wishlist/Ideas/Misc###
 
 * create new dealer just by lat/lon (without address)
+* receive parameters from website and show dealer directly in app
+* find a good way to show the dealer type in the dealer detail view
 
 ## Issues ##
 Tracked via github's bugtracker

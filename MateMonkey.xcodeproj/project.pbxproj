@@ -11,6 +11,7 @@
 		D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EE71E9C34B600478EAA /* InfoPlist.strings */; };
 		D04F2EEA1E9C34B600478EAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EEC1E9C34B600478EAA /* Localizable.strings */; };
 		D04F2EF11E9D04AD00478EAA /* MetaMateLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */; };
+		D0719D881EABEBA600230D37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0719D871EABEBA600230D37 /* Info.plist */; };
 		D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */; };
 		D08C14811E96E73400ACABAD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C14801E96E73400ACABAD /* Banner.swift */; };
 		D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */; };
@@ -43,6 +44,7 @@
 		D04F2EEB1E9C34B600478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D04F2EED1E9C355300478EAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MetaMateLocation.gpx; sourceTree = "<group>"; };
+		D0719D871EABEBA600230D37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFilter.swift; sourceTree = "<group>"; };
 		D08C14801E96E73400ACABAD /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDetailViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 		D0B6D8E61E3E3181007A59CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0B6D8E81E3E3181007A59CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B6D8EB1E3E3181007A59CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D0B6D8ED1E3E3181007A59CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B6D8F31E3E343B007A59CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0B6D8F41E3E3487007A59CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D0B6D8F61E3E800B007A59CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -153,8 +154,8 @@
 				D04F2EE71E9C34B600478EAA /* InfoPlist.strings */,
 				D08FABB21E468BD700B0F443 /* VisibleStrings.swift */,
 				D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */,
+				D0719D871EABEBA600230D37 /* Info.plist */,
 				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
-				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
 				D0E603D71E5E1F0A00B7F82B /* Extensions.swift */,
 				D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */,
 			);
@@ -258,6 +259,7 @@
 				D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */,
 				D0B6D8E91E3E3181007A59CA /* Assets.xcassets in Resources */,
 				D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */,
+				D0719D881EABEBA600230D37 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
