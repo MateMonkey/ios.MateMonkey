@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class AppInfoViewController: UIViewController {
     
@@ -39,9 +40,11 @@ class AppInfoViewController: UIViewController {
     }
         
     @IBAction func rateButtonTapped(_ sender: UIButton) {
-        // TODO: revisit once iOS 10.3 is released to implement the new rating feature.
-        openURLFromString(GlobalValues.appStoreURL)
-        
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            openURLFromString(GlobalValues.appStoreURL)
+        }
     }
     
     @IBAction func closeBarButtonPressed(_ sender: UIBarButtonItem) {
