@@ -1,10 +1,10 @@
 # MateMonkey #
 An iOS app to find mate dealers around you!
 
-##Description##
+## Description ##
 This app provides a native iOS environment for the website [MateMonkey](www.matemonkey.com), meant to find Club Mate dealers all over the world!
 
-##Version##
+## Version ##
 
 Current version: 1.0
 
@@ -14,24 +14,24 @@ Current version: 1.0
 
 ## Development Roadmap ##
 
-###1.0###
+### 1.0 ###
 
 Basic functionality:
 * search for dealers on a map
 * filter dealers by type (bar, retail, etc.)
 * add new dealers and edit existing ones
 
-###1.1###
+### 1.1 ###
 
 Stock integration
 * show and edit a dealer's stock/inventory of mate
 
-###1.2###
+### 1.2 ###
 
 Stock filter
 * filter dealers by what mate they have in stock
 
-###Wishlist/Ideas/Misc###
+### Wishlist/Ideas/Misc ###
 
 * create new dealer just by lat/lon (without address)
 * receive parameters from website and show dealer directly in app
