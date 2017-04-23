@@ -11,7 +11,6 @@
 		D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EE71E9C34B600478EAA /* InfoPlist.strings */; };
 		D04F2EEA1E9C34B600478EAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EEC1E9C34B600478EAA /* Localizable.strings */; };
 		D04F2EF11E9D04AD00478EAA /* MetaMateLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */; };
-		D0719D881EABEBA600230D37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0719D871EABEBA600230D37 /* Info.plist */; };
 		D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */; };
 		D08C14811E96E73400ACABAD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C14801E96E73400ACABAD /* Banner.swift */; };
 		D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */; };
@@ -259,7 +258,6 @@
 				D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */,
 				D0B6D8E91E3E3181007A59CA /* Assets.xcassets in Resources */,
 				D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */,
-				D0719D881EABEBA600230D37 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
