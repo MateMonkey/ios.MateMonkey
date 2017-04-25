@@ -20,7 +20,7 @@ struct GlobalValues {
     
     static let homepageURL: String = "https://matemonkey.com"
     static let twitterURL: String = "https://twitter.com/matemonkeycom"
-    static let appStoreURL: String = "itms-apps://itunes.apple.com/app/id1202602103"
+    static let appStoreReviewURL: String = "itms-apps://itunes.apple.com/app/id1202602103?action=write-review"
     
     
     // MARK: - Filter View size constants

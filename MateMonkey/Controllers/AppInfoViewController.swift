@@ -40,11 +40,7 @@ class AppInfoViewController: UIViewController {
     }
         
     @IBAction func rateButtonTapped(_ sender: UIButton) {
-        if #available(iOS 10.3, *) {
-            SKStoreReviewController.requestReview()
-        } else {
-            openURLFromString(GlobalValues.appStoreURL)
-        }
+        openURLFromString(GlobalValues.appStoreReviewURL)
     }
     
     @IBAction func closeBarButtonPressed(_ sender: UIBarButtonItem) {
