@@ -42,8 +42,10 @@ class MMDealerFetcher {
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) {data, response , error in
             
-            let httpResponse = response as! HTTPURLResponse
-            let statusCode = httpResponse.statusCode
+            var statusCode = Int()
+            if let httpResponse = response as? HTTPURLResponse {
+                statusCode = httpResponse.statusCode
+            }
             
             if (statusCode == 200) {
                 print(data!)
