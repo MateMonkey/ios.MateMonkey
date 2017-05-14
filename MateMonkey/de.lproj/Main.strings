@@ -1,0 +1,148 @@
+/* Class = "UILabel"; text = "Type"; ObjectID = "1hZ-dw-0u4"; */
+"1hZ-dw-0u4.text" = "Art";
+
+/* Class = "UIButton"; normalTitle = "Clubs"; ObjectID = "2Ig-5Y-hNY"; */
+"2Ig-5Y-hNY.normalTitle" = "Clubs";
+
+/* Class = "UILabel"; text = "Web"; ObjectID = "3Er-Lw-uzC"; */
+"3Er-Lw-uzC.text" = "Web";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "5Xd-lT-hVg"; */
+"5Xd-lT-hVg.text" = "Stadt";
+
+/* Class = "UILabel"; text = "MateMonkey"; ObjectID = "40B-nb-mla"; */
+"40B-nb-mla.text" = "MateMonkey";
+
+/* Class = "UIButton"; normalTitle = "Main Page"; ObjectID = "BHe-Y9-vsg"; */
+"BHe-Y9-vsg.normalTitle" = "Hauptseite";
+
+/* Class = "UINavigationItem"; title = "App Info"; ObjectID = "Bel-fS-hdd"; */
+"Bel-fS-hdd.title" = "App Info";
+
+/* Class = "UIButton"; normalTitle = "Other"; ObjectID = "D1D-Ip-HSh"; */
+"D1D-Ip-HSh.normalTitle" = "Andere";
+
+/* Class = "UIButton"; normalTitle = "Restaurants"; ObjectID = "EuV-fR-sLd"; */
+"EuV-fR-sLd.normalTitle" = "Restaurants";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "FeD-m6-pYP"; */
+"FeD-m6-pYP.title" = "Zurück";
+
+/* Class = "UIButton"; normalTitle = "EmailAddress"; ObjectID = "FvB-v3-eWu"; */
+"FvB-v3-eWu.normalTitle" = "[EmailAddress]";
+
+/* Class = "UITextField"; placeholder = "Dealer Name"; ObjectID = "GfQ-BE-DcB"; */
+"GfQ-BE-DcB.placeholder" = "Händlername";
+
+/* Class = "UIButton"; normalTitle = "Retail"; ObjectID = "Imf-g3-Tmu"; */
+"Imf-g3-Tmu.normalTitle" = "Einzelhandel";
+
+/* Class = "UIButton"; normalTitle = "WebsiteAddress"; ObjectID = "KRH-Xa-nmN"; */
+"KRH-Xa-nmN.normalTitle" = "[WebsiteAddress]";
+
+/* Class = "UILabel"; text = "PostalCode"; ObjectID = "MC9-t3-MbL"; */
+"MC9-t3-MbL.text" = "[PostalCode]";
+
+/* Class = "UILabel"; text = "MateMonkey\niOS App created by Peter Hoß"; ObjectID = "MEV-MS-AkF"; */
+"MEV-MS-AkF.text" = "MateMonkey
+iOS App entwickelt von Peter Hoß";
+
+/* Class = "UINavigationItem"; title = "Edit Details"; ObjectID = "MLL-ah-n8H"; */
+"MLL-ah-n8H.title" = "Infos bearbeiten";
+
+/* Class = "UIButton"; normalTitle = "Community"; ObjectID = "O6N-Cz-L8W"; */
+"O6N-Cz-L8W.normalTitle" = "Gemeinschaft";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "SJ4-Ry-CcW"; */
+"SJ4-Ry-CcW.text" = "E-Mail";
+
+/* Class = "UILabel"; text = "StreetName"; ObjectID = "Tvw-QH-HDZ"; */
+"Tvw-QH-HDZ.text" = "[StreetName]";
+
+/* Class = "UIButton"; normalTitle = "PhoneNumber"; ObjectID = "UJm-QM-iEB"; */
+"UJm-QM-iEB.normalTitle" = "[PhoneNumber]";
+
+/* Class = "UIButton"; normalTitle = "Rate MateMonkey"; ObjectID = "VVY-Qj-wns"; */
+"VVY-Qj-wns.normalTitle" = "MateMonkey bewerten";
+
+/* Class = "UILabel"; text = "StreetNumber"; ObjectID = "Yqf-iv-zxW"; */
+"Yqf-iv-zxW.text" = "[StreetNumber]";
+
+/* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "aN1-uZ-9g4"; */
+"aN1-uZ-9g4.normalTitle" = "Twitter";
+
+/* Class = "UITextField"; placeholder = "Notes"; ObjectID = "akb-gm-EZ3"; */
+"akb-gm-EZ3.placeholder" = "Notizen";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "eDB-9R-hoD"; */
+"eDB-9R-hoD.placeholder" = "Land";
+
+/* Class = "UILabel"; text = "Version 1.0"; ObjectID = "geR-EF-yPS"; */
+"geR-EF-yPS.text" = "Version 1.0";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "gtN-7L-ymE"; */
+"gtN-7L-ymE.text" = "Telefon";
+
+/* Class = "UIButton"; normalTitle = "Bars/Cafés"; ObjectID = "gwE-we-sAg"; */
+"gwE-we-sAg.normalTitle" = "Bars/Cafés";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "h5G-3N-HY3"; */
+"h5G-3N-HY3.text" = "Notizen";
+
+/* Class = "UILabel"; text = "Notes\nWith\nFour\nLines"; ObjectID = "hiw-72-dQ7"; */
+"hiw-72-dQ7.text" = "Notizen
+mit
+vier
+Zeilen";
+
+/* Class = "UITextField"; placeholder = "Email address"; ObjectID = "icR-0L-bKv"; */
+"icR-0L-bKv.placeholder" = "E-Mail Adresse";
+
+/* Class = "UITextField"; placeholder = "ZIP code"; ObjectID = "il4-DV-nnI"; */
+"il4-DV-nnI.placeholder" = "Postleitzahl";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "imd-yl-e5X"; */
+"imd-yl-e5X.text" = "Name";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "jOb-aA-8g8"; */
+"jOb-aA-8g8.text" = "Adresse";
+
+/* Class = "UILabel"; text = "DealerName"; ObjectID = "jdL-e3-tNY"; */
+"jdL-e3-tNY.text" = "[DealerName]";
+
+/* Class = "UITextField"; placeholder = "Street"; ObjectID = "kmw-qp-oN9"; */
+"kmw-qp-oN9.placeholder" = "Straße";
+
+/* Class = "UINavigationItem"; title = "Details"; ObjectID = "lmK-l0-9Kw"; */
+"lmK-l0-9Kw.title" = "Händlerinfo";
+
+/* Class = "UILabel"; text = "MateMonkey will never interrupt you for ratings."; ObjectID = "qru-ZP-Jpb"; */
+"qru-ZP-Jpb.text" = "MateMonkey wird dich nie für eine Bewertung unterbrechen.";
+
+/* Class = "UITextField"; placeholder = "Website"; ObjectID = "rBd-h6-Q9o"; */
+"rBd-h6-Q9o.placeholder" = "Webseite";
+
+/* Class = "UITextView"; text = "MateMonkey uses the following third party libraries.\n\n∙BRYXBanner (https://github.com/bryx-inc/BRYXBanner):\n\tCopyright (c) 2015 Harlan Haskins <harlan@harlanhaskins.com>\n\tPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\tThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\tTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."; ObjectID = "s2D-G9-jUv"; */
+"s2D-G9-jUv.text" = "MateMonkey nutzt die folgenden Programmbibliotheken von Drittanbietern.
+
+∙BRYXBanner (https://github.com/bryx-inc/BRYXBanner):
+	Copyright (c) 2015 Harlan Haskins 
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ";
+
+/* Class = "UIButton"; normalTitle = "View Licenses"; ObjectID = "vcZ-a1-wFM"; */
+"vcZ-a1-wFM.normalTitle" = "Zeige Lizenzen";
+
+/* Class = "UIButton"; normalTitle = "Hackerspaces"; ObjectID = "xUg-7k-TnE"; */
+"xUg-7k-TnE.normalTitle" = "Hackerspaces";
+
+/* Class = "UITextField"; placeholder = "Number"; ObjectID = "xgw-nh-P1A"; */
+"xgw-nh-P1A.placeholder" = "Nummer";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "yCs-YC-wIp"; */
+"yCs-YC-wIp.placeholder" = "Stadt";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "ySQ-30-rM1"; */
+"ySQ-30-rM1.placeholder" = "Telefonnummer";
+

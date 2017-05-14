@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */; };
+		D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EE71E9C34B600478EAA /* InfoPlist.strings */; };
+		D04F2EEA1E9C34B600478EAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EEC1E9C34B600478EAA /* Localizable.strings */; };
+		D04F2EF11E9D04AD00478EAA /* MetaMateLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */; };
+		D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */; };
+		D08C14811E96E73400ACABAD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C14801E96E73400ACABAD /* Banner.swift */; };
+		D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */; };
+		D08FABB31E468BD700B0F443 /* VisibleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB21E468BD700B0F443 /* VisibleStrings.swift */; };
+		D08FABB51E4A64A500B0F443 /* EditDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */; };
 		D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A98A01E4284DF0071C58B /* MMJSONParser.swift */; };
+		D0AE772B1E8869BD00A667B1 /* MMFilterDealerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */; };
 		D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */; };
 		D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */; };
 		D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B6D8E51E3E3181007A59CA /* Main.storyboard */; };
@@ -17,25 +27,46 @@
 		D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */; };
 		D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */; };
 		D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */; };
+		D0E2B2361E7B25A100F1BD2F /* FilterDealersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */; };
+		D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */; };
+		D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D51E57ACF300B7F82B /* MMFilterView.swift */; };
+		D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D71E5E1F0A00B7F82B /* Extensions.swift */; };
 		D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2A20B1E413018000DA93C /* MMDealerType.swift */; };
 		D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2A20D1E41317D000DA93C /* MMAddress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		D04F2EE11E9C2FCD00478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		D04F2EE21E9C2FCD00478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D04F2EE61E9C34B600478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D04F2EEB1E9C34B600478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D04F2EED1E9C355300478EAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MetaMateLocation.gpx; sourceTree = "<group>"; };
+		D0719D871EABEBA600230D37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFilter.swift; sourceTree = "<group>"; };
+		D08C14801E96E73400ACABAD /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDetailViewController.swift; sourceTree = "<group>"; };
+		D08FABB21E468BD700B0F443 /* VisibleStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleStrings.swift; sourceTree = "<group>"; };
+		D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDealerViewController.swift; sourceTree = "<group>"; };
 		D09A98A01E4284DF0071C58B /* MMJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONParser.swift; sourceTree = "<group>"; };
+		D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFilterDealerButton.swift; sourceTree = "<group>"; };
 		D0B6D8DE1E3E3181007A59CA /* MateMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MateMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateMapViewController.swift; sourceTree = "<group>"; };
 		D0B6D8E61E3E3181007A59CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0B6D8E81E3E3181007A59CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B6D8EB1E3E3181007A59CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D0B6D8ED1E3E3181007A59CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B6D8F31E3E343B007A59CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0B6D8F41E3E3487007A59CA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D0B6D8F61E3E800B007A59CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFetcher.swift; sourceTree = "<group>"; };
 		D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
 		D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealer.swift; sourceTree = "<group>"; };
+		D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDealersViewController.swift; sourceTree = "<group>"; };
+		D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONSender.swift; sourceTree = "<group>"; };
+		D0E603D51E57ACF300B7F82B /* MMFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFilterView.swift; sourceTree = "<group>"; };
+		D0E603D71E5E1F0A00B7F82B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0F2A20B1E413018000DA93C /* MMDealerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerType.swift; sourceTree = "<group>"; };
 		D0F2A20D1E41317D000DA93C /* MMAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAddress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D08C147B1E8DA04100ACABAD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D09A98A01E4284DF0071C58B /* MMJSONParser.swift */,
+				D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */,
+				D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */,
+			);
+			name = Networking;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D0B6D8D51E3E3181007A59CA = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +120,7 @@
 				D0B6D9021E412A16007A59CA /* Models */,
 				D0B6D8F81E3FD8C0007A59CA /* Storyboards/Views */,
 				D0B6D8FA1E3FD8EE007A59CA /* Controllers */,
+				D08C147B1E8DA04100ACABAD /* Networking */,
 				D0B6D8F91E3FD8DE007A59CA /* Additional Files */,
 			);
 			path = MateMonkey;
@@ -95,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
+				D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */,
+				D0E603D51E57ACF300B7F82B /* MMFilterView.swift */,
+				D08C14801E96E73400ACABAD /* Banner.swift */,
 				D0B6D8EA1E3E3181007A59CA /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards/Views;
@@ -103,9 +149,14 @@
 		D0B6D8F91E3FD8DE007A59CA /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				D04F2EEC1E9C34B600478EAA /* Localizable.strings */,
+				D04F2EE71E9C34B600478EAA /* InfoPlist.strings */,
+				D08FABB21E468BD700B0F443 /* VisibleStrings.swift */,
 				D0B6D8FD1E3FE21D007A59CA /* GlobalValues.swift */,
+				D0719D871EABEBA600230D37 /* Info.plist */,
 				D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */,
-				D0B6D8ED1E3E3181007A59CA /* Info.plist */,
+				D0E603D71E5E1F0A00B7F82B /* Extensions.swift */,
+				D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */,
 			);
 			path = "Additional Files";
 			sourceTree = "<group>";
@@ -113,9 +164,12 @@
 		D0B6D8FA1E3FD8EE007A59CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */,
+				D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */,
+				D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */,
+				D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */,
 				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
 				D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */,
-				D09A98A01E4284DF0071C58B /* MMJSONParser.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +194,7 @@
 				D0B6D8DA1E3E3181007A59CA /* Sources */,
 				D0B6D8DB1E3E3181007A59CA /* Frameworks */,
 				D0B6D8DC1E3E3181007A59CA /* Resources */,
+				D0BBD0B91E99814200FF95D1 /* Auto-Increment Build Number */,
 				D08FABAF1E46116700B0F443 /* Mark TODO: and FIXME: as warning */,
 			);
 			buildRules = (
@@ -164,6 +219,7 @@
 					D0B6D8DD1E3E3181007A59CA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3AX7ZS95SE;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -196,7 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04F2EF11E9D04AD00478EAA /* MetaMateLocation.gpx in Resources */,
+				D04F2EEA1E9C34B600478EAA /* Localizable.strings in Resources */,
 				D0B6D8EC1E3E3181007A59CA /* LaunchScreen.storyboard in Resources */,
+				D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */,
 				D0B6D8E91E3E3181007A59CA /* Assets.xcassets in Resources */,
 				D0B6D8E71E3E3181007A59CA /* Main.storyboard in Resources */,
 			);
@@ -219,6 +278,20 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
 		};
+		D0BBD0B91E99814200FF95D1 /* Auto-Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Auto-Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -226,24 +299,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */,
 				D0F2A20C1E413018000DA93C /* MMDealerType.swift in Sources */,
+				D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */,
+				D0E2B2361E7B25A100F1BD2F /* FilterDealersViewController.swift in Sources */,
+				D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */,
 				D0F2A20E1E41317D000DA93C /* MMAddress.swift in Sources */,
+				D08FABB31E468BD700B0F443 /* VisibleStrings.swift in Sources */,
 				D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */,
+				D08FABB51E4A64A500B0F443 /* EditDealerViewController.swift in Sources */,
+				D0AE772B1E8869BD00A667B1 /* MMFilterDealerButton.swift in Sources */,
+				D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */,
 				D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */,
 				D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */,
+				D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */,
 				D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */,
 				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
+				D08C14811E96E73400ACABAD /* Banner.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
+				D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D04F2EE71E9C34B600478EAA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D04F2EE61E9C34B600478EAA /* de */,
+				D04F2EED1E9C355300478EAA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D04F2EEC1E9C34B600478EAA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D04F2EEB1E9C34B600478EAA /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D0B6D8E51E3E3181007A59CA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D0B6D8E61E3E3181007A59CA /* Base */,
+				D04F2EE11E9C2FCD00478EAA /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -252,6 +354,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D0B6D8EB1E3E3181007A59CA /* Base */,
+				D04F2EE21E9C2FCD00478EAA /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -263,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -312,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -354,12 +459,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
 				INFOPLIST_FILE = "$(SRCROOT)/MateMonkey/Additional Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -368,12 +475,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3AX7ZS95SE;
 				INFOPLIST_FILE = "$(SRCROOT)/MateMonkey/Additional Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jurassicturtle.matemonkey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

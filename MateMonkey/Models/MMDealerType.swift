@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum MMDealerType: String {
-    case bar, club, retail, restaurant, other, hackerspace, community
+enum MMDealerType: Int {
+    case bar = 0, club, retail, restaurant, other, hackerspace, community
 }

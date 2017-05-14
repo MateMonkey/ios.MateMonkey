@@ -17,26 +17,22 @@ class MateMapViewController: UIViewController {
     
     // MARK: - Variables
     var locationManager: CLLocationManager!
-    var initialLocationSet = false {
-        didSet {
-            // if it is now true, lets request surrounding dealers!
-            loadingSpinner.startAnimating()
-            fetcherQueue.async {
-                self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
-            }
-        }
-    }
+    var initialLocationSet = false
     var currentDealers = [MMDealer]()
+    
+    var filterView = MMFilterView(frame: CGRect(x: 0.0, y: UIScreen.main.bounds.height - GlobalValues.FVExpanderHeight, width: UIScreen.main.bounds.width, height: GlobalValues.FilterViewHeight))
+    var filterExpanded = false
     
     // MARK: - Constants
     let fetcher = MMDealerFetcher()
     let fetcherQueue = DispatchQueue(label: "bg_fetcher_queue", qos: .userInitiated)
     
     // MARK: - View controller lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+                
         fetcher.delegate = self
         mapView.delegate = self
         
@@ -50,6 +46,13 @@ class MateMapViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
+        
+        filterView.delegate = self
+        self.view.addSubview(filterView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
 
@@ -73,6 +76,11 @@ class MateMapViewController: UIViewController {
         self.mapView.setRegion(region, animated: animated)
     }
     
+    func showBanner(withMessage message: String) {
+        let banner = Banner(title: message, subtitle: VisibleStrings.bannerTapToDismiss, backgroundColor: UIColor.monkeyGreenDark())
+        banner.dismissesOnTap = true
+        banner.show(duration: 5.0)
+    }
 }
 
 // MARK: - Extensions
@@ -111,6 +119,24 @@ extension MateMapViewController: MKMapViewDelegate {
         }
         return nil
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let dealerId = view.annotation?.title {
+            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let detailVC: DealerDetailViewController = mainStoryboard.instantiateViewController(withIdentifier: "DealerDetailView") as! DealerDetailViewController
+            if let dealer = fetcher.results.filter({ $0.title == dealerId }).first {
+                detailVC.dealerToDisplay = dealer
+                let navController = UINavigationController(rootViewController: detailVC)
+                present(navController, animated: true, completion: nil)
+            } else {
+                print("The dealer was not found in the fetcher's result.")
+            }
+        } else {
+            print("The dealer seems to not have an ID as the title?!?")
+        }
+        mapView.deselectAnnotation(view.annotation, animated: false)
+    }
 }
 
 extension MateMapViewController: MMDealerFetcherDelegate {
@@ -118,25 +144,59 @@ extension MateMapViewController: MMDealerFetcherDelegate {
         
         DispatchQueue.main.async {
             // call a method to populate the map with the fetcher's results
+            #if DEBUG
             print("There are \(sender.results.count) dealers on the map.")
+            #endif
             
             if sender.results.isEmpty {
-                // TODO: if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
-                // } else if sender.results.count >= 15 {
-                // TODO: if there are too many results, the user might not be able to select a single dealer and it might become very messy
+                // if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
+                self.showBanner(withMessage: VisibleStrings.bannerMessageNoDealers)
+            } else if sender.results.count >= GlobalValues.maximumPinsVisible {
+                // if there are too many results, the user might not be able to select a single dealer and it might become very messy
+                self.showBanner(withMessage: VisibleStrings.bannerMessageTooManyDealers)
             } else {
-                let currentDealers = self.mapView.annotations
-                for dealer in sender.results {
-                    if currentDealers.contains(where: { $0.title! == String(dealer.id) }) {
-                        // should be on the map already
-                        print("The dealer \(dealer.id) already exists and will not be added again.")
-                    } else {
+                let filteredDealers = MMDealerFilter().filterDealers(sender.results)
+                
+                if filteredDealers.count == 0 {
+                    // There are no dealers left after filters, let's inform the user.
+                    self.showBanner(withMessage: VisibleStrings.bannerMessageAllFiltered)
+                } else {
+                    for dealer in filteredDealers {
                         self.mapView.addAnnotation(dealer)
                     }
                 }
             }
             // finish up by stopping the spinner
             self.loadingSpinner.stopAnimating()
+        }
+    }
+}
+
+extension MateMapViewController: MMFilterViewDelegate {
+    func expandFilter(sender: MMFilterView) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            if self.filterExpanded == false {
+                self.filterView.frame = CGRect(x: 0.0, y: UIScreen.main.bounds.height - 229, width: UIScreen.main.bounds.width, height: 244)
+            } else {
+                self.filterView.frame = CGRect(x: 0.0, y: UIScreen.main.bounds.height - 40, width: UIScreen.main.bounds.width, height: 244)
+            }
+        }) { (completed) in
+            self.filterExpanded = !self.filterExpanded
+        }
+    }
+    
+    func presentFromFilterView(viewController: UIViewController) {
+        let navController = UINavigationController(rootViewController: viewController)
+        self.present(navController, animated: true, completion: nil)
+    }
+    
+    func filtersHaveChanged() {
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        loadingSpinner.startAnimating()
+        fetcherQueue.async {
+            self.fetcher.queryForMapRect(self.mapView.visibleMapRect)
         }
     }
 }

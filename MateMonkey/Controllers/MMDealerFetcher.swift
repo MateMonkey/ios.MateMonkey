@@ -32,7 +32,7 @@ class MMDealerFetcher {
         
         let dealerParameter = "dealers?bbox=" + bottomLeftLatitude + "," + bottomLeftLongitude + "," + topRightLatitude + "," + topRightLongitude
         
-        let completeRequestURLString = GlobalValues.testAPI + dealerParameter
+        let completeRequestURLString = GlobalValues.baseURL + dealerParameter
         
         print(completeRequestURLString)
         
@@ -42,17 +42,23 @@ class MMDealerFetcher {
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) {data, response , error in
             
-            let httpResponse = response as! HTTPURLResponse
-            let statusCode = httpResponse.statusCode
+            var statusCode = Int()
+            if let httpResponse = response as? HTTPURLResponse {
+                statusCode = httpResponse.statusCode
+            }
             
             if (statusCode == 200) {
                 print(data!)
-                let dealers = MMJSONParser(data: data!).parse()
-                if dealers.count > 0 {
-                    // We have one or more dealers in the map area
-                    self.results = dealers
+                if let dealers = try? MMJSONParser(data: data!).parse() {
+                    if dealers.count > 0 {
+                        // We have one or more dealers in the map area
+                        self.results = dealers
+                    } else {
+                        self.results = []
+                    }
                 } else {
-                    self.results = []
+                    // TODO: The parser neatly throws an error, we should be able to look into it more precisely
+                    print("ParserError")
                 }
             } else {
                 print(error.debugDescription)
