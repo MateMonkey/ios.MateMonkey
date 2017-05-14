@@ -10,16 +10,9 @@ Current version: 1.0
 
 ## To Do ##
 
-* beta test
+* minor fixes: direct feedback button, improve phone number sanitation, scrollable edit screen, show dealer type in detail view
 
 ## Development Roadmap ##
-
-### 1.0 ###
-
-Basic functionality:
-* search for dealers on a map
-* filter dealers by type (bar, retail, etc.)
-* add new dealers and edit existing ones
 
 ### 1.1 ###
 
@@ -37,11 +30,17 @@ Stock filter
 * receive parameters from website and show dealer directly in app
 * find a good way to show the dealer type in the dealer detail view
 
+## Past Releases ##
+
+### 1.0 ###
+
+Basic functionality:
+* search for dealers on a map
+* filter dealers by type (bar, retail, etc.)
+* add new dealers and edit existing ones
+
 ## Issues ##
 Tracked via github's bugtracker
 
-## Why is this Open Source? ##
-Because [MateMonkey](https://github.com/MateMonkey) is open source, too (at least in parts)! Also, I want to improve my coding skills by coding "out in the open". Anyone can participate and help make the code and the app better by contributing. 
-
 ## Before you contribute ##
-Please check out what I am working on in the development branch. If you want to make significant changes to the app, please contact me first or open an issue. Improvements to my code will be happily merged!
+Please have a look at the development branch. If you want to make significant changes to the app, let's first discuss it (just open an issue). Improvements to the code will be happily merged!
