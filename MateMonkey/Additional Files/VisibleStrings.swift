@@ -53,4 +53,6 @@ struct VisibleStrings {
     static let bannerMessageDealerUpdated = NSLocalizedString("Dealer successfully updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information has been updated.")
     static let bannerMessageDealerUpdateFailed = NSLocalizedString("Dealer could not be updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information failed to update.")
     
+    // MARK: - Feedback email
+    static let feedbackSubject = NSLocalizedString("Matemonkey Feedback", comment: "The subject line for an email with feedback the user can send.")
 }

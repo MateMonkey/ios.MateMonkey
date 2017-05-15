@@ -484,7 +484,7 @@ Lines</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MateMonkey will never interrupt you for ratings." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qru-ZP-Jpb">
-                                <rect key="frame" x="26" y="210" width="333" height="16"/>
+                                <rect key="frame" x="26" y="264" width="333" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -497,14 +497,14 @@ iOS App created by Peter Hoß</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-Qj-wns">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-5Q-gWS">
                                 <rect key="frame" x="16" y="182" width="343" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="Rate MateMonkey">
+                                <state key="normal" title="Feedback">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rateButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="9sK-ua-nIA"/>
+                                    <action selector="feedbackButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="YaC-gH-PHA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcZ-a1-wFM">
@@ -523,6 +523,16 @@ iOS App created by Peter Hoß</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-Qj-wns">
+                                <rect key="frame" x="16" y="223" width="343" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Rate MateMonkey">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="9sK-ua-nIA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -530,20 +540,23 @@ iOS App created by Peter Hoß</string>
                             <constraint firstItem="do9-Ob-hmV" firstAttribute="top" secondItem="vcZ-a1-wFM" secondAttribute="bottom" constant="8" id="0qq-Yw-qkU"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="top" secondItem="40B-nb-mla" secondAttribute="bottom" constant="8" symbolic="YES" id="4x8-2K-EAB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="40B-nb-mla" secondAttribute="trailing" id="5RC-Ro-aBH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dUr-5Q-gWS" secondAttribute="trailing" id="9fo-Sw-aeL"/>
                             <constraint firstItem="40B-nb-mla" firstAttribute="top" secondItem="ucd-Nb-KwY" secondAttribute="bottom" constant="8" symbolic="YES" id="Gn8-gc-e7k"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="top" secondItem="MEV-MS-AkF" secondAttribute="bottom" constant="8" symbolic="YES" id="JlG-eX-fqs"/>
-                            <constraint firstItem="VVY-Qj-wns" firstAttribute="top" secondItem="aN1-uZ-9g4" secondAttribute="bottom" constant="15" id="L6W-42-Hpd"/>
+                            <constraint firstItem="VVY-Qj-wns" firstAttribute="top" secondItem="dUr-5Q-gWS" secondAttribute="bottom" constant="8" symbolic="YES" id="KC9-CN-PYC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VVY-Qj-wns" secondAttribute="trailing" id="LjW-9R-9TP"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="leading" secondItem="40B-nb-mla" secondAttribute="leading" constant="10" id="Nbh-tb-q1c"/>
+                            <constraint firstItem="dUr-5Q-gWS" firstAttribute="top" secondItem="aN1-uZ-9g4" secondAttribute="bottom" constant="15" id="UVD-VE-09J"/>
                             <constraint firstItem="aN1-uZ-9g4" firstAttribute="leading" secondItem="BHe-Y9-vsg" secondAttribute="leading" id="W45-kO-cic"/>
                             <constraint firstItem="qru-ZP-Jpb" firstAttribute="leading" secondItem="VVY-Qj-wns" secondAttribute="leading" constant="10" id="WUH-yY-mkc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VVY-Qj-wns" secondAttribute="leading" id="awq-y0-M52"/>
                             <constraint firstItem="vcZ-a1-wFM" firstAttribute="top" secondItem="geR-EF-yPS" secondAttribute="bottom" constant="8" symbolic="YES" id="crI-d5-OgJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="40B-nb-mla" secondAttribute="leading" id="f5w-2j-rev"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dUr-5Q-gWS" secondAttribute="leading" id="inV-U7-QU5"/>
                             <constraint firstItem="MEV-MS-AkF" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="nVy-wS-S4Z"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="njg-UN-w8i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BHe-Y9-vsg" secondAttribute="trailing" id="pHx-Zv-Ir9"/>
-                            <constraint firstItem="qru-ZP-Jpb" firstAttribute="top" secondItem="VVY-Qj-wns" secondAttribute="bottom" constant="-5" id="tzR-Qe-Xi2"/>
+                            <constraint firstItem="qru-ZP-Jpb" firstAttribute="top" secondItem="VVY-Qj-wns" secondAttribute="bottom" constant="8" symbolic="YES" id="tzR-Qe-Xi2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qru-ZP-Jpb" secondAttribute="trailing" id="uxE-0I-UaC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aN1-uZ-9g4" secondAttribute="trailing" id="wf1-7n-iD4"/>
                             <constraint firstItem="vcZ-a1-wFM" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="zMJ-Nn-C5K"/>
