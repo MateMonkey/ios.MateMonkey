@@ -35,6 +35,7 @@ class MMFilterDealerButton: UIButton {
     func updateButtonSettings() {
         if self.filterSelected {
             self.backgroundColor = self.color
+            self.setTitleColor(UIColor.white, for: UIControlState.normal)
         } else {
             self.backgroundColor = desaturateColor(self.color)
             if (self.typeTag == .restaurant || self.typeTag == .bar || self.typeTag == .hackerspace || self.typeTag == .club) {
