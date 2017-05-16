@@ -64,7 +64,7 @@ class DealerDetailViewController: UIViewController {
     
     @IBAction func phoneNumberPressed(_ sender: UIButton) {
         if let phoneNumber = dealerToDisplay?.address.phone {
-            let phoneString = "tel://" + phoneNumber.replacingOccurrences(of: " ", with: "")
+            let phoneString = "tel://" + sanitizedPhoneNumber(phoneNumber)
             if let phoneURL = URL(string: phoneString) {
                 if UIApplication.shared.canOpenURL(phoneURL) {
                     let phoneConfirmationAlert: UIAlertController = UIAlertController(title: VisibleStrings.callAlertTitle, message: VisibleStrings.callAlertMessage, preferredStyle: .alert)
@@ -133,6 +133,15 @@ class DealerDetailViewController: UIViewController {
         invalidAlert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
         
         self.present(invalidAlert, animated: true, completion: nil)
+    }
+    
+    private func sanitizedPhoneNumber(_ phoneNumber: String) -> String {
+        let removedSpaces = phoneNumber.replacingOccurrences(of: " ", with: "")
+        let removedSlashes = removedSpaces.replacingOccurrences(of: "/", with: "")
+        let removedBackslashes = removedSlashes.replacingOccurrences(of: "\\", with: "")
+        
+        let sanitizedNumber = removedBackslashes
+        return sanitizedNumber
     }
 
     // MARK: - Navigation
