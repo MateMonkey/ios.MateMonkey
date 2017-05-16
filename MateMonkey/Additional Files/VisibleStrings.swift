@@ -55,4 +55,13 @@ struct VisibleStrings {
     
     // MARK: - Feedback email
     static let feedbackSubject = NSLocalizedString("Matemonkey Feedback", comment: "The subject line for an email with feedback the user can send.")
+    
+    // MARK: - Dealer types
+    static let dealerTypeBar = NSLocalizedString("Bar/Café", comment: "User facing String for dealer types.")
+    static let dealerTypeClub = NSLocalizedString("Club", comment: "User facing String for dealer types.")
+    static let dealerTypeRetail = NSLocalizedString("Retail", comment: "User facing String for dealer types.")
+    static let dealerTypeRestaurant = NSLocalizedString("Restaurant", comment: "User facing String for dealer types.")
+    static let dealerTypeOther = NSLocalizedString("Other", comment: "User facing String for dealer types.")
+    static let dealerTypeHackerspace = NSLocalizedString("Hackerspace", comment: "User facing String for dealer types.")
+    static let dealerTypeCommunity = NSLocalizedString("Community", comment: "User facing String for dealer types.")
 }

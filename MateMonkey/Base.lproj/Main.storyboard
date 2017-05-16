@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DealerName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-e3-tNY">
-                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <rect key="frame" x="16" y="72" width="288.5" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -151,6 +151,13 @@ Lines</string>
                                     <action selector="websiteAddressPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="Blu-NI-Fiv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text=" Type " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-rD-A9X">
+                                <rect key="frame" x="312.5" y="72" width="46.5" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.26666666666666666" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,12 +192,14 @@ Lines</string>
                             <constraint firstItem="U4y-zE-53M" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="ZRk-Ke-yGi"/>
                             <constraint firstItem="yKg-bF-xd7" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="cGv-A4-pu3"/>
                             <constraint firstItem="hiw-72-dQ7" firstAttribute="leading" secondItem="qUV-2n-IGC" secondAttribute="trailing" constant="8" id="dgj-ja-Nne"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jdL-e3-tNY" secondAttribute="trailing" id="eRV-hx-rsd"/>
                             <constraint firstItem="jdL-e3-tNY" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" id="fdO-J2-72l"/>
+                            <constraint firstItem="Fhz-rD-A9X" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" symbolic="YES" id="iBX-7P-586"/>
                             <constraint firstItem="5Xd-lT-hVg" firstAttribute="top" secondItem="Tvw-QH-HDZ" secondAttribute="bottom" constant="1" id="mX8-tv-EGb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fhz-rD-A9X" secondAttribute="trailing" id="qF2-5G-yQO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UJm-QM-iEB" secondAttribute="trailing" priority="250" id="sGy-O7-yqp"/>
                             <constraint firstItem="rtk-eZ-njs" firstAttribute="top" secondItem="yKg-bF-xd7" secondAttribute="bottom" constant="8" symbolic="YES" id="sTs-V8-3HG"/>
                             <constraint firstItem="Tvw-QH-HDZ" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="tgM-Dl-JXZ"/>
+                            <constraint firstItem="Fhz-rD-A9X" firstAttribute="leading" secondItem="jdL-e3-tNY" secondAttribute="trailing" constant="8" symbolic="YES" id="uGi-EA-Kqp"/>
                             <constraint firstItem="KRH-Xa-nmN" firstAttribute="leading" secondItem="rtk-eZ-njs" secondAttribute="trailing" constant="8" symbolic="YES" id="ut6-cK-pSf"/>
                         </constraints>
                     </view>
@@ -212,6 +221,7 @@ Lines</string>
                     <connections>
                         <outlet property="cityLabel" destination="5Xd-lT-hVg" id="31Y-7t-M3p"/>
                         <outlet property="dealerNameLabel" destination="jdL-e3-tNY" id="osd-Ix-dKE"/>
+                        <outlet property="dealerTypeLabel" destination="Fhz-rD-A9X" id="pje-tP-iLX"/>
                         <outlet property="emailAddressButton" destination="FvB-v3-eWu" id="ih7-JV-ORx"/>
                         <outlet property="notesLabel" destination="hiw-72-dQ7" id="NvH-N5-ypm"/>
                         <outlet property="phoneNumberButton" destination="UJm-QM-iEB" id="dM9-9y-iw7"/>
