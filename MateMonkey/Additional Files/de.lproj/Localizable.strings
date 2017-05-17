@@ -4,6 +4,9 @@
 /* Title for the app's screen that lets users add a new dealer. */
 "Add Dealer" = "Neuer Händler";
 
+/* User facing String for dealer types. */
+"Bar/Café" = "Bar/Café";
+
 /* Call confirmation action for an alert when the user is about to make a phone call. */
 "Call" = "Anrufen";
 
@@ -12,6 +15,12 @@
 
 /* Reason for an alert when the user does not provide a required field: city */
 "City" = "Stadt";
+
+/* User facing String for dealer types. */
+"Club" = "Club";
+
+/* User facing String for dealer types. */
+"Community" = "Gemeinschaft";
 
 /* Reason for an alert when the user does not provide a required field: country */
 "Country" = "Land";
@@ -34,8 +43,14 @@
 /* Title text for the button leading to filtering options for the products. */
 "Filter Products" = "Produkte filtern";
 
+/* User facing String for dealer types. */
+"Hackerspace" = "Hackerspace";
+
 /* Title for an alert when the user is about to make a phone call. */
 "Make a phone call" = "Einen Anruf tätigen";
+
+/* The subject line for an email with feedback the user can send. */
+"Matemonkey Feedback" = "MateMonkey Feedback";
 
 /* Title for an alert when a required field for a dealer is empty. */
 "Missing Entry" = "Fehlender Eintrag";
@@ -45,6 +60,15 @@
 
 /* Generic OK for use in an alert. */
 "OK" = "OK";
+
+/* User facing String for dealer types. */
+"Other" = "Andere";
+
+/* User facing String for dealer types. */
+"Restaurant" = "Restaurant";
+
+/* User facing String for dealer types. */
+"Retail" = "Einzelhandel";
 
 /* Reason for an alert when the user does not provide a required field: street name */
 "Street" = "Straße";

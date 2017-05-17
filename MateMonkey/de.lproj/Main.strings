@@ -28,6 +28,9 @@
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "FeD-m6-pYP"; */
 "FeD-m6-pYP.title" = "Zurück";
 
+/* Class = "UILabel"; text = " Type "; ObjectID = "Fhz-rD-A9X"; */
+"Fhz-rD-A9X.text" = "[Art]";
+
 /* Class = "UIButton"; normalTitle = "EmailAddress"; ObjectID = "FvB-v3-eWu"; */
 "FvB-v3-eWu.normalTitle" = "[EmailAddress]";
 
@@ -73,6 +76,9 @@ iOS App entwickelt von Peter Hoß";
 
 /* Class = "UITextField"; placeholder = "Notes"; ObjectID = "akb-gm-EZ3"; */
 "akb-gm-EZ3.placeholder" = "Notizen";
+
+/* Class = "UIButton"; normalTitle = "Feedback/Suggestions"; ObjectID = "dUr-5Q-gWS"; */
+"dUr-5Q-gWS.normalTitle" = "Feedback/Anregungen";
 
 /* Class = "UITextField"; placeholder = "Country"; ObjectID = "eDB-9R-hoD"; */
 "eDB-9R-hoD.placeholder" = "Land";
