@@ -122,6 +122,9 @@ class DealerDetailViewController: UIViewController {
         
         dealerTypeLabel.text = " " + visibleStringForDealerType(dealer.type) + " "
         dealerTypeLabel.backgroundColor = colorForDealerType(dealer.type)
+        
+        dealerTypeLabel.layer.masksToBounds = true
+        dealerTypeLabel.layer.cornerRadius = 2
     }
     
     private func showErrorAlert(forErrorType errorType: ContactError) {

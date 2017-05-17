@@ -80,15 +80,13 @@
 "There are no dealers matching your filters." = "Es gibt in hier keinen Händler, der deinen Filtern entspricht.";
 
 /* Message for an alert that shows when the URL is invalid. */
-"This URL is not valid.
-You can help fix it by editing this dealer." = "Diese URL ist nicht zulässig.\\nDu kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
+"This URL is not valid.\nYou can help fix it by editing this dealer." = "Diese URL ist nicht zulässig.\nDu kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
 
 /* Message for an alert when a required field for a dealer is empty. */
 "This field can not be empty: " = "Dieses Feld darf nicht leer sein:";
 
 /* Message for an alert that shows when the phone number is invalid. */
-"This phone number is not valid.
-You can help fix it by editing this dealer." = "Diese Telefonnummer ist nicht zulässig.\\nDu kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
+"This phone number is not valid.\nYou can help fix it by editing this dealer." = "Diese Telefonnummer ist nicht zulässig.\nDu kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
 
 /* Message displayed in a banner at the top of the screen when there are too many dealers on the map. */
 "Too many dealers, please zoom in." = "Zu viele Händler, bitte zoome näher heran.";
