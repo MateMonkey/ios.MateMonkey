@@ -70,6 +70,41 @@ class MMDealerFetcher {
         task.resume()
     }
     
+    func queryForDealerSlug(_ slug: String) {
+        let requestURLString = GlobalValues.baseURL + "dealers/" + slug
+        
+        // query the API server
+        let requestURL: URL = URL(string: requestURLString)!
+        let urlRequest: URLRequest = URLRequest(url: requestURL)
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            
+            var statusCode = Int()
+            if let httpResponse = response as? HTTPURLResponse {
+                statusCode = httpResponse.statusCode
+            }
+            
+            if (statusCode == 200) {
+                // Dealer found
+                print("Data returned by server: \(data!)")
+                do {
+                    let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+                    if let dealer = try? MMDealer(json: json as! [String : Any]) {
+                        self.results.append(dealer)
+                        self.delegate?.queryCompleted(sender: self)
+                    }
+                }
+            } else if (statusCode == 404) {
+                // No results
+                print("No results.")
+            } else {
+                // Another error altogether
+                print("Request error. Status code: \(statusCode). Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
+        task.resume()
+    }
+    
     // MARK: - Map methods
     func getNECoordinateFromMapRect(_ mRect: MKMapRect) -> CLLocationCoordinate2D {
         return getCoordinateFromMapRectanglePoint(x: MKMapRectGetMaxX(mRect), y: mRect.origin.y)
