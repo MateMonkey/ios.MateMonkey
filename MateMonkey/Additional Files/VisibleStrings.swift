@@ -53,4 +53,15 @@ struct VisibleStrings {
     static let bannerMessageDealerUpdated = NSLocalizedString("Dealer successfully updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information has been updated.")
     static let bannerMessageDealerUpdateFailed = NSLocalizedString("Dealer could not be updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information failed to update.")
     
+    // MARK: - Feedback email
+    static let feedbackSubject = NSLocalizedString("Matemonkey Feedback", comment: "The subject line for an email with feedback the user can send.")
+    
+    // MARK: - Dealer types
+    static let dealerTypeBar = NSLocalizedString("Bar/Café", comment: "User facing String for dealer types.")
+    static let dealerTypeClub = NSLocalizedString("Club", comment: "User facing String for dealer types.")
+    static let dealerTypeRetail = NSLocalizedString("Retail", comment: "User facing String for dealer types.")
+    static let dealerTypeRestaurant = NSLocalizedString("Restaurant", comment: "User facing String for dealer types.")
+    static let dealerTypeOther = NSLocalizedString("Other", comment: "User facing String for dealer types.")
+    static let dealerTypeHackerspace = NSLocalizedString("Hackerspace", comment: "User facing String for dealer types.")
+    static let dealerTypeCommunity = NSLocalizedString("Community", comment: "User facing String for dealer types.")
 }

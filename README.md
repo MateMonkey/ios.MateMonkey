@@ -6,18 +6,18 @@ This app provides a native iOS environment for the website [MateMonkey](www.mate
 
 ## Version ##
 
-Current version: 1.0
+Current version: 1.0.1
 
 ## To Do ##
 
-* minor fixes: direct feedback button, improve phone number sanitation, scrollable edit screen, show dealer type in detail view
+* version 1.1 
 
 ## Development Roadmap ##
 
 ### 1.1 ###
 
-Stock integration
-* show and edit a dealer's stock/inventory of mate
+* Stock integration: show and edit a dealer's stock/inventory of mate
+* Detect when a user comes from the website and show them the last dealer they looked at
 
 ### 1.2 ###
 
@@ -27,8 +27,6 @@ Stock filter
 ### Wishlist/Ideas/Misc ###
 
 * create new dealer just by lat/lon (without address)
-* receive parameters from website and show dealer directly in app
-* find a good way to show the dealer type in the dealer detail view
 
 ## Past Releases ##
 
@@ -38,6 +36,14 @@ Basic functionality:
 * search for dealers on a map
 * filter dealers by type (bar, retail, etc.)
 * add new dealers and edit existing ones
+
+### 1.0.1 ###
+
+Minor fixes: 
+* direct feedback button
+* improve phone number sanitation
+* edit screen moves up to show otherwise hidden text fields
+* show dealer type in detail view
 
 ## Issues ##
 Tracked via github's bugtracker

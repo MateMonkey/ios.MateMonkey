@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import StoreKit
+import MessageUI
 
 class AppInfoViewController: UIViewController {
     
@@ -37,6 +37,20 @@ class AppInfoViewController: UIViewController {
     
     @IBAction func twitterButtonTapped(_ sender: UIButton) {
         openURLFromString(GlobalValues.twitterURL)
+    }
+    
+    @IBAction func feedbackButtonTapped(_ sender: UIButton) {
+        
+        let emailAddress = GlobalValues.feedbackEmail
+        let addressArray = [emailAddress]
+        let mailController = MFMailComposeViewController()
+        mailController.setToRecipients(addressArray)
+        mailController.setSubject(VisibleStrings.feedbackSubject)
+        mailController.setMessageBody("\n\n\n\n\n" + getDeviceInfoString(), isHTML: false)
+        mailController.mailComposeDelegate = self
+        
+        present(mailController, animated: true, completion: nil)
+
     }
         
     @IBAction func rateButtonTapped(_ sender: UIButton) {
@@ -74,4 +88,31 @@ class AppInfoViewController: UIViewController {
         }
     }
     
+    func getDeviceInfoString() -> String {
+        if let versionString = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            if let buildString = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+                let systemName = UIDevice.current.systemName
+                let systemVersion = UIDevice.current.systemVersion
+                var currentLanguage = "(unknown)"
+                if let language = Bundle.main.preferredLocalizations.first {
+                    currentLanguage = language
+                }
+                
+                let deviceInfo = "MateMonkey version " + versionString + "(" + buildString + ")\nOperating System: " + systemName + " " + systemVersion + "\nLanguage: " + currentLanguage
+                
+                return deviceInfo
+            } else {
+                return ""
+            }
+        } else {
+            return ""
+        }
+    }
+}
+
+extension AppInfoViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        // Not much to do here except dismiss the VC (we don't care whatever the user did)
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DealerName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-e3-tNY">
-                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <rect key="frame" x="16" y="72" width="288.5" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -151,6 +151,13 @@ Lines</string>
                                     <action selector="websiteAddressPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="Blu-NI-Fiv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text=" Type " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-rD-A9X">
+                                <rect key="frame" x="312.5" y="72" width="46.5" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.26666666666666666" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,12 +192,14 @@ Lines</string>
                             <constraint firstItem="U4y-zE-53M" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="ZRk-Ke-yGi"/>
                             <constraint firstItem="yKg-bF-xd7" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="cGv-A4-pu3"/>
                             <constraint firstItem="hiw-72-dQ7" firstAttribute="leading" secondItem="qUV-2n-IGC" secondAttribute="trailing" constant="8" id="dgj-ja-Nne"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jdL-e3-tNY" secondAttribute="trailing" id="eRV-hx-rsd"/>
                             <constraint firstItem="jdL-e3-tNY" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" id="fdO-J2-72l"/>
+                            <constraint firstItem="Fhz-rD-A9X" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" symbolic="YES" id="iBX-7P-586"/>
                             <constraint firstItem="5Xd-lT-hVg" firstAttribute="top" secondItem="Tvw-QH-HDZ" secondAttribute="bottom" constant="1" id="mX8-tv-EGb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fhz-rD-A9X" secondAttribute="trailing" id="qF2-5G-yQO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UJm-QM-iEB" secondAttribute="trailing" priority="250" id="sGy-O7-yqp"/>
                             <constraint firstItem="rtk-eZ-njs" firstAttribute="top" secondItem="yKg-bF-xd7" secondAttribute="bottom" constant="8" symbolic="YES" id="sTs-V8-3HG"/>
                             <constraint firstItem="Tvw-QH-HDZ" firstAttribute="top" secondItem="jdL-e3-tNY" secondAttribute="bottom" constant="8" symbolic="YES" id="tgM-Dl-JXZ"/>
+                            <constraint firstItem="Fhz-rD-A9X" firstAttribute="leading" secondItem="jdL-e3-tNY" secondAttribute="trailing" constant="8" symbolic="YES" id="uGi-EA-Kqp"/>
                             <constraint firstItem="KRH-Xa-nmN" firstAttribute="leading" secondItem="rtk-eZ-njs" secondAttribute="trailing" constant="8" symbolic="YES" id="ut6-cK-pSf"/>
                         </constraints>
                     </view>
@@ -212,6 +221,7 @@ Lines</string>
                     <connections>
                         <outlet property="cityLabel" destination="5Xd-lT-hVg" id="31Y-7t-M3p"/>
                         <outlet property="dealerNameLabel" destination="jdL-e3-tNY" id="osd-Ix-dKE"/>
+                        <outlet property="dealerTypeLabel" destination="Fhz-rD-A9X" id="pje-tP-iLX"/>
                         <outlet property="emailAddressButton" destination="FvB-v3-eWu" id="ih7-JV-ORx"/>
                         <outlet property="notesLabel" destination="hiw-72-dQ7" id="NvH-N5-ypm"/>
                         <outlet property="phoneNumberButton" destination="UJm-QM-iEB" id="dM9-9y-iw7"/>
@@ -248,14 +258,14 @@ Lines</string>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" textAlignment="natural" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="kmw-qp-oN9">
                                 <rect key="frame" x="16" y="129" width="265" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xgw-nh-P1A">
                                 <rect key="frame" x="289" y="129" width="70" height="30"/>
@@ -265,7 +275,7 @@ Lines</string>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOb-aA-8g8">
                                 <rect key="frame" x="16" y="106" width="66" height="21"/>
@@ -314,49 +324,49 @@ Lines</string>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="yCs-YC-wIp">
                                 <rect key="frame" x="124" y="167" width="235" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eDB-9R-hoD">
                                 <rect key="frame" x="16" y="205" width="343" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-30-rM1">
                                 <rect key="frame" x="144" y="252" width="215" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="icR-0L-bKv">
                                 <rect key="frame" x="144" y="285" width="215" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rBd-h6-Q9o">
                                 <rect key="frame" x="144" y="318" width="215" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notes" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="akb-gm-EZ3">
                                 <rect key="frame" x="72" y="353" width="287" height="30"/>
                                 <color key="tintColor" red="0.36078431370000003" green="0.72156862749999995" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6q-Zv-hPd">
                                 <rect key="frame" x="27.5" y="420" width="320" height="216"/>
@@ -484,7 +494,7 @@ Lines</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MateMonkey will never interrupt you for ratings." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qru-ZP-Jpb">
-                                <rect key="frame" x="26" y="210" width="333" height="16"/>
+                                <rect key="frame" x="26" y="264" width="333" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -497,14 +507,14 @@ iOS App created by Peter Hoß</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-Qj-wns">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUr-5Q-gWS">
                                 <rect key="frame" x="16" y="182" width="343" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="Rate MateMonkey">
+                                <state key="normal" title="Feedback/Suggestions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rateButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="9sK-ua-nIA"/>
+                                    <action selector="feedbackButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="YaC-gH-PHA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcZ-a1-wFM">
@@ -523,6 +533,16 @@ iOS App created by Peter Hoß</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-Qj-wns">
+                                <rect key="frame" x="16" y="223" width="343" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Rate MateMonkey">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="qNM-0I-plG" eventType="touchUpInside" id="9sK-ua-nIA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -530,20 +550,23 @@ iOS App created by Peter Hoß</string>
                             <constraint firstItem="do9-Ob-hmV" firstAttribute="top" secondItem="vcZ-a1-wFM" secondAttribute="bottom" constant="8" id="0qq-Yw-qkU"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="top" secondItem="40B-nb-mla" secondAttribute="bottom" constant="8" symbolic="YES" id="4x8-2K-EAB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="40B-nb-mla" secondAttribute="trailing" id="5RC-Ro-aBH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dUr-5Q-gWS" secondAttribute="trailing" id="9fo-Sw-aeL"/>
                             <constraint firstItem="40B-nb-mla" firstAttribute="top" secondItem="ucd-Nb-KwY" secondAttribute="bottom" constant="8" symbolic="YES" id="Gn8-gc-e7k"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="top" secondItem="MEV-MS-AkF" secondAttribute="bottom" constant="8" symbolic="YES" id="JlG-eX-fqs"/>
-                            <constraint firstItem="VVY-Qj-wns" firstAttribute="top" secondItem="aN1-uZ-9g4" secondAttribute="bottom" constant="15" id="L6W-42-Hpd"/>
+                            <constraint firstItem="VVY-Qj-wns" firstAttribute="top" secondItem="dUr-5Q-gWS" secondAttribute="bottom" constant="8" symbolic="YES" id="KC9-CN-PYC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VVY-Qj-wns" secondAttribute="trailing" id="LjW-9R-9TP"/>
                             <constraint firstItem="BHe-Y9-vsg" firstAttribute="leading" secondItem="40B-nb-mla" secondAttribute="leading" constant="10" id="Nbh-tb-q1c"/>
+                            <constraint firstItem="dUr-5Q-gWS" firstAttribute="top" secondItem="aN1-uZ-9g4" secondAttribute="bottom" constant="15" id="UVD-VE-09J"/>
                             <constraint firstItem="aN1-uZ-9g4" firstAttribute="leading" secondItem="BHe-Y9-vsg" secondAttribute="leading" id="W45-kO-cic"/>
                             <constraint firstItem="qru-ZP-Jpb" firstAttribute="leading" secondItem="VVY-Qj-wns" secondAttribute="leading" constant="10" id="WUH-yY-mkc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VVY-Qj-wns" secondAttribute="leading" id="awq-y0-M52"/>
                             <constraint firstItem="vcZ-a1-wFM" firstAttribute="top" secondItem="geR-EF-yPS" secondAttribute="bottom" constant="8" symbolic="YES" id="crI-d5-OgJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="40B-nb-mla" secondAttribute="leading" id="f5w-2j-rev"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dUr-5Q-gWS" secondAttribute="leading" id="inV-U7-QU5"/>
                             <constraint firstItem="MEV-MS-AkF" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="nVy-wS-S4Z"/>
                             <constraint firstItem="geR-EF-yPS" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="njg-UN-w8i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BHe-Y9-vsg" secondAttribute="trailing" id="pHx-Zv-Ir9"/>
-                            <constraint firstItem="qru-ZP-Jpb" firstAttribute="top" secondItem="VVY-Qj-wns" secondAttribute="bottom" constant="-5" id="tzR-Qe-Xi2"/>
+                            <constraint firstItem="qru-ZP-Jpb" firstAttribute="top" secondItem="VVY-Qj-wns" secondAttribute="bottom" constant="8" symbolic="YES" id="tzR-Qe-Xi2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qru-ZP-Jpb" secondAttribute="trailing" id="uxE-0I-UaC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aN1-uZ-9g4" secondAttribute="trailing" id="wf1-7n-iD4"/>
                             <constraint firstItem="vcZ-a1-wFM" firstAttribute="centerX" secondItem="UQP-Yw-RsD" secondAttribute="centerX" id="zMJ-Nn-C5K"/>

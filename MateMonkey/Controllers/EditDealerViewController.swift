@@ -62,6 +62,7 @@ class EditDealerViewController: UIViewController {
         phoneNumberField.delegate = self
         emailAddressField.delegate = self
         websiteField.delegate = self
+        notesField.delegate = self
         
         populateFields()
     }
@@ -281,5 +282,21 @@ extension EditDealerViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == notesField || textField == websiteField {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.bounds.origin.y = self.view.bounds.origin.y + 100
+            })
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == notesField || textField == websiteField {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.bounds.origin.y = self.view.bounds.origin.y - 100
+            })
+        }
     }
 }

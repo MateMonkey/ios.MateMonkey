@@ -23,6 +23,7 @@ class DealerDetailViewController: UIViewController {
     @IBOutlet weak var streetNumberLabel: UILabel!
     @IBOutlet weak var postalCodeLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var dealerTypeLabel: UILabel!
     
     
     @IBOutlet weak var phoneNumberButton: UIButton!
@@ -64,7 +65,7 @@ class DealerDetailViewController: UIViewController {
     
     @IBAction func phoneNumberPressed(_ sender: UIButton) {
         if let phoneNumber = dealerToDisplay?.address.phone {
-            let phoneString = "tel://" + phoneNumber.replacingOccurrences(of: " ", with: "")
+            let phoneString = "tel://" + sanitizedPhoneNumber(phoneNumber)
             if let phoneURL = URL(string: phoneString) {
                 if UIApplication.shared.canOpenURL(phoneURL) {
                     let phoneConfirmationAlert: UIAlertController = UIAlertController(title: VisibleStrings.callAlertTitle, message: VisibleStrings.callAlertMessage, preferredStyle: .alert)
@@ -118,6 +119,12 @@ class DealerDetailViewController: UIViewController {
         websiteAddressButton.setTitle(dealer.address.web, for: .normal)
         
         notesLabel.text = dealer.note
+        
+        dealerTypeLabel.text = " " + visibleStringForDealerType(dealer.type) + " "
+        dealerTypeLabel.backgroundColor = colorForDealerType(dealer.type)
+        
+        dealerTypeLabel.layer.masksToBounds = true
+        dealerTypeLabel.layer.cornerRadius = 2
     }
     
     private func showErrorAlert(forErrorType errorType: ContactError) {
@@ -133,6 +140,53 @@ class DealerDetailViewController: UIViewController {
         invalidAlert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
         
         self.present(invalidAlert, animated: true, completion: nil)
+    }
+    
+    private func sanitizedPhoneNumber(_ phoneNumber: String) -> String {
+        let removedSpaces = phoneNumber.replacingOccurrences(of: " ", with: "")
+        let removedSlashes = removedSpaces.replacingOccurrences(of: "/", with: "")
+        let removedBackslashes = removedSlashes.replacingOccurrences(of: "\\", with: "")
+        
+        let sanitizedNumber = removedBackslashes
+        return sanitizedNumber
+    }
+    
+    private func visibleStringForDealerType(_ type: MMDealerType) -> String {
+        switch type {
+        case .bar:
+            return VisibleStrings.dealerTypeBar
+        case .club:
+            return VisibleStrings.dealerTypeClub
+        case .retail:
+            return VisibleStrings.dealerTypeRetail
+        case .restaurant:
+            return VisibleStrings.dealerTypeRestaurant
+        case .other:
+            return VisibleStrings.dealerTypeOther
+        case .hackerspace:
+            return VisibleStrings.dealerTypeHackerspace
+        case .community:
+            return VisibleStrings.dealerTypeCommunity
+        }
+    }
+    
+    private func colorForDealerType(_ type: MMDealerType) -> UIColor {
+        switch type {
+        case .bar:
+            return UIColor.dealerTypeBars()
+        case .club:
+            return UIColor.dealerTypeClubs()
+        case .retail:
+            return UIColor.dealerTypeRetail()
+        case .restaurant:
+            return UIColor.dealerTypeRestaurants()
+        case .other:
+            return UIColor.dealerTypeOther()
+        case .hackerspace:
+            return UIColor.dealerTypeHackerspaces()
+        case .community:
+            return UIColor.dealerTypeCommunity()
+        }
     }
 
     // MARK: - Navigation
