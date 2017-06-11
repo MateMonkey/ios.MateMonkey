@@ -34,6 +34,13 @@ class DealerDetailViewController: UIViewController {
     
     @IBOutlet weak var stockTableView: UITableView!
     
+    // MARK: Cell outlets
+    
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productPrizeLabel: UILabel!
+    @IBOutlet weak var productLastUpdatedLabel: UILabel!
+    @IBOutlet weak var productStockLevelImage: UIImageView!
+    
     
     // MARK: - Variables
     var dealerToDisplay: MMDealer?
@@ -235,6 +242,24 @@ extension DealerDetailViewController: JSONSenderDelegate {
 }
 
 extension DealerDetailViewController: UITableViewDataSource {
+    @available(iOS 2.0, *)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    @available(iOS 2.0, *)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StockCell") as! StockTableViewCell
+        
+        // FIXME: These are just test values. Implement a server call to query the real availability for the product.
+        cell.productNameLabel.text = "Club Mate 0.5l"
+        cell.productPrizeLabel.text = "€14.99/Crate"
+        cell.productLastUpdateLabel.text = "11h"
+        cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_low")
+        
+        return cell
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

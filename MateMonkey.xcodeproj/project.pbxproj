@@ -11,6 +11,7 @@
 		D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EE71E9C34B600478EAA /* InfoPlist.strings */; };
 		D04F2EEA1E9C34B600478EAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EEC1E9C34B600478EAA /* Localizable.strings */; };
 		D04F2EF11E9D04AD00478EAA /* MetaMateLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */; };
+		D0897C871EEDE98A000442A2 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0897C861EEDE98A000442A2 /* StockTableViewCell.swift */; };
 		D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */; };
 		D08C14811E96E73400ACABAD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C14801E96E73400ACABAD /* Banner.swift */; };
 		D08FABB11E46782E00B0F443 /* DealerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */; };
@@ -44,6 +45,7 @@
 		D04F2EED1E9C355300478EAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D04F2EF01E9D04AD00478EAA /* MetaMateLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MetaMateLocation.gpx; sourceTree = "<group>"; };
 		D0719D871EABEBA600230D37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0897C861EEDE98A000442A2 /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDealerFilter.swift; sourceTree = "<group>"; };
 		D08C14801E96E73400ACABAD /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDetailViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B6D8E51E3E3181007A59CA /* Main.storyboard */,
+				D0897C861EEDE98A000442A2 /* StockTableViewCell.swift */,
 				D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */,
 				D0E603D51E57ACF300B7F82B /* MMFilterView.swift */,
 				D08C14801E96E73400ACABAD /* Banner.swift */,
@@ -317,6 +320,7 @@
 				D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */,
 				D08C14811E96E73400ACABAD /* Banner.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
+				D0897C871EEDE98A000442A2 /* StockTableViewCell.swift in Sources */,
 				D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
