@@ -32,6 +32,9 @@ class DealerDetailViewController: UIViewController {
 
     @IBOutlet weak var notesLabel: UILabel!
     
+    @IBOutlet weak var stockTableView: UITableView!
+    
+    
     // MARK: - Variables
     var dealerToDisplay: MMDealer?
     
@@ -44,6 +47,7 @@ class DealerDetailViewController: UIViewController {
             populateLabelsForDealer(dealer)
         }
         
+        stockTableView.dataSource = self
 
         /* Experimental navBar colors
          self.navigationController?.navigationBar.barTintColor = UIColor.monkeyGreenDark()
@@ -227,5 +231,11 @@ extension DealerDetailViewController: JSONSenderDelegate {
                 presenter.showBanner(withMessage: VisibleStrings.bannerMessageDealerUpdateFailed)
             }
         }
+    }
+}
+
+extension DealerDetailViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 }
