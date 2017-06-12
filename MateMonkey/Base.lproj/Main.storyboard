@@ -170,7 +170,7 @@ Lines</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="[[MMProduct.name]]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-C3-aPp">
-                                                    <rect key="frame" x="8" y="11" width="205.5" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="204.5" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -188,8 +188,8 @@ Lines</string>
                                                         <constraint firstAttribute="height" constant="19" id="9ol-RI-16e"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[[Prize]]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vd-wz-ZII">
-                                                    <rect key="frame" x="215.5" y="12" width="62" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[[Price]]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vd-wz-ZII">
+                                                    <rect key="frame" x="214.5" y="12" width="63" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -218,10 +218,14 @@ Lines</string>
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZMG-So-NgD">
+                                <rect key="frame" x="177.5" y="344" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.26666666666666666" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZMG-So-NgD" firstAttribute="top" secondItem="uxz-b4-30N" secondAttribute="top" id="0YE-Su-xet"/>
                             <constraint firstItem="qUV-2n-IGC" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="1U3-Z1-0iT"/>
                             <constraint firstItem="5Xd-lT-hVg" firstAttribute="leading" secondItem="MC9-t3-MbL" secondAttribute="trailing" constant="2" id="1XO-lD-sVy"/>
                             <constraint firstItem="UJm-QM-iEB" firstAttribute="centerY" secondItem="HgU-oo-f9e" secondAttribute="centerY" id="1Z1-1J-Fpu"/>
@@ -256,6 +260,7 @@ Lines</string>
                             <constraint firstItem="yKg-bF-xd7" firstAttribute="leading" secondItem="zcA-a6-Xkf" secondAttribute="leadingMargin" constant="-6" id="cGv-A4-pu3"/>
                             <constraint firstItem="hiw-72-dQ7" firstAttribute="leading" secondItem="qUV-2n-IGC" secondAttribute="trailing" constant="8" id="dgj-ja-Nne"/>
                             <constraint firstItem="jdL-e3-tNY" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" id="fdO-J2-72l"/>
+                            <constraint firstItem="ZMG-So-NgD" firstAttribute="centerX" secondItem="zcA-a6-Xkf" secondAttribute="centerX" id="hni-As-SRa"/>
                             <constraint firstItem="Fhz-rD-A9X" firstAttribute="top" secondItem="Lhg-tJ-CpN" secondAttribute="bottom" constant="8" symbolic="YES" id="iBX-7P-586"/>
                             <constraint firstItem="5Xd-lT-hVg" firstAttribute="top" secondItem="Tvw-QH-HDZ" secondAttribute="bottom" constant="1" id="mX8-tv-EGb"/>
                             <constraint firstAttribute="leadingMargin" secondItem="uxz-b4-30N" secondAttribute="leading" id="pk9-W0-2IX"/>
@@ -290,6 +295,7 @@ Lines</string>
                         <outlet property="notesLabel" destination="hiw-72-dQ7" id="NvH-N5-ypm"/>
                         <outlet property="phoneNumberButton" destination="UJm-QM-iEB" id="dM9-9y-iw7"/>
                         <outlet property="postalCodeLabel" destination="MC9-t3-MbL" id="MhL-1J-jlX"/>
+                        <outlet property="stockSpinner" destination="ZMG-So-NgD" id="tvu-CM-iNM"/>
                         <outlet property="stockTableView" destination="uxz-b4-30N" id="owM-YE-n67"/>
                         <outlet property="streetNameLabel" destination="Tvw-QH-HDZ" id="aWH-2x-k1G"/>
                         <outlet property="streetNumberLabel" destination="Yqf-iv-zxW" id="kvu-fi-JBC"/>

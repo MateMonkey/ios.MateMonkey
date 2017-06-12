@@ -33,6 +33,7 @@ class DealerDetailViewController: UIViewController {
     @IBOutlet weak var notesLabel: UILabel!
     
     @IBOutlet weak var stockTableView: UITableView!
+    @IBOutlet weak var stockSpinner: UIActivityIndicatorView!
     
     // MARK: Cell outlets
     
@@ -55,6 +56,9 @@ class DealerDetailViewController: UIViewController {
         }
         
         stockTableView.dataSource = self
+        stockSpinner.startAnimating()
+        stockSpinner.hidesWhenStopped = true
+        stockTableView.isHidden = true
 
         /* Experimental navBar colors
          self.navigationController?.navigationBar.barTintColor = UIColor.monkeyGreenDark()
