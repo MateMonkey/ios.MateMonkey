@@ -45,6 +45,10 @@ class DealerDetailViewController: UIViewController {
     
     // MARK: - Variables
     var dealerToDisplay: MMDealer?
+    var dealerStock = [MMStockEntry]()
+    
+    // MARK: - Constants
+    let stockFetcher = MMStockFetcher()
     
     // MARK: - View controller lifecycle
     override func viewDidLoad() {
@@ -59,12 +63,22 @@ class DealerDetailViewController: UIViewController {
         stockSpinner.startAnimating()
         stockSpinner.hidesWhenStopped = true
         stockTableView.isHidden = true
+        
+        stockFetcher.delegate = self
 
         /* Experimental navBar colors
          self.navigationController?.navigationBar.barTintColor = UIColor.monkeyGreenDark()
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = UIColor.white
         */
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let dealer = dealerToDisplay {
+            stockFetcher.queryForDealerId(dealer.id)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -248,23 +262,67 @@ extension DealerDetailViewController: JSONSenderDelegate {
 extension DealerDetailViewController: UITableViewDataSource {
     @available(iOS 2.0, *)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if dealerStock.count > 0 {
+            return dealerStock.count
+        } else {
+            return 1
+        }
     }
     
     @available(iOS 2.0, *)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StockCell") as! StockTableViewCell
         
-        // FIXME: These are just test values. Implement a server call to query the real availability for the product.
-        cell.productNameLabel.text = "Club Mate 0.5l"
-        cell.productPrizeLabel.text = "€14.99/Crate"
-        cell.productLastUpdateLabel.text = "11h"
-        cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_low")
+        if dealerStock.count == 0 {
+            cell.productNameLabel.text = "No products yet."
+            cell.productPrizeLabel.text = ""
+            cell.productAvailabilityImage.image = nil
+            cell.productLastUpdateLabel.text = ""
+        } else {
+            let entry = dealerStock[indexPath.row]
+            cell.productNameLabel.text = entry.product.name
+            if entry.price == "?" {
+                cell.productPrizeLabel.text = entry.price
+            } else {
+                cell.productPrizeLabel.text = "€" + entry.price
+            }
+            // FIXME: We need the timestamps and convert them, too.
+            cell.productLastUpdateLabel.text = ""
+            
+            switch entry.status {
+            case .discontinued:
+                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_empty")
+                break
+            case .soldout:
+                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_empty")
+                break
+            case .full:
+                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_full")
+                break
+            case .low:
+                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_low")
+                break
+            case .unknown:
+                // FIXME: We need a question mark icon here.
+                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_empty")
+            }
+        }
         
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+}
+
+extension DealerDetailViewController: MMStockFetcherDelegate {
+    func queryCompleted(sender: MMStockFetcher) {
+        DispatchQueue.main.async {
+            self.dealerStock = sender.results
+            self.stockTableView.reloadData()
+            self.stockSpinner.stopAnimating()
+            self.stockTableView.isHidden = false
+        }
     }
 }

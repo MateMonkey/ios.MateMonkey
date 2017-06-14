@@ -31,6 +31,7 @@
 		D0CEFC881EEF26DD00431FEE /* MMStockEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEFC871EEF26DD00431FEE /* MMStockEntry.swift */; };
 		D0CEFC8A1EEF26F200431FEE /* MMProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEFC891EEF26F200431FEE /* MMProduct.swift */; };
 		D0CEFC8C1EEF371900431FEE /* MMStockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEFC8B1EEF371900431FEE /* MMStockStatus.swift */; };
+		D0CEFC8E1EF072F100431FEE /* MMStockFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEFC8D1EF072F100431FEE /* MMStockFetcher.swift */; };
 		D0E2B2361E7B25A100F1BD2F /* FilterDealersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */; };
 		D0E603D41E4BADA900B7F82B /* MMJSONSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */; };
 		D0E603D61E57ACF300B7F82B /* MMFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E603D51E57ACF300B7F82B /* MMFilterView.swift */; };
@@ -71,6 +72,7 @@
 		D0CEFC871EEF26DD00431FEE /* MMStockEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMStockEntry.swift; sourceTree = "<group>"; };
 		D0CEFC891EEF26F200431FEE /* MMProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMProduct.swift; sourceTree = "<group>"; };
 		D0CEFC8B1EEF371900431FEE /* MMStockStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMStockStatus.swift; sourceTree = "<group>"; };
+		D0CEFC8D1EF072F100431FEE /* MMStockFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMStockFetcher.swift; sourceTree = "<group>"; };
 		D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDealersViewController.swift; sourceTree = "<group>"; };
 		D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONSender.swift; sourceTree = "<group>"; };
 		D0E603D51E57ACF300B7F82B /* MMFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFilterView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 		D08C147B1E8DA04100ACABAD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */,
+				D0CEFC8D1EF072F100431FEE /* MMStockFetcher.swift */,
 				D09A98A01E4284DF0071C58B /* MMJSONParser.swift */,
 				D08C147C1E8DA07C00ACABAD /* MMDealerFilter.swift */,
 				D0E603D31E4BADA900B7F82B /* MMJSONSender.swift */,
@@ -178,7 +182,6 @@
 				D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */,
 				D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */,
 				D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */,
-				D0B6D8FB1E3FDB97007A59CA /* MMDealerFetcher.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				D08C14811E96E73400ACABAD /* Banner.swift in Sources */,
 				D0B6D8FE1E3FE21D007A59CA /* GlobalValues.swift in Sources */,
 				D0897C871EEDE98A000442A2 /* StockTableViewCell.swift in Sources */,
+				D0CEFC8E1EF072F100431FEE /* MMStockFetcher.swift in Sources */,
 				D0E603D81E5E1F0A00B7F82B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

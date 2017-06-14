@@ -49,7 +49,7 @@ class MMDealerFetcher {
             
             if (statusCode == 200) {
                 print(data!)
-                if let dealers = try? MMJSONParser(data: data!).parse() {
+                if let dealers = try? MMJSONParser(data: data!).parseDealers() {
                     if dealers.count > 0 {
                         // We have one or more dealers in the map area
                         self.results = dealers
