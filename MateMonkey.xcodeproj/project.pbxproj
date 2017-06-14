@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01FD92D1EF1E78800795DE8 /* MMStockQuantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FD92C1EF1E78800795DE8 /* MMStockQuantity.swift */; };
 		D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */; };
 		D04F2EE51E9C34B600478EAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EE71E9C34B600478EAA /* InfoPlist.strings */; };
 		D04F2EEA1E9C34B600478EAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D04F2EEC1E9C34B600478EAA /* Localizable.strings */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D01FD92C1EF1E78800795DE8 /* MMStockQuantity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMStockQuantity.swift; sourceTree = "<group>"; };
 		D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		D04F2EE11E9C2FCD00478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		D04F2EE21E9C2FCD00478EAA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				D0CEFC871EEF26DD00431FEE /* MMStockEntry.swift */,
+				D01FD92C1EF1E78800795DE8 /* MMStockQuantity.swift */,
 				D0CEFC891EEF26F200431FEE /* MMProduct.swift */,
 				D0B6D8FF1E4129FB007A59CA /* MMDealer.swift */,
 				D0F2A20D1E41317D000DA93C /* MMAddress.swift */,
@@ -328,6 +331,7 @@
 				D0AE772B1E8869BD00A667B1 /* MMFilterDealerButton.swift in Sources */,
 				D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */,
 				D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */,
+				D01FD92D1EF1E78800795DE8 /* MMStockQuantity.swift in Sources */,
 				D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */,
 				D032DAA51E661ADE00D17543 /* AppInfoViewController.swift in Sources */,
 				D0CEFC8A1EEF26F200431FEE /* MMProduct.swift in Sources */,

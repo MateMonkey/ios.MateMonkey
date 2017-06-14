@@ -63,6 +63,7 @@ class DealerDetailViewController: UIViewController {
         stockSpinner.startAnimating()
         stockSpinner.hidesWhenStopped = true
         stockTableView.isHidden = true
+        stockTableView.allowsSelection = false
         
         stockFetcher.delegate = self
 
@@ -274,20 +275,25 @@ extension DealerDetailViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StockCell") as! StockTableViewCell
         
         if dealerStock.count == 0 {
-            cell.productNameLabel.text = "No products yet."
+            cell.productNameLabel.text = VisibleStrings.noStockInformation
             cell.productPrizeLabel.text = ""
             cell.productAvailabilityImage.image = nil
             cell.productLastUpdateLabel.text = ""
         } else {
             let entry = dealerStock[indexPath.row]
             cell.productNameLabel.text = entry.product.name
+            
             if entry.price == "?" {
-                cell.productPrizeLabel.text = entry.price
+                cell.productPrizeLabel.text = entry.price + "/" + MMStockQuantity.getQuantity(entry.quantity)
             } else {
-                cell.productPrizeLabel.text = "€" + entry.price
+                if let symbol = Locale.current.currencySymbol {
+                    cell.productPrizeLabel.text = symbol + " " + entry.price + "/" + MMStockQuantity.getQuantity(entry.quantity)
+                } else {
+                    cell.productPrizeLabel.text = "€ " + entry.price + "/" + MMStockQuantity.getQuantity(entry.quantity)
+                }
             }
-            // FIXME: We need the timestamps and convert them, too.
-            cell.productLastUpdateLabel.text = ""
+            
+            cell.productLastUpdateLabel.text = getStringForLastUpdated(entry.created)
             
             switch entry.status {
             case .discontinued:
@@ -303,8 +309,7 @@ extension DealerDetailViewController: UITableViewDataSource {
                 cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_low")
                 break
             case .unknown:
-                // FIXME: We need a question mark icon here.
-                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_empty")
+                cell.productAvailabilityImage.image = UIImage(named: "Icon_Stock_unknown")
             }
         }
         
@@ -313,6 +318,26 @@ extension DealerDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func getStringForLastUpdated(_ update: Date) -> String {
+        let calendar = Calendar.current
+        let date = Date()
+        let timeDifference = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: update, to: date)
+        
+        if let year = timeDifference.year, timeDifference.year! != 0 {
+            return String(describing: year) + "y"
+        } else if let month = timeDifference.month, timeDifference.month! != 0 {
+            return String(describing: month) + "M"
+        } else if let day = timeDifference.day, timeDifference.day! != 0 {
+            return String(describing: day) + "d"
+        } else if let hour = timeDifference.hour, timeDifference.hour! != 0 {
+            return String(describing: hour) + "h"
+        } else if let minute = timeDifference.minute, timeDifference.minute! != 0 {
+            return String(describing: minute) + "min"
+        } else {
+            return "~"
+        }
     }
 }
 

@@ -64,4 +64,8 @@ struct VisibleStrings {
     static let dealerTypeOther = NSLocalizedString("Other", comment: "User facing String for dealer types.")
     static let dealerTypeHackerspace = NSLocalizedString("Hackerspace", comment: "User facing String for dealer types.")
     static let dealerTypeCommunity = NSLocalizedString("Community", comment: "User facing String for dealer types.")
+    
+    // MARK: - Stock information
+    static let noStockInformation = NSLocalizedString("No products yet.", comment: "String to show when there are no stock entries for a dealer.")
+    
 }
