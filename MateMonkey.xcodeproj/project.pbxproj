@@ -19,6 +19,7 @@
 		D08FABB31E468BD700B0F443 /* VisibleStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB21E468BD700B0F443 /* VisibleStrings.swift */; };
 		D08FABB51E4A64A500B0F443 /* EditDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */; };
 		D09A98A11E4284DF0071C58B /* MMJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A98A01E4284DF0071C58B /* MMJSONParser.swift */; };
+		D09CC2F61EF329F2009AFD17 /* UpdateStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CC2F51EF329F2009AFD17 /* UpdateStockViewController.swift */; };
 		D0AE772B1E8869BD00A667B1 /* MMFilterDealerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */; };
 		D0B6D8E21E3E3181007A59CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */; };
 		D0B6D8E41E3E3181007A59CA /* MateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6D8E31E3E3181007A59CA /* MateMapViewController.swift */; };
@@ -58,6 +59,7 @@
 		D08FABB21E468BD700B0F443 /* VisibleStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleStrings.swift; sourceTree = "<group>"; };
 		D08FABB41E4A64A500B0F443 /* EditDealerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDealerViewController.swift; sourceTree = "<group>"; };
 		D09A98A01E4284DF0071C58B /* MMJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMJSONParser.swift; sourceTree = "<group>"; };
+		D09CC2F51EF329F2009AFD17 /* UpdateStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStockViewController.swift; sourceTree = "<group>"; };
 		D0AE772A1E8869BD00A667B1 /* MMFilterDealerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFilterDealerButton.swift; sourceTree = "<group>"; };
 		D0B6D8DE1E3E3181007A59CA /* MateMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MateMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B6D8E11E3E3181007A59CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		D0B6D8FA1E3FD8EE007A59CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D09CC2F51EF329F2009AFD17 /* UpdateStockViewController.swift */,
 				D032DAA41E661ADE00D17543 /* AppInfoViewController.swift */,
 				D0E2B2351E7B25A100F1BD2F /* FilterDealersViewController.swift */,
 				D08FABB01E46782E00B0F443 /* DealerDetailViewController.swift */,
@@ -329,6 +332,7 @@
 				D0B6D8FC1E3FDB97007A59CA /* MMDealerFetcher.swift in Sources */,
 				D08FABB51E4A64A500B0F443 /* EditDealerViewController.swift in Sources */,
 				D0AE772B1E8869BD00A667B1 /* MMFilterDealerButton.swift in Sources */,
+				D09CC2F61EF329F2009AFD17 /* UpdateStockViewController.swift in Sources */,
 				D08C147D1E8DA07C00ACABAD /* MMDealerFilter.swift in Sources */,
 				D0B6D9001E4129FB007A59CA /* MMDealer.swift in Sources */,
 				D01FD92D1EF1E78800795DE8 /* MMStockQuantity.swift in Sources */,

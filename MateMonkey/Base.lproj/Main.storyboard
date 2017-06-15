@@ -166,7 +166,7 @@ Lines</string>
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HVD-nu-yKd" id="nxL-yW-Zsa">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="[[MMProduct.name]]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-C3-aPp">
@@ -222,13 +222,13 @@ Lines</string>
                                 <rect key="frame" x="177.5" y="344" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6o-Hi-1KN">
-                                <rect key="frame" x="227" y="307.5" width="132" height="33"/>
+                                <rect key="frame" x="218" y="307.5" width="141" height="33"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Update Inventory"/>
+                                <state key="normal" title=" Update Inventory "/>
                                 <connections>
-                                    <segue destination="8Xs-D3-xep" kind="show" action="showDetailViewController:sender:" id="yXB-RH-XKp"/>
+                                    <segue destination="8Xs-D3-xep" kind="show" id="uaY-wQ-DyG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -311,6 +311,7 @@ Lines</string>
                         <outlet property="stockTableView" destination="uxz-b4-30N" id="owM-YE-n67"/>
                         <outlet property="streetNameLabel" destination="Tvw-QH-HDZ" id="aWH-2x-k1G"/>
                         <outlet property="streetNumberLabel" destination="Yqf-iv-zxW" id="kvu-fi-JBC"/>
+                        <outlet property="updateInventoryButton" destination="X6o-Hi-1KN" id="bUN-Cp-AqQ"/>
                         <outlet property="websiteAddressButton" destination="KRH-Xa-nmN" id="I5g-gU-hTg"/>
                     </connections>
                 </viewController>
@@ -318,10 +319,10 @@ Lines</string>
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Update Stock-->
         <scene sceneID="Z0E-Tu-ym2">
             <objects>
-                <viewController id="8Xs-D3-xep" sceneMemberID="viewController">
+                <viewController title="Update Stock" id="8Xs-D3-xep" customClass="UpdateStockViewController" customModule="MateMonkey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8yp-Wr-Vpo"/>
                         <viewControllerLayoutGuide type="bottom" id="JpK-f0-s91"/>
@@ -370,7 +371,7 @@ Lines</string>
                                 <rect key="frame" x="88" y="148" width="271" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcS-If-5oA">
                                 <rect key="frame" x="88" y="186" width="271" height="30"/>
@@ -378,11 +379,16 @@ Lines</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eay-Jy-ogf">
+                                <rect key="frame" x="27" y="431" width="320" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GxA-V9-cIP" firstAttribute="baseline" secondItem="gUE-j5-Vwy" secondAttribute="baseline" id="1Qe-FZ-bUL"/>
+                            <constraint firstItem="eay-Jy-ogf" firstAttribute="centerX" secondItem="lgo-ZI-dND" secondAttribute="centerX" id="2vH-go-hrV"/>
                             <constraint firstItem="XcS-If-5oA" firstAttribute="top" secondItem="GkY-62-K9k" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ma-CQ-1lW"/>
                             <constraint firstItem="GkY-62-K9k" firstAttribute="width" secondItem="gUE-j5-Vwy" secondAttribute="width" id="7Ac-KN-zrN"/>
                             <constraint firstItem="LMT-2X-fiL" firstAttribute="baseline" secondItem="yxG-AS-SGe" secondAttribute="baseline" id="7vL-b0-SUe"/>
@@ -400,6 +406,7 @@ Lines</string>
                             <constraint firstAttribute="trailingMargin" secondItem="gUE-j5-Vwy" secondAttribute="trailing" id="ktT-O2-hD9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yxG-AS-SGe" secondAttribute="trailing" id="o9U-id-6x1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GxA-V9-cIP" secondAttribute="leading" id="oku-JK-3ce"/>
+                            <constraint firstItem="JpK-f0-s91" firstAttribute="top" secondItem="eay-Jy-ogf" secondAttribute="bottom" constant="20" id="p7v-Js-cUo"/>
                             <constraint firstItem="PlC-uX-jqS" firstAttribute="baseline" secondItem="GkY-62-K9k" secondAttribute="baseline" id="pdW-Ty-8hv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="19J-s5-YHL" secondAttribute="leading" id="qKs-mS-HBz"/>
                             <constraint firstItem="GkY-62-K9k" firstAttribute="top" secondItem="yxG-AS-SGe" secondAttribute="bottom" constant="8" symbolic="YES" id="s2e-Vq-Ggn"/>
@@ -407,6 +414,13 @@ Lines</string>
                             <constraint firstAttribute="leadingMargin" secondItem="PlC-uX-jqS" secondAttribute="leading" id="wlO-eP-bkK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="GkY-62-K9k" id="wYj-qU-u5h"/>
+                        <outlet property="productTextField" destination="gUE-j5-Vwy" id="8Gn-a2-Rdv"/>
+                        <outlet property="quantityTextField" destination="XcS-If-5oA" id="PPS-AX-fal"/>
+                        <outlet property="statusTextField" destination="yxG-AS-SGe" id="0AS-cG-V49"/>
+                        <outlet property="valuePickerView" destination="eay-Jy-ogf" id="zNF-Vg-4NF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iRr-SJ-b8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -32,6 +32,8 @@ class DealerDetailViewController: UIViewController {
 
     @IBOutlet weak var notesLabel: UILabel!
     
+    @IBOutlet weak var updateInventoryButton: UIButton!
+    
     @IBOutlet weak var stockTableView: UITableView!
     @IBOutlet weak var stockSpinner: UIActivityIndicatorView!
     
@@ -66,7 +68,11 @@ class DealerDetailViewController: UIViewController {
         stockTableView.allowsSelection = false
         
         stockFetcher.delegate = self
-
+        
+        updateInventoryButton.layer.borderWidth = 1.0
+        updateInventoryButton.layer.borderColor = UIColor.white.cgColor
+        updateInventoryButton.layer.cornerRadius = 8
+        
         /* Experimental navBar colors
          self.navigationController?.navigationBar.barTintColor = UIColor.monkeyGreenDark()
         self.navigationController?.navigationBar.isTranslucent = false
