@@ -6,11 +6,11 @@ This app provides a native iOS environment for the website [MateMonkey](www.mate
 
 ## Version ##
 
-Current version: 1.0.1
+Current version: 1.1
 
 ## To Do ##
 
-* version 1.1 
+* after release: test smart banner deep linking
 
 ## Development Roadmap ##
 

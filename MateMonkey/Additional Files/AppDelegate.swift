@@ -81,14 +81,16 @@ extension AppDelegate: MMDealerFetcherDelegate {
             // We have either too many dealers or to little :(
             print("We should have exactly one dealer, but we haven't: \(sender.results)")
         } else {
-            let dealerToPresent = sender.results.first!
-            let dealerDetailVC = DealerDetailViewController()
-            dealerDetailVC.dealerToDisplay = dealerToPresent
-            
-            let navController = UINavigationController()
-            navController.pushViewController(dealerDetailVC, animated: false)
-            
-            UIApplication.topViewController()?.present(navController, animated: false, completion: nil)
+            DispatchQueue.main.async {
+                let dealerToPresent = sender.results.first!
+                let dealerDetailVC = DealerDetailViewController()
+                dealerDetailVC.dealerToDisplay = dealerToPresent
+                
+                let navController = UINavigationController()
+                navController.pushViewController(dealerDetailVC, animated: false)
+                
+                UIApplication.topViewController()?.present(navController, animated: false, completion: nil)
+            }
         }
         
     }
