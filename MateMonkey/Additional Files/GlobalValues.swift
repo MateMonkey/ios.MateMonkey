@@ -60,6 +60,7 @@ struct GlobalValues {
     
     static let FVSnapBackAnimationDuration: TimeInterval = 0.1
     
-    
     static let maximumPinsVisible = 25
+    
+    static var productDict = [Int: String]()
 }

@@ -25,12 +25,14 @@ class UpdateStockViewController: UIViewController {
     
     var productData = ["1337mate 0.33l", "berliner mätchen", "Club Mate 0.5l", "floraPOWER"]
     var statusData = [String(describing: MMStockStatus.discontinued), String(describing: MMStockStatus.full), String(describing: MMStockStatus.low), String(describing: MMStockStatus.soldout), String(describing: MMStockStatus.unknown)]
-
+    
+    // MARK: - View controller lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        pickerData = productData
+        pickerData = mapDictToArray(GlobalValues.productDict)
         
         self.valuePickerView.delegate = self
         self.valuePickerView.dataSource = self
@@ -46,7 +48,13 @@ class UpdateStockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func mapDictToArray(_ dict: [Int:String]) -> [String] {
+        var array = [String]()
+        for i in 1...dict.count {
+            array.append(dict[i]!)
+        }
+        return array
+    }
     /*
     // MARK: - Navigation
 
@@ -81,11 +89,18 @@ extension UpdateStockViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == statusTextField {
+            self.priceTextField.resignFirstResponder()
             self.pickerData = statusData
             self.valuePickerView.reloadAllComponents()
             return false
         } else if textField == productTextField {
-            self.pickerData = productData
+            self.priceTextField.resignFirstResponder()
+            self.pickerData = mapDictToArray(GlobalValues.productDict)
+            self.valuePickerView.reloadAllComponents()
+            return false
+        } else if textField == quantityTextField {
+            self.priceTextField.resignFirstResponder()
+            self.pickerData = ["a", "b", "c"]
             self.valuePickerView.reloadAllComponents()
             return false
         } else {

@@ -49,6 +49,8 @@ class MateMapViewController: UIViewController {
         
         filterView.delegate = self
         self.view.addSubview(filterView)
+        
+        getProductDict()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,6 +82,35 @@ class MateMapViewController: UIViewController {
         let banner = Banner(title: message, subtitle: VisibleStrings.bannerTapToDismiss, backgroundColor: UIColor.monkeyGreenDark())
         banner.dismissesOnTap = true
         banner.show(duration: 5.0)
+    }
+    
+    func getProductDict() {
+        let urlString = GlobalValues.baseURL + "products"
+        
+        let requestURL: URL = URL(string: urlString)!
+        let urlRequest: URLRequest = URLRequest(url: requestURL)
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) {data, response , error in
+            
+            var statusCode = Int()
+            if let httpResponse = response as? HTTPURLResponse {
+                statusCode = httpResponse.statusCode
+            }
+            
+            if (statusCode == 200) {
+                print(data!)
+                
+                if let productDict = try? MMJSONParser(data: data!).parseProductList() {
+                    print(productDict)
+                    GlobalValues.productDict = productDict
+                } else {
+                    print("The parser had a problem parsing the products.")
+                }
+            } else {
+                print(error.debugDescription)
+            }
+        }
+        task.resume()
     }
 }
 

@@ -13,6 +13,7 @@ class MMJSONParser {
     private var data: Data
     private var dealerResultArray = [MMDealer]()
     private var stockResultArray = [MMStockEntry]()
+    private var productResultDict = [Int: String]()
     
     init(data: Data) {
         self.data = data
@@ -41,7 +42,7 @@ class MMJSONParser {
                                     dealerResultArray.append(newDealer)
                                 } catch {
                                     print(error)
-                                    throw JSONParserError(title: "Could not extract dealer", messages: [], kind: .parsingDealerError)
+                                    throw JSONParserError(title: "Could not extract dealer", messages: [], kind: .parsingItemError)
                                 }
                             }
                         }
@@ -77,7 +78,7 @@ class MMJSONParser {
                                     stockResultArray.append(newEntry)
                                 } catch {
                                     print(error)
-                                    throw JSONParserError(title: "Could not extract entry", messages: [], kind: .parsingDealerError)
+                                    throw JSONParserError(title: "Could not extract entry", messages: [], kind: .parsingItemError)
                                 }
                             }
                         }
@@ -89,12 +90,39 @@ class MMJSONParser {
         }
         return stockResultArray
     }
+    
+    func parseProductList() throws -> [Int:String] {
+        do {
+            let json = try? JSONSerialization.jsonObject(with: self.data, options: [])
+            if let fullDictionary = json as? [String: Any] {
+                
+                if let entryCount = fullDictionary["count"] as? Int {
+                    if entryCount > 0 {
+                        if let productArray = fullDictionary["products"] as? Array<Dictionary<String,Any>> {
+                            for entry in productArray {
+                                do {
+                                    let newProduct = try MMProduct(json: entry)
+                                    productResultDict[newProduct.id] = newProduct.name
+                                } catch {
+                                    print(error)
+                                    throw JSONParserError(title: "Could not extract product", messages: [], kind: .parsingItemError)
+                                }
+                            }
+                        }
+                    } else {
+                        print("There are no products.")
+                    }
+                }
+            }
+        }
+        return productResultDict
+    }
 
     
     struct JSONParserError: Error {
         enum ErrorKind {
             case serverReturnedError
-            case parsingDealerError
+            case parsingItemError
         }
         
         let title: String
