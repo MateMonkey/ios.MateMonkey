@@ -22,8 +22,8 @@ class UpdateStockViewController: UIViewController {
     // MARK: - Variables
     
     var pickerData = [String]()
+    var selected: selectedTextField = .product
     
-    var productData = ["1337mate 0.33l", "berliner mätchen", "Club Mate 0.5l", "floraPOWER"]
     var statusData = [String(describing: MMStockStatus.discontinued), String(describing: MMStockStatus.full), String(describing: MMStockStatus.low), String(describing: MMStockStatus.soldout), String(describing: MMStockStatus.unknown)]
     
     // MARK: - View controller lifecycle
@@ -65,9 +65,29 @@ class UpdateStockViewController: UIViewController {
     }
     */
 
+    
+    // MARK: - Enums
+    
+    enum selectedTextField {
+        case status, product, quantity, price
+    }
 }
 extension UpdateStockViewController: UIPickerViewDelegate {
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch selected {
+        case .product:
+            productTextField.text = pickerData[row]
+            break
+        case .status:
+            statusTextField.text = pickerData[row]
+            break
+        case .quantity:
+            quantityTextField.text = pickerData[row]
+            break
+        default:
+            break
+        }
+    }
 }
 
 extension UpdateStockViewController: UIPickerViewDataSource {
@@ -91,18 +111,24 @@ extension UpdateStockViewController: UITextFieldDelegate {
         if textField == statusTextField {
             self.priceTextField.resignFirstResponder()
             self.pickerData = statusData
+            selected = .status
             self.valuePickerView.reloadAllComponents()
             return false
         } else if textField == productTextField {
             self.priceTextField.resignFirstResponder()
             self.pickerData = mapDictToArray(GlobalValues.productDict)
+            selected = .product
             self.valuePickerView.reloadAllComponents()
             return false
         } else if textField == quantityTextField {
             self.priceTextField.resignFirstResponder()
             self.pickerData = ["a", "b", "c"]
+            selected = .quantity
             self.valuePickerView.reloadAllComponents()
             return false
+        } else if textField == priceTextField {
+            selected = .price
+            return true
         } else {
             return true
         }
