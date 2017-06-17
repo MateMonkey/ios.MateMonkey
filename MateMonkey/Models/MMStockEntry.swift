@@ -28,9 +28,20 @@ class MMStockEntry {
         guard let statusString = json["status"] as? String else {
             throw SerializationError.missing("status")
         }
-        // Extract extract price
-        guard let price = json["price"] as? String else {
-            throw SerializationError.missing("price")
+        
+        // Extract price
+        if let price = json["price"] as? String {
+            if price == "?" {
+                self.price = price
+            } else {
+                throw SerializationError.invalid("price", price)
+            }
+        } else if let price = json["price"] as? Int {
+            let priceDec = Float(price)
+            let finalPrice = priceDec / 100
+            self.price = String(describing: finalPrice)
+        } else {
+            throw SerializationError.invalid("price", json["price"]!)
         }
         
         // get the status enum from the status(string)
@@ -52,16 +63,6 @@ class MMStockEntry {
             break
         default:
             self.status = .unknown
-        }
-        
-        // Get the price, which is in hundreds of the currency (1600 for €16.00, e.g.), so we convert.
-        if price != "?" {
-            let insertIndex = price.index(price.endIndex, offsetBy: -2)
-            var mutablePrice = price
-            mutablePrice.insert(".", at: insertIndex)
-            self.price = mutablePrice
-        } else {
-            self.price = price
         }
         
         if let quantityString = json["quantity"] as? String {
