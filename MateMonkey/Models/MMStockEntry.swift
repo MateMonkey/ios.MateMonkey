@@ -37,9 +37,10 @@ class MMStockEntry {
                 throw SerializationError.invalid("price", price)
             }
         } else if let price = json["price"] as? Int {
-            let priceDec = Float(price)
-            let finalPrice = priceDec / 100
-            self.price = String(describing: finalPrice)
+            var priceString = String(price)
+            let insertIndex = priceString.index(priceString.endIndex, offsetBy: -2)
+            priceString.insert(".", at: insertIndex)
+            self.price = priceString
         } else {
             throw SerializationError.invalid("price", json["price"]!)
         }

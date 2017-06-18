@@ -22,9 +22,14 @@ class UpdateStockViewController: UIViewController {
     // MARK: - Variables
     
     var pickerData = [String]()
-    var selected: selectedTextField = .product
     
-    var statusData = [String(describing: MMStockStatus.discontinued), String(describing: MMStockStatus.full), String(describing: MMStockStatus.low), String(describing: MMStockStatus.soldout), String(describing: MMStockStatus.unknown)]
+    var selected: selectedTextField = .product
+    var internStatus = MMStockStatus.unknown
+    var internQuantity = MMStockQuantity.piece
+    var internProduct = String()
+    
+    var statusData = [MMStockStatus(rawValue: 0)!.getLocalizedStatus(), MMStockStatus(rawValue: 1)!.getLocalizedStatus(), MMStockStatus(rawValue: 2)!.getLocalizedStatus(), MMStockStatus(rawValue: 3)!.getLocalizedStatus(), MMStockStatus(rawValue: 4)!.getLocalizedStatus()]
+    var quantityData = [MMStockQuantity(rawValue: 0)!.getLocalizedQuantity(), MMStockQuantity(rawValue: 1)!.getLocalizedQuantity(), MMStockQuantity(rawValue: 2)!.getLocalizedQuantity()]
     
     // MARK: - View controller lifecycle
     
@@ -41,6 +46,8 @@ class UpdateStockViewController: UIViewController {
         statusTextField.delegate = self
         priceTextField.delegate = self
         quantityTextField.delegate = self
+        
+        print(statusData)
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,12 +84,18 @@ extension UpdateStockViewController: UIPickerViewDelegate {
         switch selected {
         case .product:
             productTextField.text = pickerData[row]
+            internProduct = pickerData[row]
+            print("internProduct: \(internProduct)")
             break
         case .status:
             statusTextField.text = pickerData[row]
+            internStatus = MMStockStatus(rawValue: row)!
+            print("internStatus: \(internStatus)")
             break
         case .quantity:
             quantityTextField.text = pickerData[row]
+            internQuantity = MMStockQuantity(rawValue: row)!
+            print("internQuantity: \(internQuantity)")
             break
         default:
             break
@@ -108,21 +121,21 @@ extension UpdateStockViewController: UIPickerViewDataSource {
 extension UpdateStockViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField == statusTextField {
-            self.priceTextField.resignFirstResponder()
-            self.pickerData = statusData
-            selected = .status
-            self.valuePickerView.reloadAllComponents()
-            return false
-        } else if textField == productTextField {
+        if textField == productTextField {
             self.priceTextField.resignFirstResponder()
             self.pickerData = mapDictToArray(GlobalValues.productDict)
             selected = .product
             self.valuePickerView.reloadAllComponents()
             return false
+        } else if textField == statusTextField {
+            self.priceTextField.resignFirstResponder()
+            self.pickerData = statusData
+            selected = .status
+            self.valuePickerView.reloadAllComponents()
+            return false
         } else if textField == quantityTextField {
             self.priceTextField.resignFirstResponder()
-            self.pickerData = ["a", "b", "c"]
+            self.pickerData = quantityData
             selected = .quantity
             self.valuePickerView.reloadAllComponents()
             return false

@@ -96,13 +96,3 @@
 
 /* Reason for an alert when the user does not provide a required field: postal */
 "ZIP Code" = "Postleitzahl";
-
-/* Translation of data from the website for "crate" */
-"crate" = "Kiste";
-
-/* Translation of data from the website for "piece" */
-"piece" = "St.";
-
-/* Translation of data from the website for "kg" */
-"kg" = "kg";
-

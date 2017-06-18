@@ -8,16 +8,17 @@
 
 import Foundation
 
-enum MMStockQuantity: String {
-    case crate = "crate"
-    case piece = "piece"
-    case kg = "kg"
+enum MMStockQuantity: Int {
+    case crate = 0, piece, kg
     
-    func localizedString() -> String {
-        return NSLocalizedString(self.rawValue, comment: "")
-    }
-    
-    static func getQuantity(_ quantity: MMStockQuantity) -> String {
-        return quantity.localizedString()
+    func getLocalizedQuantity() -> String {
+        switch self {
+        case .crate:
+            return VisibleStrings.crateStockQuantity
+        case .piece:
+            return VisibleStrings.pieceStockQuantity
+        case .kg:
+            return VisibleStrings.kgStockQuantity
+        }
     }
 }

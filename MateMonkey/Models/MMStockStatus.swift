@@ -9,5 +9,20 @@
 import Foundation
 
 enum MMStockStatus: Int {
-    case discontinued, soldout, low, full, unknown
+    case discontinued = 0, soldout, low, full, unknown
+    
+    func getLocalizedStatus() -> String {
+        switch self {
+        case .discontinued:
+            return VisibleStrings.discontinuedStockStatus
+        case .soldout:
+            return VisibleStrings.soldoutStockStatus
+        case .low:
+            return VisibleStrings.lowStockStatus
+        case .full:
+            return VisibleStrings.fullStockStatus
+        case .unknown:
+            return VisibleStrings.unknownStockStatus
+        }
+    }
 }

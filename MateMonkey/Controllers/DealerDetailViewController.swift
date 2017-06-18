@@ -290,12 +290,12 @@ extension DealerDetailViewController: UITableViewDataSource {
             cell.productNameLabel.text = entry.product.name
             
             if entry.price == "?" {
-                cell.productPrizeLabel.text = entry.price + "/" + MMStockQuantity.getQuantity(entry.quantity)
+                cell.productPrizeLabel.text = entry.price + "/" + entry.quantity.getLocalizedQuantity()
             } else {
                 if let symbol = Locale.current.currencySymbol {
-                    cell.productPrizeLabel.text = symbol + " " + entry.price + "/" + MMStockQuantity.getQuantity(entry.quantity)
+                    cell.productPrizeLabel.text = symbol + " " + entry.price + "/" + entry.quantity.getLocalizedQuantity()
                 } else {
-                    cell.productPrizeLabel.text = "€ " + entry.price + "/" + MMStockQuantity.getQuantity(entry.quantity)
+                    cell.productPrizeLabel.text = "€ " + entry.price + "/" + entry.quantity.getLocalizedQuantity()
                 }
             }
             

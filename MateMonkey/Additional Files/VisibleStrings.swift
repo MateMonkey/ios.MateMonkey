@@ -67,5 +67,15 @@ struct VisibleStrings {
     
     // MARK: - Stock information
     static let noStockInformation = NSLocalizedString("No products yet.", comment: "String to show when there are no stock entries for a dealer.")
+    static let crateStockQuantity = NSLocalizedString("crate", comment: "Localized version for a quantity description for a crate")
+    static let pieceStockQuantity = NSLocalizedString("piece", comment: "Localized version for a quantity description for a piece")
+    static let kgStockQuantity = NSLocalizedString("kg", comment: "Localized version for a quantity description for a kg")
+    
+    // MARK: - Status information
+    static let discontinuedStockStatus = NSLocalizedString("discontinued", comment: "Localized version for the status description discontinued.")
+    static let soldoutStockStatus = NSLocalizedString("sold out", comment: "Localized version for the status description sold out.")
+    static let lowStockStatus = NSLocalizedString("low", comment: "Localized version for the status description low.")
+    static let fullStockStatus = NSLocalizedString("full", comment: "Localized version for the status description full.")
+    static let unknownStockStatus = NSLocalizedString("unknown", comment: "Localized version for the status description unknown.")
     
 }
