@@ -21,6 +21,8 @@ class UpdateStockViewController: UIViewController {
     
     // MARK: - Variables
     
+    var dealerId: Int?
+    
     var pickerData = [String]()
     
     var selected: selectedTextField = .product
@@ -37,6 +39,8 @@ class UpdateStockViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.navigationController?.view.tintColor = UIColor.monkeyGreenDark()
+        
         pickerData = mapDictToArray(GlobalValues.productDict)
         
         self.valuePickerView.delegate = self
@@ -62,16 +66,58 @@ class UpdateStockViewController: UIViewController {
         }
         return array
     }
-    /*
-    // MARK: - Navigation
 
+    // MARK: - Navigation
+     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        // check for missing values. ("All values except product are optional")
+        
+        guard !internProduct.isEmpty else {
+            showMissingProductAlert()
+            return
+        }
+        
+        guard dealerId != nil else {
+            return
+        }
+        
+        var productId = 0
+        for (id, product) in GlobalValues.productDict {
+            if product == internProduct {
+                productId = id
+                break
+            }
+        }
+
+        var price: Float = -1
+        if priceTextField.text != nil {
+            let floatPrice = priceTextField.text!.floatConverter
+            if floatPrice != 0 {
+                price = floatPrice * 100
+            }
+        }
+        
+        MMJSONSender().addStockEntryForDealer(dealerId!, productId: productId, status: String(describing: internStatus), quantity: String(describing: internQuantity), price: Int(price))
+        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK: - Functions
+    
+    func showMissingProductAlert() {
+        let alert: UIAlertController = UIAlertController(title: VisibleStrings.missingProductAlertTitle, message: VisibleStrings.missingProductAlertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     // MARK: - Enums
     

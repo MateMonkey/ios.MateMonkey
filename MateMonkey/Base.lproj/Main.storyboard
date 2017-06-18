@@ -68,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DealerName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-e3-tNY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DealerName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-e3-tNY">
                                 <rect key="frame" x="16" y="72" width="288.5" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,7 +143,7 @@ Lines</string>
                                     <action selector="phoneNumberPressed:" destination="EII-sb-Ixr" eventType="touchUpInside" id="4Dt-Sj-Bqz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRH-Xa-nmN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRH-Xa-nmN">
                                 <rect key="frame" x="42" y="204" width="99" height="28"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <state key="normal" title="WebsiteAddress"/>
@@ -414,6 +414,14 @@ Lines</string>
                             <constraint firstAttribute="leadingMargin" secondItem="PlC-uX-jqS" secondAttribute="leading" id="wlO-eP-bkK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Update Stock" id="SdJ-oQ-lP0">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="bm0-5i-QOT">
+                            <color key="tintColor" red="0.0" green="0.2666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="8Xs-D3-xep" id="Zef-Bx-T2g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="priceTextField" destination="GkY-62-K9k" id="wYj-qU-u5h"/>
                         <outlet property="productTextField" destination="gUE-j5-Vwy" id="8Gn-a2-Rdv"/>

@@ -78,4 +78,7 @@ struct VisibleStrings {
     static let fullStockStatus = NSLocalizedString("full", comment: "Localized version for the status description full.")
     static let unknownStockStatus = NSLocalizedString("unknown", comment: "Localized version for the status description unknown.")
     
+    // MARK: - Update Stock
+    static let missingProductAlertTitle = NSLocalizedString("No product selected", comment: "Title for an alert when the user wants to save a stock entry, but has no product selected.")
+    static let missingProductAlertMessage = NSLocalizedString("Please select a product.", comment: "Message for an alert when the user wants to save a stock entry, but has no product selected.")
 }

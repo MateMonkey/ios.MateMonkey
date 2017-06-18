@@ -12,6 +12,7 @@ protocol JSONSenderDelegate {
     func requestCompleted(success: Bool, updatedDealer: MMDealer?)
 }
 
+
 class MMJSONSender {
     
     var delegate: JSONSenderDelegate?
@@ -96,6 +97,46 @@ class MMJSONSender {
         task.resume()
     }
     
+    func addStockEntryForDealer(_ dealerId: Int, productId: Int, status: String = "", quantity: String = "", price: Int = -1) {
+        
+        var json: [String:Any] = ["product":productId]
+        
+        if status != "" && status != "unknown" {
+            json["status"] = status
+        }
+        
+        if quantity != "" {
+            json["quantity"] = quantity
+        }
+        
+        if price != -1 {
+            json["price"] = price
+        }
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        let targetURLString = GlobalValues.baseURL + "dealers/" + String(dealerId) + "/stock"
+        let url = URL(string: targetURLString)!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            var statusCode = Int()
+            if let httpResponse = response as? HTTPURLResponse {
+                statusCode = httpResponse.statusCode
+            }
+            
+            if (statusCode == 201) {
+                print("Successfully added stock entry: \(json)")
+            } else {
+                print("Something went wrong, status code \(statusCode) for json: \(json)")
+            }
+        }
+        task.resume()
+    }
     
     // MARK: - Private functions
     

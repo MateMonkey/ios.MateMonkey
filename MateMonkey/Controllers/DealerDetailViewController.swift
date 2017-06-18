@@ -234,6 +234,10 @@ class DealerDetailViewController: UIViewController {
             editVC.dealerToEdit = self.dealerToDisplay
             editVC.JSONsender.delegate = self
         }
+        
+        if let updateStockVC = segue.destination as? UpdateStockViewController {
+            updateStockVC.dealerId = self.dealerToDisplay?.id
+        }
     }
 
 }
