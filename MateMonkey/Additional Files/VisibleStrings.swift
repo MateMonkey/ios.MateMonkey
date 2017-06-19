@@ -81,4 +81,7 @@ struct VisibleStrings {
     // MARK: - Update Stock
     static let missingProductAlertTitle = NSLocalizedString("No product selected", comment: "Title for an alert when the user wants to save a stock entry, but has no product selected.")
     static let missingProductAlertMessage = NSLocalizedString("Please select a product.", comment: "Message for an alert when the user wants to save a stock entry, but has no product selected.")
+    
+    static let highPriceAlertTitle = NSLocalizedString("High price", comment: "Title for an alert when the user enters a price higher than 10.000 for a product.")
+    static let highPriceAlertMessage = NSLocalizedString("The price you entered seems a little high. Please enter a realistic price (or just leave it blank if you don't know it).", comment: "Title for an alert when the user enters a price higher than 10.000 for a product.")
 }

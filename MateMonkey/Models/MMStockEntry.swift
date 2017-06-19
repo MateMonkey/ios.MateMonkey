@@ -30,13 +30,17 @@ class MMStockEntry {
         }
         
         // Extract price
-        if let price = json["price"] as? String {
+        priceExtract: if let price = json["price"] as? String {
             if price == "?" {
                 self.price = price
             } else {
                 throw SerializationError.invalid("price", price)
             }
         } else if let price = json["price"] as? Int {
+            guard price != 0 else {
+                self.price = "?"
+                break priceExtract
+            }
             var priceString = String(price)
             let insertIndex = priceString.index(priceString.endIndex, offsetBy: -2)
             priceString.insert(".", at: insertIndex)

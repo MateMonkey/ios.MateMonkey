@@ -97,6 +97,12 @@ class UpdateStockViewController: UIViewController {
             }
         }
         
+        // Make sure the price is not too high (to prevent nasty conversion errors that are fatal)
+        guard price < 1000000 else {
+            showHighPriceAlert()
+            return
+        }
+        
         MMJSONSender().addStockEntryForDealer(dealerId!, productId: productId, status: String(describing: internStatus), quantity: String(describing: internQuantity), price: Int(price))
         
         self.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -115,6 +121,12 @@ class UpdateStockViewController: UIViewController {
     
     func showMissingProductAlert() {
         let alert: UIAlertController = UIAlertController(title: VisibleStrings.missingProductAlertTitle, message: VisibleStrings.missingProductAlertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showHighPriceAlert() {
+        let alert: UIAlertController = UIAlertController(title: VisibleStrings.highPriceAlertTitle, message: VisibleStrings.highPriceAlertMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
