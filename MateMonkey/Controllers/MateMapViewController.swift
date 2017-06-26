@@ -176,25 +176,21 @@ extension MateMapViewController: MMDealerFetcherDelegate {
         DispatchQueue.main.async {
             // call a method to populate the map with the fetcher's results
             #if DEBUG
-            print("There are \(sender.results.count) dealers on the map.")
+            print("There are \(sender.results.count) dealers in the map area.")
             #endif
             
-            if sender.results.isEmpty {
+            let filteredDealers = MMDealerFilter().filterDealers(sender.results)
+
+            if filteredDealers.isEmpty {
                 // if the results-Array from the fetcher is empty, we should display a message telling the user (popup, "toast", or similar)
                 self.showBanner(withMessage: VisibleStrings.bannerMessageNoDealers)
-            } else if sender.results.count >= GlobalValues.maximumPinsVisible {
+            } else if filteredDealers.count >= GlobalValues.maximumPinsVisible {
                 // if there are too many results, the user might not be able to select a single dealer and it might become very messy
                 self.showBanner(withMessage: VisibleStrings.bannerMessageTooManyDealers)
             } else {
-                let filteredDealers = MMDealerFilter().filterDealers(sender.results)
-                
-                if filteredDealers.count == 0 {
-                    // There are no dealers left after filters, let's inform the user.
-                    self.showBanner(withMessage: VisibleStrings.bannerMessageAllFiltered)
-                } else {
-                    for dealer in filteredDealers {
-                        self.mapView.addAnnotation(dealer)
-                    }
+                print("There are \(filteredDealers.count) dealers in the map area after filtering.")
+                for dealer in filteredDealers {
+                    self.mapView.addAnnotation(dealer)
                 }
             }
             // finish up by stopping the spinner

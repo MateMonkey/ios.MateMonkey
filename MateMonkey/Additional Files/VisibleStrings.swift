@@ -45,9 +45,8 @@ struct VisibleStrings {
     static let addDealerTitle = NSLocalizedString("Add Dealer", comment: "Title for the app's screen that lets users add a new dealer.")
     
     // MARK: - Banner texts
-    static let bannerMessageNoDealers = NSLocalizedString("There are no dealers in this area.", comment: "Message displayed in a banner at the top of the screen when the current map area has no dealers.")
-    static let bannerMessageTooManyDealers = NSLocalizedString("Too many dealers, please zoom in.", comment: "Message displayed in a banner at the top of the screen when there are too many dealers on the map.")
-    static let bannerMessageAllFiltered = NSLocalizedString("There are no dealers matching your filters.", comment: "Message displayed in a banner at the top of the screen when there are dealers, but they get sorted out by the user's filters.")
+    static let bannerMessageNoDealers = NSLocalizedString("There are no dealers matching your filters in this area.", comment: "Message displayed in a banner at the top of the screen when the current map area has no dealers.")
+    static let bannerMessageTooManyDealers = NSLocalizedString("There are too many dealers matching your filters in this area. Zoom in to see them.", comment: "Message displayed in a banner at the top of the screen when there are too many dealers on the map.")
     static let bannerTapToDismiss = NSLocalizedString("(Tap to dismiss)", comment: "Banner subtitle to let the user know how to get rid of the banner quickly.")
     
     static let bannerMessageDealerUpdated = NSLocalizedString("Dealer successfully updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information has been updated.")
