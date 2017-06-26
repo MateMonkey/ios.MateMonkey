@@ -10,6 +10,15 @@
 /* Class = "UILabel"; text = "City"; ObjectID = "5Xd-lT-hVg"; */
 "5Xd-lT-hVg.text" = "Stadt";
 
+/* Class = "UIViewController"; title = "Update Stock"; ObjectID = "8Xs-D3-xep"; */
+"8Xs-D3-xep.title" = "Inventar aktualisieren";
+
+/* Class = "UILabel"; text = "[[Price]]"; ObjectID = "8vd-wz-ZII"; */
+"8vd-wz-ZII.text" = "[[Preis]]";
+
+/* Class = "UILabel"; text = "per"; ObjectID = "19J-s5-YHL"; */
+"19J-s5-YHL.text" = "je";
+
 /* Class = "UILabel"; text = "MateMonkey"; ObjectID = "40B-nb-mla"; */
 "40B-nb-mla.text" = "MateMonkey";
 
@@ -25,6 +34,9 @@
 /* Class = "UIButton"; normalTitle = "Restaurants"; ObjectID = "EuV-fR-sLd"; */
 "EuV-fR-sLd.normalTitle" = "Restaurants";
 
+/* Class = "UILabel"; text = "[[h]]"; ObjectID = "FJU-9P-jYR"; */
+"FJU-9P-jYR.text" = "[h]";
+
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "FeD-m6-pYP"; */
 "FeD-m6-pYP.title" = "Zurück";
 
@@ -37,11 +49,23 @@
 /* Class = "UITextField"; placeholder = "Dealer Name"; ObjectID = "GfQ-BE-DcB"; */
 "GfQ-BE-DcB.placeholder" = "Händlername";
 
+/* Class = "UITextField"; placeholder = "price"; ObjectID = "GkY-62-K9k"; */
+"GkY-62-K9k.placeholder" = "Preis";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "GxA-V9-cIP"; */
+"GxA-V9-cIP.text" = "Produkt";
+
 /* Class = "UIButton"; normalTitle = "Retail"; ObjectID = "Imf-g3-Tmu"; */
 "Imf-g3-Tmu.normalTitle" = "Einzelhandel";
 
+/* Class = "UILabel"; text = "[[MMProduct.name]]"; ObjectID = "K8B-C3-aPp"; */
+"K8B-C3-aPp.text" = "[Produktname]";
+
 /* Class = "UIButton"; normalTitle = "WebsiteAddress"; ObjectID = "KRH-Xa-nmN"; */
 "KRH-Xa-nmN.normalTitle" = "[WebsiteAddress]";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "LMT-2X-fiL"; */
+"LMT-2X-fiL.text" = "Status";
 
 /* Class = "UILabel"; text = "PostalCode"; ObjectID = "MC9-t3-MbL"; */
 "MC9-t3-MbL.text" = "[PostalCode]";
@@ -56,8 +80,14 @@ iOS App entwickelt von Peter Hoß";
 /* Class = "UIButton"; normalTitle = "Community"; ObjectID = "O6N-Cz-L8W"; */
 "O6N-Cz-L8W.normalTitle" = "Gemeinschaft";
 
+/* Class = "UILabel"; text = "Price"; ObjectID = "PlC-uX-jqS"; */
+"PlC-uX-jqS.text" = "Preis";
+
 /* Class = "UILabel"; text = "Email"; ObjectID = "SJ4-Ry-CcW"; */
 "SJ4-Ry-CcW.text" = "E-Mail";
+
+/* Class = "UINavigationItem"; title = "Update Stock"; ObjectID = "SdJ-oQ-lP0"; */
+"SdJ-oQ-lP0.title" = "Inventar aktualisieren";
 
 /* Class = "UILabel"; text = "StreetName"; ObjectID = "Tvw-QH-HDZ"; */
 "Tvw-QH-HDZ.text" = "[StreetName]";
@@ -67,6 +97,12 @@ iOS App entwickelt von Peter Hoß";
 
 /* Class = "UIButton"; normalTitle = "Rate MateMonkey"; ObjectID = "VVY-Qj-wns"; */
 "VVY-Qj-wns.normalTitle" = "MateMonkey bewerten";
+
+/* Class = "UIButton"; normalTitle = " Update Inventory "; ObjectID = "X6o-Hi-1KN"; */
+"X6o-Hi-1KN.normalTitle" = " Inventar aktualisieren ";
+
+/* Class = "UITextField"; placeholder = "quantity"; ObjectID = "XcS-If-5oA"; */
+"XcS-If-5oA.placeholder" = "Mengen in";
 
 /* Class = "UILabel"; text = "StreetNumber"; ObjectID = "Yqf-iv-zxW"; */
 "Yqf-iv-zxW.text" = "[StreetNumber]";
@@ -82,6 +118,9 @@ iOS App entwickelt von Peter Hoß";
 
 /* Class = "UITextField"; placeholder = "Country"; ObjectID = "eDB-9R-hoD"; */
 "eDB-9R-hoD.placeholder" = "Land";
+
+/* Class = "UITextField"; placeholder = "product"; ObjectID = "gUE-j5-Vwy"; */
+"gUE-j5-Vwy.placeholder" = "Produkt";
 
 /* Class = "UILabel"; text = "Version 1.0"; ObjectID = "geR-EF-yPS"; */
 "geR-EF-yPS.text" = "Version 1.0";
@@ -151,4 +190,7 @@ Zeilen";
 
 /* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "ySQ-30-rM1"; */
 "ySQ-30-rM1.placeholder" = "Telefonnummer";
+
+/* Class = "UITextField"; placeholder = "status"; ObjectID = "yxG-AS-SGe"; */
+"yxG-AS-SGe.placeholder" = "Status";
 
