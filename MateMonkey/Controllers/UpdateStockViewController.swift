@@ -52,6 +52,8 @@ class UpdateStockViewController: UIViewController {
         quantityTextField.delegate = self
         
         print(statusData)
+        
+        populateDefaults()
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,7 +107,7 @@ class UpdateStockViewController: UIViewController {
         
         MMJSONSender().addStockEntryForDealer(dealerId!, productId: productId, status: String(describing: internStatus), quantity: String(describing: internQuantity), price: Int(price))
         
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 
@@ -129,6 +131,11 @@ class UpdateStockViewController: UIViewController {
         let alert: UIAlertController = UIAlertController(title: VisibleStrings.highPriceAlertTitle, message: VisibleStrings.highPriceAlertMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: VisibleStrings.ok, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func populateDefaults() {
+        statusTextField.text = statusData[4]
+        quantityTextField.text = quantityData[1]
     }
     
     // MARK: - Enums

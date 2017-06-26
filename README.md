@@ -17,12 +17,14 @@ Current version: 1.1
 ### 1.1 ###
 
 * Stock integration: show and edit a dealer's stock/inventory of mate
-* Detect when a user comes from the website and show them the last dealer they looked at
 
 ### 1.2 ###
 
 Stock filter
 * filter dealers by what mate they have in stock
+
+Detect when a user comes from the website and show them the last dealer they looked at
+
 
 ### Wishlist/Ideas/Misc ###
 
