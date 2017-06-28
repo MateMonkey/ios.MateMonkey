@@ -143,8 +143,10 @@ extension MateMapViewController: MKMapViewDelegate {
             } else {
                 view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 let imageName = "MapPin_" + identifier
-                view.image = UIImage(named: imageName)
+                let image = UIImage(named: imageName)!
+                view.image = image
                 view.canShowCallout = false
+                view.centerOffset = CGPoint(x: 0, y: -image.size.height/2)
             }
             return view
         }
