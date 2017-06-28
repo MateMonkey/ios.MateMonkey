@@ -65,7 +65,7 @@
 "No product selected" = "Kein Produkt ausgewählt";
 
 /* String to show when there are no stock entries for a dealer. */
-"No products yet." = "Keine Produkte bekannt";
+"No products in stock/known." = "Keine Produkte vorrätig/bekannt.";
 
 /* Generic OK for use in an alert. */
 "OK" = "OK";
