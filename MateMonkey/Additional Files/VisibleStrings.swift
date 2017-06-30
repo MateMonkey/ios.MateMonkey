@@ -45,9 +45,8 @@ struct VisibleStrings {
     static let addDealerTitle = NSLocalizedString("Add Dealer", comment: "Title for the app's screen that lets users add a new dealer.")
     
     // MARK: - Banner texts
-    static let bannerMessageNoDealers = NSLocalizedString("There are no dealers in this area.", comment: "Message displayed in a banner at the top of the screen when the current map area has no dealers.")
-    static let bannerMessageTooManyDealers = NSLocalizedString("Too many dealers, please zoom in.", comment: "Message displayed in a banner at the top of the screen when there are too many dealers on the map.")
-    static let bannerMessageAllFiltered = NSLocalizedString("There are no dealers matching your filters.", comment: "Message displayed in a banner at the top of the screen when there are dealers, but they get sorted out by the user's filters.")
+    static let bannerMessageNoDealers = NSLocalizedString("There are no dealers matching your filters in this area.", comment: "Message displayed in a banner at the top of the screen when the current map area has no dealers.")
+    static let bannerMessageTooManyDealers = NSLocalizedString("There are too many dealers matching your filters in this area. Zoom in to see them.", comment: "Message displayed in a banner at the top of the screen when there are too many dealers on the map.")
     static let bannerTapToDismiss = NSLocalizedString("(Tap to dismiss)", comment: "Banner subtitle to let the user know how to get rid of the banner quickly.")
     
     static let bannerMessageDealerUpdated = NSLocalizedString("Dealer successfully updated.", comment: "Message displayed in a banner at the top of the screen when a dealer's information has been updated.")
@@ -64,4 +63,24 @@ struct VisibleStrings {
     static let dealerTypeOther = NSLocalizedString("Other", comment: "User facing String for dealer types.")
     static let dealerTypeHackerspace = NSLocalizedString("Hackerspace", comment: "User facing String for dealer types.")
     static let dealerTypeCommunity = NSLocalizedString("Community", comment: "User facing String for dealer types.")
+    
+    // MARK: - Stock information
+    static let noStockInformation = NSLocalizedString("No products in stock/known.", comment: "String to show when there are no stock entries for a dealer.")
+    static let crateStockQuantity = NSLocalizedString("crate", comment: "Localized version for a quantity description for a crate")
+    static let pieceStockQuantity = NSLocalizedString("piece", comment: "Localized version for a quantity description for a piece")
+    static let kgStockQuantity = NSLocalizedString("kg", comment: "Localized version for a quantity description for a kg")
+    
+    // MARK: - Status information
+    static let discontinuedStockStatus = NSLocalizedString("discontinued", comment: "Localized version for the status description discontinued.")
+    static let soldoutStockStatus = NSLocalizedString("sold out", comment: "Localized version for the status description sold out.")
+    static let lowStockStatus = NSLocalizedString("low", comment: "Localized version for the status description low.")
+    static let fullStockStatus = NSLocalizedString("full", comment: "Localized version for the status description full.")
+    static let unknownStockStatus = NSLocalizedString("unknown", comment: "Localized version for the status description unknown.")
+    
+    // MARK: - Update Stock
+    static let missingProductAlertTitle = NSLocalizedString("No product selected", comment: "Title for an alert when the user wants to save a stock entry, but has no product selected.")
+    static let missingProductAlertMessage = NSLocalizedString("Please select a product.", comment: "Message for an alert when the user wants to save a stock entry, but has no product selected.")
+    
+    static let highPriceAlertTitle = NSLocalizedString("High price", comment: "Title for an alert when the user enters a price higher than 10.000 for a product.")
+    static let highPriceAlertMessage = NSLocalizedString("The price you entered seems a little high. Please enter a realistic price (or just leave it blank if you don't know it).", comment: "Title for an alert when the user enters a price higher than 10.000 for a product.")
 }

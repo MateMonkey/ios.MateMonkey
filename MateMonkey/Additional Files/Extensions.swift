@@ -40,3 +40,40 @@ extension UIColor {
     }
 
 }
+
+extension UIApplication {
+    class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(base: selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        return base
+    }
+}
+
+
+// We need to convert Strings from the price input in the stock updater view to Floats. Casting a string to Float only works when the decimal separator is a dot (.), a (European) comma (,) does not work. Taken from http://www.howtobuildsoftware.com/index.php/how-do/bdPI/string-comma-swift-playground-swift-playground-how-to-convert-a-string-with-comma-to-a-string-with-decimal
+extension String {
+    var floatConverter: Float {
+        let converter = NumberFormatter()
+        converter.decimalSeparator = "."
+        if let result = converter.number(from: self) {
+            return result.floatValue
+        } else {
+            converter.decimalSeparator = ","
+            if let result = converter.number(from: self) {
+                return result.floatValue
+            }
+        }
+        return 0
+    }
+}

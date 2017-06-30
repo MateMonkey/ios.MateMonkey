@@ -46,6 +46,9 @@
 /* User facing String for dealer types. */
 "Hackerspace" = "Hackerspace";
 
+/* Title for an alert when the user enters a price higher than 10.000 for a product. */
+"High price" = "Hoher Preis";
+
 /* Title for an alert when the user is about to make a phone call. */
 "Make a phone call" = "Einen Anruf tätigen";
 
@@ -58,11 +61,20 @@
 /* Reason for an alert when the user does not provide a required field: dealer name */
 "Name" = "Name";
 
+/* Title for an alert when the user wants to save a stock entry, but has no product selected. */
+"No product selected" = "Kein Produkt ausgewählt";
+
+/* String to show when there are no stock entries for a dealer. */
+"No products in stock/known." = "Keine Produkte vorrätig/bekannt.";
+
 /* Generic OK for use in an alert. */
 "OK" = "OK";
 
 /* User facing String for dealer types. */
 "Other" = "Andere";
+
+/* Message for an alert when the user wants to save a stock entry, but has no product selected. */
+"Please select a product." = "Bitte wähle ein Produkt aus.";
 
 /* User facing String for dealer types. */
 "Restaurant" = "Restaurant";
@@ -73,27 +85,55 @@
 /* Reason for an alert when the user does not provide a required field: street name */
 "Street" = "Straße";
 
-/* Message displayed in a banner at the top of the screen when the current map area has no dealers. */
-"There are no dealers in this area." = "Es gibt in diesem Gebiet keinen Händler.";
+/* Title for an alert when the user enters a price higher than 10.000 for a product. */
+"The price you entered seems a little high. Please enter a realistic price (or just leave it blank if you don't know it)." = "Der Preis, den du eingegeben hast, scheint etwas hoch. Bitte gib einen realistischen Preis ein (oder lass' das Feld leer, wenn du den Preis nicht weißt).";
 
-/* Message displayed in a banner at the top of the screen when there are dealers, but they get sorted out by the user's filters. */
-"There are no dealers matching your filters." = "Es gibt in hier keinen Händler, der deinen Filtern entspricht.";
+/* Message displayed in a banner at the top of the screen when the current map area has no dealers. */
+"There are no dealers matching your filters in this area." = "Es gibt keine Händler auf der Karte, die deinen Filtern entsprechen.";
+
+/* Message displayed in a banner at the top of the screen when there are too many dealers on the map. */
+"There are too many dealers matching your filters in this area. Zoom in to see them." = "Es gibt zu viele Händler auf der Karte, die deinen Filtern entsprechen. Zoome näher heran, um sie zu sehen.";
 
 /* Message for an alert that shows when the URL is invalid. */
-"This URL is not valid.\nYou can help fix it by editing this dealer." = "Diese URL ist nicht zulässig.\nDu kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
+"This URL is not valid.
+You can help fix it by editing this dealer." = "Diese URL ist nicht zulässig.
+Du kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
 
 /* Message for an alert when a required field for a dealer is empty. */
 "This field can not be empty: " = "Dieses Feld darf nicht leer sein:";
 
 /* Message for an alert that shows when the phone number is invalid. */
-"This phone number is not valid.\nYou can help fix it by editing this dealer." = "Diese Telefonnummer ist nicht zulässig.\nDu kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
-
-/* Message displayed in a banner at the top of the screen when there are too many dealers on the map. */
-"Too many dealers, please zoom in." = "Zu viele Händler, bitte zoome näher heran.";
+"This phone number is not valid.
+You can help fix it by editing this dealer." = "Diese Telefonnummer ist nicht zulässig.
+Du kannst diesen Fehler beheben, indem du den Händler bearbeitest und aktualisierst.";
 
 /* Used to display the app's current version in the AppInfoViewController */
 "Version" = "Version";
 
 /* Reason for an alert when the user does not provide a required field: postal */
 "ZIP Code" = "Postleitzahl";
+
+/* Localized version for a quantity description for a crate */
+"crate" = "Kiste";
+
+/* Localized version for the status description discontinued. */
+"discontinued" = "eingestellt";
+
+/* Localized version for the status description full. */
+"full" = "voll";
+
+/* Localized version for a quantity description for a kg */
+"kg" = "kg";
+
+/* Localized version for the status description low. */
+"low" = "wenig";
+
+/* Localized version for a quantity description for a piece */
+"piece" = "Stück";
+
+/* Localized version for the status description sold out. */
+"sold out" = "ausverkauft";
+
+/* Localized version for the status description unknown. */
+"unknown" = "unbekannt";
 
