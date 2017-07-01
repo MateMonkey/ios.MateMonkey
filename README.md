@@ -10,13 +10,10 @@ Current version: 1.1
 
 ## To Do ##
 
-* after release: test smart banner deep linking
+* test smart banner deep linking
+* implement filtering by the dealers' inventory
 
 ## Development Roadmap ##
-
-### 1.1 ###
-
-* Stock integration: show and edit a dealer's stock/inventory of mate
 
 ### 1.2 ###
 
@@ -24,7 +21,6 @@ Stock filter
 * filter dealers by what mate they have in stock
 
 Detect when a user comes from the website and show them the last dealer they looked at
-
 
 ### Wishlist/Ideas/Misc ###
 
@@ -46,6 +42,10 @@ Minor fixes:
 * improve phone number sanitation
 * edit screen moves up to show otherwise hidden text fields
 * show dealer type in detail view
+
+### 1.1 ###
+
+* Stock integration: show and edit a dealer's stock/inventory of mate
 
 ## Issues ##
 Tracked via github's bugtracker
